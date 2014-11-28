@@ -72,7 +72,7 @@ StorySchema.plugin(autoIncrement.plugin, {
 // view engine setup
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
-app.set('PORT', 6060);
+app.set('PORT', 8887);
 
 app.use(favicon());
 //app.use(logger('dev'));
