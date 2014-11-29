@@ -1,0 +1,93 @@
+html
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='shortcut icon', href='libs/link/ico/favicon.png')
+    title Dashboard
+    link(href='libs/link/css/bootstrap.css', rel='stylesheet')
+    link(href='libs/link/css/main.css', rel='stylesheet')
+    link(href='libs/link/css/font-awesome.min.css', rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css')
+    script(src='libs/link/js/modernizr.custom.js')
+    link(href='assets/css/map.css', rel='stylesheet')
+    link(href='stylesheets/dashboard.css', rel='stylesheet')
+
+    script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBeYO4WXTpTzPR615h9n6L8Ear4dkNd80Y&sensor=false')
+    script(src='assets/js/map.js')
+    script(src='assets/js/call.js')
+    script(src='assets/js/clearText.js')
+  body
+
+    ul#nav
+        li
+            a(href='/portfolio') Activity Mode
+          li
+            a(href='/here') View Mode
+          li
+            a(href='/missions') Mission
+          li
+            a(href='#') Help
+
+    .row
+    .holder
+      .row
+        .col-lg-8
+          #map-canvas
+        .col-md-4
+          h2(style='color: #FFFFFF; font-weight: bold; font-family: \'Abril+Fatface\', serif;') Can't Wait to Hear Your Story!
+          form.storysubmitform(method='POST', action='/new')
+            fieldset
+            .form-group
+                label.col-lg-12.control-label(for='selectbasic' style='color: #FFFFFF;') How do you prefer to tell us your story?
+                br
+            .col-lg-12
+              select#category.form-control(name='category', onchange='call()')
+                          option(value='NA') Select your input type
+                          option(value='Texts') Text
+                          option(value='Video') Video
+                          option(value='Pictures') Picture
+                           option(value='Sound') Sound
+              p#Text Perfect! it is really easy to give us your text. the text box is provided for you here. 
+              p#Video This will be an explanation of how they can submit videos
+              p#Pictures This will be about how to submit pictures
+              p#Sound This is about how to submit sound
+              .col-lg-12
+              select#feeling.form-control.confirm(name='feeling')
+                          option(value='0') ...  
+                          option(value='5') Extremly Happy
+                          option(value='4') Happy
+                          option(value='3') Indifferent
+                          option(value='2') Sad
+                          option(value='1') Extremely Sad
+              textarea#hashtag.form-control.confirm.hashtag(name='hashtag') Hashtag!
+              textarea#textarea.form-control.confirm(name='textarea') default text           
+              input#place.text(name='place', type='hidden')          
+          button#textBut.storysubmitbutton.btn.btn-success.confirm(type='submit') Submit Your Story!
+                br
+                br
+                p  This will lead them to pages which are for helps for visualization 
+    //
+       Bootstrap core JavaScript
+    script(src='https://code.jquery.com/jquery-1.10.2.min.js')
+    script(src='libs/link/js/bootstrap.min.js')
+    script(src='libs/link/js/main.js')
+    script(src='libs/link/js/masonry.pkgd.min.js')
+    script(src='libs/link/js/imagesloaded.js')
+    script(src='libs/link/js/classie.js')
+    script(src='libs/link/js/AnimOnScroll.js')
+    script.
+      new AnimOnScroll( document.getElementById( 'grid' ), {
+      minDuration : 0.4,
+      maxDuration : 0.7,
+      viewportFactor : 0.2
+      } );
+    script.
+      $('button.storysubmitbutton').click( function() {
+      $('form.storysubmitform').submit();
+      });

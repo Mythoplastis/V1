@@ -1,0 +1,64 @@
+html
+  head(lang='en')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title Mythoplastis
+    meta(name='description', content='CUPS - Mythoplastis - A Planning Phd on puplic participation')
+    meta(name='keywords', content='cups, uom, university of manchester, planning, gaming, public participation')
+    meta(property='og:title', content='')
+    link(rel='stylesheet', type='text/css', href='libs/Intro/css/bootstrap-modal-bs3patch.css')
+    link(rel='stylesheet', type='text/css', href='libs/Intro/css/bootstrap-modal.css')
+    link(rel='stylesheet', href='libs/Intro/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='libs/Intro/css/main.css')
+    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+  body
+    .topbar
+      .panel-body
+          br
+          br
+          br
+          br
+          h2 ALREADY A MEMBER? SIGN IN HERE! 
+          form.loginForm(method='POST', action='/logedin')
+            fieldset
+              label.col-md-4.control-label(for='textinput') Your Email:
+              input#email.form-control.input-lg(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', data-required='true')
+              label.col-md-4.control-label(for='passwordinput')  Your Password: 
+              input#password.form-control.input-lg(type='password', name='passwordlog', placeholder='Password')
+              button.loginButton.btn.btn-success.pull-right(type='submit')  Sign in 
+          hr.colorgraph
+          h2 REGISTER HERE!
+          h4 The information you give us in the registration form will only be used for the research purposes. None of the information will be shown public.
+          br
+
+          form.registerForm(method='POST', action='/samples')
+            fieldset
+              .row
+                label.col-md-4.control-label(for='fullName') Full Name:
+                input#text.input2.form-control.input-md(name='fullName', type='text', placeholder='*Please enter a valid email address', required='')
+                label.label2.col-md-4.control-label(for='age') Your Age    :
+                input#text.input2.form-control.input-md(name='age', type='text', placeholder='*How old are you?', required='')
+              .row
+                label.col-md-4.control-label(for='city') Postcode:
+                input#text.input2.form-control.input-md(name='city', type='text', placeholder='*Please enter the valid postcode', required='')
+                label.label2.col-md-4.control-label(for='job') Your Job:
+                input#text.input2.form-control.input-md(name='job', type='text', placeholder='*What you do for living?', required='')
+              .row
+                label.col-md-4.control-label(for='username') Username:
+                input#text.form-control.input-md(name='username', type='text', placeholder='*what do you want to be called here?', required='')
+                label.label2.col-md-4.control-label(for='password') Password:
+                input#test.form-control.input-md(name='password', type='text', placeholder='*choose a password', required='')
+              .row
+                label.col-md-4.control-label(for='email') Your Email:
+                input#email.form-control.input-md(name='email', type='email', placeholder='*PLease enter a valid email address?', required='')
+                button.registerButton.btn.btn-success.pull-right(type='submit') Start Exploring Now!           
+
+    .leftbar.pull-left
+    .rightbar.pull-right
+    script.
+      $('button.registerButton').click( function() {
+      $('form.registerForm').submit();
+      });
+      $('button.loginButton').click( function() {
+      $('form.loginForm').submit();
+      });

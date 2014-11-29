@@ -1,0 +1,83 @@
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Umbrella Point
+    meta(name='description', content='Circle Hover Effects with CSS Transitions')
+    meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
+    meta(name='author', content='Codrops')
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/style6.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+  body
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    .container
+        .support-note
+          span.no-csstransforms CSS transforms are not supported in your browser
+          span.no-csstransitions CSS transitions are not supported in your browser
+          span.note-ie Sorry, only modern browsers.
+      section.main
+        ul#clues.ch-grid
+          li 
+            .ch-item.ch-img-2
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-2
+                  .ch-info-back
+                    h3 COMMUNISM
+                    p
+                      | One of these gentlemen had lived in Aberdeen House which is very close to our point of interest.
+          li
+            .ch-item.ch-img-3
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-3
+                  .ch-info-back
+                    h3 BIG PUB
+                    p
+                      | If you are student you have definitely been to this pub which is 50 metere away from our POI!
+          li
+            .ch-item.ch-img-4
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-4
+                  .ch-info-back
+                    h3 ART GALLERY
+                    p
+                      | Our POI is just beside one of the University halls with the same name as this building!
+          li
+            .ch-item.ch-img-1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-1
+                  .ch-info-back
+                    h3 LEMN SISSAY
+                    p
+                      | The Umbrella logo is below the rain poem on the wall! look for it on walls of Manchester.
+          br
+          br
+      .col-md-8(style="margin-left: 20%;")  
+          h2(style="color: #4f5154; font-family: Tahoma, Geneva, sans-serif; font-size: 30px; font-weight: 30; margin-bottom: 0.5%;") Name the closest fast food place to umbrella logo??!    
+          br
+          input#takeway.form-control(type="text", placeholder="Name of the Take Away Place", style="margin-left: 20%; width: 250px; height: 30px;")
+          input(type="button", name="answer", value="takename", onclick="showDiv()")
+
+  script.
+    function showDiv() {
+    var enter = $('#takeway').val();
+    if(enter == "Gemini Take Away" || enter == "gemini") {
+    document.getElementById('clues').style.display = "none";
+    }
+    }

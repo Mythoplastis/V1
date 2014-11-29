@@ -1,0 +1,52 @@
+html(lang='en')
+head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Home | Flat Theme
+    link(href='/libs/flat/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/libs/flat/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/libs/flat/css/prettyPhoto.css', rel='stylesheet')
+    link(href='/libs/flat/css/animate.css', rel='stylesheet')
+    link(href='/libs/flat/css/main.css', rel='stylesheet')
+    link(href='/libs/flat/css/mission.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='js/html5shiv.js')
+      script(src='js/respond.min.js')
+    link(rel='shortcut icon', href='images/ico/favicon.ico')
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='images/ico/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='images/ico/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='images/ico/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='images/ico/apple-touch-icon-57-precomposed.png')
+    script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBeYO4WXTpTzPR615h9n6L8Ear4dkNd80Y&sensor=false')
+  body
+
+    #bee2.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 28px; font-color: white") TERMS AND CONDITIONS
+          .modal-body
+            h3(style="font-weight: bold; font-size: 28px; color: #A6D1D9;") Here it will be list of terms and conditions 
+          .modal-footer
+            button.btn.btn-success(type="button", href='/new2') 
+
+    section#main-slider.no-margin
+      #myCarousel.carousel.slide.wet-asphalt(data-interval='false')
+        .carousel-inner
+          .item.active(style='background-image: url(libs/flat/images/slider/alt1.jpg);')
+            .container
+              canvas#canvas
+
+
+  script(src="libs/flat/js/jquery.js")
+  script.
+    $('.carousel').carousel()
+  script(src="libs/flat/js/bootstrap.min.js")
+  script(src="libs/flat/js/animation.js")
+  script(src="libs/flat/js/main.js")
+  script(src="libs/flat/js/picchange.js")

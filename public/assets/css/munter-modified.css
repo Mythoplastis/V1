@@ -1,0 +1,25 @@
+﻿
+  .panel {
+    background-image: url('../img/panel.jpg');
+  }
+
+  .input-signup {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  border-color: white;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  }
+
+  /*.modal-content {
+    width: 40%;
+    height: 40%;
+    background-image: url('../img/panel.jpg');
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%
+  }*/
+

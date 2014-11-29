@@ -1,0 +1,74 @@
+html
+head
+    title LINK - Agency Theme
+    link(href='libs/link/css/bootstrap.css', rel='stylesheet')
+    link(href='assets/css/missions.css', rel='stylesheet')
+    link(href='libs/link/css/font-awesome.min.css', rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+    script(src='libs/link/js/modernizr.custom.js')
+    script(type='text/javascript', src='http://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBeYO4WXTpTzPR615h9n6L8Ear4dkNd80Y&sensor=false')
+
+
+  body
+    ul#nav
+        li
+            a(href='/portfolio') Activity Mode
+          li
+            a(href='/here') View Mode
+          li
+            a(href='#') Mission
+          li
+            a(href='#') Help
+
+
+    .container
+      .row.mt
+          h1(style="color: #3b3b39; font-family: Georgia, serif; font-size: 28px; font-weight: bold; margin-left: 1%; text-align: center;") THERE ARE PLENTLY OF THINGS YOU CAN DO HERE!
+          h1(style="color: #3b3b39; font-family: Georgia, serif; font-size: 20px; margin-left: 1%; text-align: center;") Start With Our Missions or Tell Us Your Stories and Help Us Define Our Missions! Wanna Try Both?! No Worries You Can Always Come Back Here!        
+            br
+            br
+
+  
+    .container
+        .row
+        .col-md-12
+          button.longmission(class= 'mission' )
+        br
+        br
+        .col-md-12
+          button(class= 'mission' style="background-image: url(../../../libs/flat/images/slider/button2.jpg);")
+            a(href='/portfolio') WE NEED YOUR STORIES              
+        br
+
+
+
+    #portfolio
+        .container
+          #map-canvas
+          br
+
+
+
+    script(src='https://code.jquery.com/jquery-1.10.2.min.js')
+    script(src='libs/link/js/bootstrap.min.js')
+    script(src='libs/link/js/main.js')
+    script(src='libs/link/js/masonry.pkgd.min.js')
+    script(src='libs/link/js/imagesloaded.js')
+    script(src='libs/link/js/classie.js')
+    script(src='libs/link/js/AnimOnScroll.js')
+    script.
+      new AnimOnScroll(document.getElementById('grid'), {
+      minDuration : 0.4,
+      maxDuration : 0.7,
+      viewportFactor : 0.2
+      });
+    script.
+      $('button.submitcomment').click( function() {
+      $('form.subcomment').submit();
+      $('#mymodal').modal('hide');
+      });
+    script.
+      $('button.longmission').click(function() {
+      window.location.href = '/new';
+      });
