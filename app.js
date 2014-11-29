@@ -24,6 +24,7 @@ MongoClient.connect("mongodb://localhost:27017/Work", function(err, db) {
 });
 
 //Database and Models
+//this works
 
 var connection= mongoose.connect("mongodb://localhost/Work");
 autoIncrement.initialize(connection);
