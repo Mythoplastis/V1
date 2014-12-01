@@ -174,10 +174,10 @@ app.get('/umbrella', function (req, res) {
     }
 });
 
-app.get('/location2', function (req, res) {
+app.get('/locations', function (req, res) {
 
     if (req.session.user) {
-        res.render('location2');
+        res.render('locations');
     } else {
         res.redirect('/');
     }
@@ -238,7 +238,7 @@ app.post("/samples", userExist, function (req, res) {
                 if(user){
                     req.session.regenerate(function(){
                         req.session.user = user;
-                        res.render('portfolio');
+                        res.render('missions');
  
                     });
                 }

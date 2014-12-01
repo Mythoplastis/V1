@@ -54,7 +54,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #nav li a:hover {
       color: #0A2A0A;
-      background-color: #AEB404; }
+      background-color: #AEB404; 
+  }
 
 .comment {
     background-color: #B7B5B5;

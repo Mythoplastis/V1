@@ -12,6 +12,9 @@ body{
 	cursor: default;
 }
 
+.break {
+	height: 20%;
+}
 .ch-info-wrap, 
 .ch-info{
 	position: absolute;

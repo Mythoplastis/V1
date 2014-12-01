@@ -25,7 +25,7 @@ head
     section#main-slider.no-margin
       #myCarousel.carousel.slide.wet-asphalt(data-interval='false')
         .carousel-inner
-          .item.active(style='background-image: url(libs/flat/images/slider/bg.jpg);')
+          .item.active(style='background-image: url(libs/flat/images/slider/bg.jpg); background-size:100% 100%;')
             .container
               .row
                 .col-sm-12
@@ -33,7 +33,7 @@ head
                     br
                     .row
                       .col-md-12(style="margin-left: 10%; margin-top: 3%;")
-                        h2.boxed.animation.animated-item-1(style="margin-bottom: 40%; font-size: 28px;") CLICK ON THE LOGO TO START, LOOK FOR THIS LOGO EVERYWHERE!
+                        h2.boxed(style="margin-bottom: 40%; font-size: 28px; opacity:0;") 
                       .col-md-4(style="margin-top: -30%; margin-left: 37%;")
                         input#start.button.pulse(type="image", src="libs/flat/images/slider/letter2.png")
 
@@ -43,7 +43,7 @@ head
     $('.carousel').carousel()
   script.
     $('#start').click(function() {
-    window.location.href = '/location2';
+    window.location.href = '/locations';
     });
   script(src="libs/flat/js/bootstrap.min.js")
   script(src="libs/flat/js/animation.js")
