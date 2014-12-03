@@ -1,5 +1,5 @@
 html(lang='en')
-head
+  head
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -11,6 +11,8 @@ head
     link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
     link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
     link(rel='stylesheet', type='text/css', href='libs/circle/css/style6.css')
+    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700', rel='stylesheet', type='text/css')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
   body
@@ -63,13 +65,29 @@ head
       .col-md-8(style="margin-left: 20%;")  
           h2(style="color: #4f5154; font-family: Tahoma, Geneva, sans-serif; font-size: 30px; font-weight: 30; margin-bottom: 0.5%;") Name the closest fast food place to umbrella logo??!    
           br
-          input#takeway.form-control(type="text", placeholder="Name of the Take Away Place", style="margin-left: 20%; width: 250px; height: 30px;")
-          input(type="button", name="answer", value="takename", onclick="showDiv()")
+          input#takeway.form-control(type="text", placeholder="Name of the Take Away Place", style="padding-left: 5px; border-radius:5px; margin-right:1%; margin-left: 20%; width: 250px; height: 30px;")
+          input(type="button", class="button", id="answer", value="CHECK!", disabled="disabled", onclick="showDiv()" style="width: 100px; border-radius: 5px; background-color: #67896c; height: 30px; border: none;")
+ 
 
-  script.
-    function showDiv() {
-    var enter = $('#takeway').val();
-    if(enter == "Gemini Take Away" || enter == "gemini") {
-    document.getElementById('clues').style.display = "none";
-    }
-    }
+
+
+
+    script.
+      $('#takeway').keyup(function() {
+        if ($('#takeway').val().length > 0) {
+          $('#answer').removeAttr('disabled');
+        }
+        else {
+          $('#answer').attr('disabled', 'disabled');
+        }
+      });
+
+    script.
+      function showDiv() { 
+       if ($('#takeway').val() == 'Gemini' || $('#takeway').val() == 'gemini' || $('#takeway').val() == 'Gemini Take away' ) {
+          document.getElementById('clues').style.display='none';
+        } else {
+          alert('wrong');
+        }       
+      }   
+    

@@ -273,7 +273,7 @@ app.post("/logedin", function (req, res) {
             req.session.regenerate(function () {
 
                 req.session.user = user;
-                req.session.success = res.render('missions');
+                req.session.success = res.render('locations');
                 
             });
         } else {

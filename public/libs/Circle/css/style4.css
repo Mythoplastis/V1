@@ -18,7 +18,18 @@ body{
 	margin: 20px;
 }
 
-
+.leftbar {
+    margin-top: -8%;
+    margin-left: 3%;
+    height: 35%;
+    width: 7%;
+    background-image: url(../images/banner.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-top: 5px;
+    border-color: #4e5247;
+    position: fixed;
+}
 .ch-info-wrap{
 	position: absolute;
 	width: 160px;

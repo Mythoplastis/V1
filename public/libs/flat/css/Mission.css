@@ -7,7 +7,7 @@
 }
 
 #canvas {
-    height: 85%;
+    height: 70%;
     width: 100%;
 }
 
@@ -17,6 +17,7 @@
     background-image: url('../images/slider/alt2.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
 }
 
 .box {
