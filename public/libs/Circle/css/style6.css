@@ -1,6 +1,7 @@
 body{
 	background-image: url(../images/bg-umbrella.jpg);
 	background-size: 100% 100%;
+	overflow: hidden;
 }
 
 .ch-item {
@@ -12,15 +13,76 @@ body{
 	cursor: default;
 }
 
+#question {
+	font-weight: 600; 
+	font-size: 28px; 
+	color: #494a4a; 
+	margin-left: 24%; 
+	margin-top: 6%;
+	text-shadow: 2px 2px #404041;
+}
+#umb1 {
+	display: none; 
+	padding-left: 5px; 
+	border-radius:5px; 
+	margin-right:1%; 
+	margin-left: 39%; 
+	width: 250px; 
+	height: 30px;
+}
+#umb2 {
+	display: none; 
+	padding-left: 5px; 
+	border-radius:5px; 
+	margin-right:1%; 
+	margin-left: 39%; 
+	width: 250px; 
+	height: 30px;
+}
+#umb3 {
+	display: none; 
+	padding-left: 5px; 
+	border-radius:5px; 
+	margin-right:1%; 
+	margin-left: 39%; 
+	width: 250px; 
+	height: 30px;
+}
+
+#submit {
+	margin-left: 41%; 
+	margin-top:1%; 
+	width: 200px; 
+	border-radius: 5px; 
+	background-color: #67896c; 
+	height: 30px; 
+	border: none; 
+	display: none;
+}
+#showclues {
+	width: 30%;
+	color: white; 
+	border-radius: 5px; 
+	background-color: #676f7d; 
+	margin-left: 20%;
+	margin-top: 2%;
+	height: 30px; 
+	border: none; 
+	display:none;
+}
 .break {
-	height: 20%;
+	height: 15%;
+}
+
+.break2 {
+	height:35%;
 }
 .ch-info-wrap, 
 .ch-info{
 	position: absolute;
 	width: 180px;
 	height: 180px;
-	border-radius: 50%;
+	border-radius: 30%;
 	
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
@@ -58,7 +120,7 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
+	border-radius: 30%;
 	background-position: center center;
 	-webkit-transition: all 0.6s ease-in-out;
 	-moz-transition: all 0.6s ease-in-out;

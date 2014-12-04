@@ -43,6 +43,16 @@ var UserSchema = new mongoose.Schema({
 
 var User = mongoose.model('users', UserSchema);
 
+var MissionSchema = new mongoose.Schema({
+        umb: Number,
+        umb1: String,
+        umb2: String,
+        umb3: String,
+        author: String
+});
+
+var Missions = mongoose.model('missions', MissionSchema);
+
 var StorySchema = new mongoose.Schema({
     text: String,
     posted: Date,
@@ -265,7 +275,14 @@ app.get('/new', function (req, res) {
     }
 });
 
+app.get('/circles', function (req, res) {
 
+    if (req.session.user) {
+        res.render('circles');
+    } else {
+        res.redirect('/');
+    }
+});
 app.post("/logedin", function (req, res) {
     authenticate(req.body.emaillog, req.body.passwordlog, function (err, user) {
         if (user) {
@@ -302,6 +319,22 @@ app.post("/new", function(req,res){
         res.render('portfolio');
     });
 });
+
+app.post("/Submitted", function(req,res){
+    var missions = new Missions({
+        umb: req.body.umb,
+        umb1: req.body.umb1,
+        umb2: req.body.umb2,
+        umb3: req.body.umb3,
+        author: req.session.user.username,
+    });
+    missions.save(function (err, story) {
+        if (err) res.json(err);
+        else 
+        res.render('5points', {umb: umb});
+    });
+});
+
 
 app.get('/portfolio', function (req, res) {
 

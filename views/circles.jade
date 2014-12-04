@@ -1,0 +1,22 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Umbrella Point
+    meta(name='description', content='Circle Hover Effects with CSS Transitions')
+    meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
+    meta(name='author', content='Codrops')
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/circles.css')
+    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+    link(href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+  body
+
+      input#umb1.form-control(type='text', name='umb1', placeholder="Word #1", style="margin-top: 40%; position: absolute;")
+      input#umb2.form-control(type='text', name='umb2', placeholder="Word #2", style="margin-top: 42%; position: absolute;")   
+      canvas#c
+      img#lamp(src="libs/Circle/images/bg-umbrella.jpg" style="display:none;")
+
+    script(type='text/javascript', src='assets/js/circles.js')
