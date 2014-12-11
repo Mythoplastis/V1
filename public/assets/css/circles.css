@@ -3,11 +3,19 @@ body {
 	height: 100%;
 	overflow: hidden;
 	background-color: #323232;
+	font-family: mpact, Charcoal, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px #212121, 2px 2px #727272;
 }
 
-canvas {
+canvas{ 
   margin: 0px; 
   padding: 0px; 
-  position: absolute; 
-  background-color: #323232; 
+  width: 100%;
+  position: absolute;
+  height: 95%;
+  background-image: url(libs/Circle/images/words.jpg);
 }
+

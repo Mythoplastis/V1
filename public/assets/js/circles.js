@@ -25,7 +25,7 @@ var h = window.innerHeight;
 //width and height of canvas
 
 c.width = w;
-c.height = 0.83*h;
+c.height = h;
 //setting the width and height for canvas
 
 var mouse = {
@@ -74,11 +74,10 @@ function particle(x, y) {
 
 function draw() {
   requestAnimFrame(draw);
-
   var img=document.getElementById("lamp");
-  var pat=ctx.createPattern(img, "repeat");  
-
+  var pat=ctx.createPattern(img,"repeat");
   ctx.fillStyle = pat;
+  // ctx.fillStyle = 'rgba(52, 52, 53, 0.75)';
   ctx.fillRect(0, 0, c.width, c.height);
   
   for(t = 0; t < particles.length; t++) {
@@ -104,6 +103,7 @@ function draw() {
       p.r = 83;
     }
   }
+  // alert('end');
 }
 
 draw();

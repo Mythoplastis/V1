@@ -38,13 +38,17 @@ var UserSchema = new mongoose.Schema({
     password: String,
     _id: String,
     salt: String,
-    hash: String
+    hash: String,
+    Umb: Boolean,
+    circle: Boolean,
+    tree: Boolean,
+    Books: Boolean,
+    flag: Boolean
 });
 
 var User = mongoose.model('users', UserSchema);
 
 var MissionSchema = new mongoose.Schema({
-        umb: Number,
         umb1: String,
         umb2: String,
         umb3: String,
@@ -241,7 +245,12 @@ app.post("/samples", userExist, function (req, res) {
             job:req.body.job,
             username:req.body.username,
             salt: salt,
-            hash: hash
+            hash: hash,
+            Umb: false,
+            circle: false,
+            tree: false,
+            Books: false,
+            flag: false
         }).save(function (err, newUser) {
             if (err) throw err;
             authenticate(newUser._id, password, function(err, user){
@@ -320,9 +329,15 @@ app.post("/new", function(req,res){
     });
 });
 
-app.post("/Submitted", function(req,res){
+app.post("/Submitted", function(req,res){ 
+    var umbrella = req.session.user.Umb; 
+    var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
+      doc.Umb = true;
+      doc.save();
+    });
+
+    console.log('updated');   
     var missions = new Missions({
-        umb: req.body.umb,
         umb1: req.body.umb1,
         umb2: req.body.umb2,
         umb3: req.body.umb3,
@@ -331,7 +346,7 @@ app.post("/Submitted", function(req,res){
     missions.save(function (err, story) {
         if (err) res.json(err);
         else 
-        res.render('5points', {umb: umb});
+        res.render('5points', {umbrella: umbrella});
     });
 });
 
