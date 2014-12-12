@@ -198,9 +198,10 @@ app.get('/locations', function (req, res) {
 });
 
 app.get('/5points', function (req, res) {
-
+    var umbrella = req.session.user.Umb;
+    var circle = req.session.user.circle;
     if (req.session.user) {
-        res.render('5points');
+        res.render('5points', {umbrella: umbrella, circle: circle});
     } else {
         res.redirect('/');
     }
@@ -284,6 +285,14 @@ app.get('/new', function (req, res) {
     }
 });
 
+app.get('/books', function (req, res) {
+
+    if (req.session.user) {
+        res.render('books');
+    } else {
+        res.redirect('/');
+    }
+});
 app.get('/circles', function (req, res) {
 
     if (req.session.user) {
@@ -330,13 +339,10 @@ app.post("/new", function(req,res){
 });
 
 app.post("/Submitted", function(req,res){ 
-    var umbrella = req.session.user.Umb; 
     var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
       doc.Umb = true;
       doc.save();
     });
-
-    console.log('updated');   
     var missions = new Missions({
         umb1: req.body.umb1,
         umb2: req.body.umb2,
@@ -346,10 +352,17 @@ app.post("/Submitted", function(req,res){
     missions.save(function (err, story) {
         if (err) res.json(err);
         else 
-        res.render('5points', {umbrella: umbrella});
+        res.render('5points');
     });
 });
 
+app.post("/circle-submitted", function(req,res){ 
+    var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
+      doc.circle = true;
+      doc.save();
+        res.redirect('5points');
+    });
+    });
 
 app.get('/portfolio', function (req, res) {
 

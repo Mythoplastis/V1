@@ -15,12 +15,26 @@ head
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
     script.
       function check() {
-        var umb =  !{JSON.stringify(umb)};
-        if umb = "1";
-        alert ('umb');
+        var umbrella = !{JSON.stringify(umbrella)};
+        if (umbrella="true") {
+              document.getElementById('umbmis').style.backgroundImage= "none";
+              document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('info').style.display= "block";
+              document.getElementById('umb').style.display= "none";
+              document.getElementById('umb1').style.display= "none";
+              document.getElementById('umb2').style.display= "none";
+          };
+        var circle = !{JSON.stringify(circle)};
+        if (circle="true") {
+              document.getElementById('circle1').style.backgroundImage= "none";
+              document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('circle3').style.display= "none";
+              document.getElementById('circle4').style.display= "none";
+              document.getElementById('circle6').style.display= "none";
+              document.getElementById('circle5').style.display= "block";
+          };
       }
-      window.onload = check;
-  body
+  body(onload= "check()")
     br
     br
     br
@@ -32,14 +46,15 @@ head
       section.main
         ul.ch-grid
           li
-            .ch-item.ch-img-1
+            .ch-item.ch-img-1#circle1
               .ch-info-wrap
                 .ch-info
-                  .ch-info-front.ch-img-1
+                  .ch-info-front.ch-img-1#circle2
                   .ch-info-back
-                    h3 It's All Circles!
-                    p
-                      a(href='circles') Start Here!
+                    img#circle5(src="libs/Circle/images/circle-logo.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#circle3 It's All Circles!
+                    p#circle4
+                      a#circle6(href='circles') Start Here!
 
           li
             .ch-item.ch-img-2
@@ -49,16 +64,17 @@ head
                   .ch-info-back
                     h3 You Need Books!
                     p
-                      a(href='umbrella') Start Finding books!
+                      a(href='books') Start Finding books!
           li
-            .ch-item.ch-img-3
+            .ch-item.ch-img-3#umbmis
               .ch-info-wrap
                 .ch-info
-                  .ch-info-front.ch-img-3
+                  .ch-info-front.ch-img-3#umbmis2
                   .ch-info-back
-                    h3 Find the Umbrella!
-                    p
-                      a(href='umbrella') Start Here! 
+                    img#info(src="libs/Circle/images/logo-umbrella.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#umb Find the Umbrella!
+                    p#umb1
+                      a#umb2(href='umbrella') Start Here! 
           li
             .ch-item.ch-img-4
               .ch-info-wrap
@@ -69,15 +85,6 @@ head
                     p
                       a(href='umbrella') Find the Tree Logo!
           br
-          li
-            .ch-item.ch-img-4
-              .ch-info-wrap
-                .ch-info
-                  .ch-info-front.ch-img-4
-                  .ch-info-back
-                    h3 It's all Green
-                    p
-                      a(href='umbrella') Find the Tree Logo!
           li
             .ch-item.ch-img-5
               .ch-info-wrap
@@ -96,3 +103,10 @@ head
                     h3 Unlock this point!
                     p
                       a(href='umbrella') Find all the other points
+
+    //- script.
+    //-   function check() {
+    //-     var umbrella = !{JSON.stringify(umbrella)};
+    //-     if (umbrella="true") {
+    //-       alert('umbrella');
+    //-   }.style.display= "none";

@@ -1,4 +1,4 @@
-var partNum = 750;
+var partNum = 1;
 //particle number - change it!
 
 window.requestAnimFrame = (function(){
@@ -29,15 +29,11 @@ c.height = h;
 //setting the width and height for canvas
 
 var mouse = {
-  x: w / 2, 
-  y: h / 2
+  x: w / 2, y: h / 2
 };
 //mouse position
-
 document.addEventListener('mousemove', function(e){ 
-    mouse.x = e.clientX || e.pageX; 
-    mouse.y = e.clientY || e.pageY;
-  
+    mouse.x = e.clientX || e.pageX; mouse.y = e.clientY || e.pageY;
   	istruehover = false;
 }, false);
 
@@ -71,13 +67,12 @@ function particle(x, y) {
   this.color = colors[Math.round(Math.random() * 2)];
   //only random colors of the variables
 }
-
 function draw() {
   requestAnimFrame(draw);
   var img=document.getElementById("lamp");
   var pat=ctx.createPattern(img,"repeat");
   ctx.fillStyle = pat;
-  // ctx.fillStyle = 'rgba(52, 52, 53, 0.75)';
+  // ctx.fillStyle = 'rgba(52, 52, 53, 0.7)';
   ctx.fillRect(0, 0, c.width, c.height);
   
   for(t = 0; t < particles.length; t++) {
@@ -96,23 +91,19 @@ function draw() {
 		dist = Math.sqrt(dx*dx + dy*dy);
 			
   	var change = p.r - dist / 3; 
-    
     p.r -= change / 7.5;
     
     if(p.r > 83) {
       p.r = 83;
     }
   }
-  // alert('end');
 }
-
 draw();
+// function mousemove() {
+//   if(istruehover) {
+//     mouse.x = Math.random() * w;
+//   	mouse.y = Math.random() * h;
+//   }
+// }
 
-function mousemove() {
-  if(istruehover) {
-    mouse.x = Math.random() * w;
-  	mouse.y = Math.random() * h;
-  }
-}
-
-setInterval(mousemove, 1000)
+// setInterval(mousemove, 200)

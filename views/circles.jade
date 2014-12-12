@@ -3,7 +3,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Umbrella Point
+    title Circle Point
     meta(name='description', content='Circle Hover Effects with CSS Transitions')
     meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
     meta(name='author', content='Codrops')
@@ -14,8 +14,82 @@ html(lang='en')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
   body
       canvas#c
-      h2(style="position: absolute; margin-left:10%; position: absolute; color: white;") MOVE YOUR MOUSE; FIND THE LETTERS; PUT THEM TOGETHER; FIND THE LOGO!
-      input#uni.form-control(type='text', name='umb1', placeholder="Word #1", style="position: absolute; height: 4%; width: 25%; margin-top: 40%; margin-left:37%;")
+      h2#title(style="position: absolute; margin-left:4%; color: white; font-size: 36px; font-weight: bold;") MOVE YOUR MOUSE; FIND THE LETTER; NAME THE PLACE USING THOSE LETTERS!
+      h2#ques(style="position: absolute; margin-left:36%; margin-top: 34%; color: white;") Name this Tin-Like Building!
+      input#uni.form-control(type='text', name='uni', placeholder="Name the place!", style="position: absolute; height: 4%; width: 24%; margin-top: 37%; margin-left:37%;")
       img#lamp(src="libs/Circle/images/words.jpg" style="display:none;")
+      input(type="button", class="button", id="answer", value="CHECK!", disabled="disabled", onclick="showDiv()" style="border: none; background-color: #5f6382; position: absolute; height: 4%; margin-top: 39%; margin-left:44%;")
+      //- input#check.umbrel(type="button" class="button", value="GET THE LOGO",  style="border: none; background-color: #5f6382; position: absolute; height: 4%; margin-top: 39%; margin-left:44%;" disabled="disabled")
+      h1#congrat1(style="display:none;")
+        span#congrat(style="display: none; font-size:40px; margin-left:-7%;") CONGRATULATIONS! YOU FOUND THE <span style="color: #efcd06;">CIRCLE</span> LOGO!
+      img#umbrella(src="libs/Circle/images/circle-logo.png" style="display:none; margin-left: 43%; margin-top:3%;")
+      h1#inst(style="display: none; margin-top: 1%; margin-left: -1%; font-weight: bold; text-shadow: 1px 1px #454546; font-family: mpact, Charcoal, sans-serif; font-size:20px;") What Face You Make Seeing University Place Building?!
+      .container
+        .row
+          .col-md-12.col-md-offset-3
+            form#circle.form-horizontal.well(method='POST', action='/circle-submitted')
+              .row(style="margin-left: 25%;")
+                .col-xs-4#pic1(style="float: left; display: none;")
+                  img.img-responsive.img-radio(src='../../libs/Circle/images/happy.png', style="margin-left:15%;")
+                  button.btn.btn-primary.btn-radio(type='button') Happy
+                  input#left-item.hidden(type='checkbox',style="visibility: hidden;", name="circle", value="happy")
+                .col-xs-4#pic2(style="float: left; display: none;")
+                  img.img-responsive.img-radio(src='../../libs/Circle/images/meh.png', style="margin-left:15%;")
+                  button.btn.btn-primary.btn-radio(type='button') Indifferent
+                  input#middle-item(type='checkbox', style="visibility: hidden;", name="circle", value="indif")
+                .col-xs-4#pic3(style="float: left; display: none;")
+                  img.img-responsive.img-radio(src='../../libs/Circle/images/facepalm.png')
+                  button.btn.btn-primary.btn-radio(type='button') Disappointed
+                  input#right-item.hidden(type='checkbox',style="visibility: hidden;", name="circle", value="disappoint")
 
+      button#submit.umbrel(type='submit', style="margin-top: 15%; width: 10%;") GET THE LOGO
+      h1#tweet(style="display: none; margin-left: -1%; margin-top: 4%; font-weight: bold; text-shadow: 1px 1px #454546; font-size:24px;") Tweet Us How Your Pictures Seeing University Place!
+
+    script.
+      $('#uni').keyup(function() {
+        if ($('#uni').val().length > 0) {
+          $('#answer').removeAttr('disabled');
+        }
+        else {
+          $('#answer').attr('disabled', 'disabled');
+        }
+      });    
+
+    script.
+      function showDiv() { 
+       if ($('#uni').val() == 'University Place' || $('#uni').val() == 'university place' || $('#uni').val() == 'uni place' ) {
+          document.getElementById('c').style.display='none';
+          document.getElementById('title').style.display='none';
+          document.getElementById('ques').style.display='none';
+          document.getElementById('uni').style.display='none';
+          document.getElementById('answer').style.display='none';
+          document.getElementById('umbrella').style.display='block';
+          document.getElementById('congrat').style.display='block';
+          document.getElementById('congrat1').style.display='block';
+          document.getElementById('inst').style.display='block';
+          document.getElementById('pic1').style.display='block';
+          document.getElementById('pic2').style.display='block';
+          document.getElementById('pic3').style.display='block';
+          document.getElementById('tweet').style.display='block';
+          document.getElementById('submit').style.display='block';
+
+        } else {
+          alert('wrong');
+        }       
+      }
+    script.
+      $(function () {
+          $('.btn-radio').click(function(e) {
+              $('.btn-radio').not(this).removeClass('active')
+              .siblings('input').prop('checked',false)
+                  .siblings('.img-radio').css('opacity','0.5');
+            $(this).addClass('active')
+                  .siblings('input').prop('checked',true)
+              .siblings('.img-radio').css('opacity','1');
+          });
+      });    
+    script.
+      $('button.umbrel').click( function() {
+      $('form.well').submit();
+      });
     script(type='text/javascript', src='assets/js/circles.js')
