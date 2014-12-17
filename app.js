@@ -187,6 +187,15 @@ app.get('/umbrella', function (req, res) {
         res.redirect('/');
     }
 });
+app.get('/logout', function (req, res) {
+
+    if (req.session.user) {
+        req.session.destroy();
+        res.redirect('/');
+    } else {
+        res.redirect('/');
+    }
+});
 
 app.get('/locations', function (req, res) {
 
@@ -352,7 +361,7 @@ app.post("/Submitted", function(req,res){
     missions.save(function (err, story) {
         if (err) res.json(err);
         else 
-        res.render('5points');
+        res.redirect('5points');
     });
 });
 

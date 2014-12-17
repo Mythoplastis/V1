@@ -1,109 +1,57 @@
-var partNum = 1;
-//particle number - change it!
-
-window.requestAnimFrame = (function(){
-    return window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        function(callback){
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
-
-function between(min, max) {
-  return Math.random() * (max - min) + min;
+function Brush(x,y,size,jitt,maxHeight,color,invert) {
+    this.x = x;
+    this.y = y;
+    this.height = 0;
+    this.size = size;
+    this.jitt = jitt;
+    this.maxHeight = maxHeight;
+    this.color = color;
+    this.invert = invert;
 }
-
-var istruehover = true;
-
-var c = document.getElementById('c');
-var ctx = c.getContext('2d');
-//context and id of canvas
-
-var w = window.innerWidth;
-var h = window.innerHeight;
-//width and height of canvas
-
-c.width = w;
-c.height = h;
-//setting the width and height for canvas
-
-var mouse = {
-  x: w / 2, y: h / 2
-};
-//mouse position
-document.addEventListener('mousemove', function(e){ 
-    mouse.x = e.clientX || e.pageX; mouse.y = e.clientY || e.pageY;
-  	istruehover = false;
-}, false);
-
-document.addEventListener('mouseover', function(){ 
-  	istruehover = false;
-}, false);
-//finding the mouse position
-
-var particles = [];
-for(var x = 0; x < c.width / 80; x++) {
-  for(var y = 0; y < c.height / 80; y++) {
-    particles.push(new particle(x*80, y*80));
-  }
-}
-    
-//the particle function
-function particle(x, y) {
-  this.x = x + 40;
-  this.y = y + 20;
-  //setting the mouse position to the particle x and y
-  
-  this.vx = 0;
-  this.vy = 0;
-  
-  this.r = 40;
-  //random radius
-  
-  var one = 'rgba(84, 88, 88, 0.7)';
-  var two = 'rgba(183, 163, 29, 0.7)';
-  var colors = [one, two];
-  this.color = colors[Math.round(Math.random() * 2)];
-  //only random colors of the variables
-}
-function draw() {
-  requestAnimFrame(draw);
-  var img=document.getElementById("lamp");
-  var pat=ctx.createPattern(img,"repeat");
-  ctx.fillStyle = pat;
-  // ctx.fillStyle = 'rgba(52, 52, 53, 0.7)';
-  ctx.fillRect(0, 0, c.width, c.height);
-  
-  for(t = 0; t < particles.length; t++) {
-    var p = particles[t];
-    
-    ctx.beginPath();
-    ctx.fillStyle = p.color;
-    ctx.arc(p.x, p.y, p.r, Math.PI * 2, false);
-    ctx.fill();
-    //the context of the particle(s)
-    
-    var dist,
-		dx = mouse.x - p.x,
-		dy = mouse.y - p.y;
-	
-		dist = Math.sqrt(dx*dx + dy*dy);
-			
-  	var change = p.r - dist / 3; 
-    p.r -= change / 7.5;
-    
-    if(p.r > 83) {
-      p.r = 83;
+Brush.prototype.grow = function() {
+    if( this.height ++ > this.maxHeight ) {
+        return;
     }
-  }
-}
-draw();
-// function mousemove() {
-//   if(istruehover) {
-//     mouse.x = Math.random() * w;
-//   	mouse.y = Math.random() * h;
-//   }
-// }
+    requestAnimationFrame(this.grow.bind(this));
+    var y = this.invert ? this.maxHeight - this.height : this.height;
+    context.beginPath();
+    context.moveTo(this.x - this.size/2, y);
+    context.lineTo(this.x + this.size/2, y);
+    context.strokeStyle = this.color;
+    context.stroke();
+    context.closePath();
+    this.x += Math.random() * this.jitt - (this.jitt / 2);
+    }
 
-// setInterval(mousemove, 200)
+function itterate() {
+    for( var i = 0; i < 3; i++ ) {
+        if( count >= limit ) return;
+
+        var x = Math.random() * width,
+            y = height,
+            size = Math.random() * 15 + 15,
+            jitt = Math.random() + 16,
+            maxHeight = height;
+        new Brush(x,y,size,jitt,maxHeight,color(count++),Math.random()>0.5).grow();
+    }
+    setTimeout(itterate, Math.random() * 50);
+}
+function color(i) {
+    var r = Math.floor( Math.sin(i) * 127 + 128 );
+    var g = Math.floor( Math.sin(i + 2) * 127 + 128 );
+    var b = Math.floor( Math.sin(i + 3) * 127 + 128 );
+    return 'rgb(' + r + ', ' + g + ',' + b + ')';
+}
+function init() {
+    canvas = document.getElementById('canvas');
+    context = canvas.getContext('2d');
+    height = canvas.height = document.body.offsetHeight;
+    width = canvas.width = document.body.offsetWidth;
+    order= document.getElementById('canvas').style.zIndex="-1";
+    count = 0;
+    limit = 1024;
+    context.globalAlpha = 0.88;
+    itterate();
+}
+var canvas,context,height,width,count,limit;
+setTimeout(init,10);

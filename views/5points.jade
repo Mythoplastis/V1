@@ -16,16 +16,16 @@ head
     script.
       function check() {
         var umbrella = !{JSON.stringify(umbrella)};
-        if (umbrella="true") {
+          if (umbrella == true) {
               document.getElementById('umbmis').style.backgroundImage= "none";
               document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
               document.getElementById('info').style.display= "block";
               document.getElementById('umb').style.display= "none";
               document.getElementById('umb1').style.display= "none";
-              document.getElementById('umb2').style.display= "none";
-          };
+              document.getElementById('umb2').style.display= "none";            
+            } 
         var circle = !{JSON.stringify(circle)};
-        if (circle="true") {
+          if (circle == true) {
               document.getElementById('circle1').style.backgroundImage= "none";
               document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
               document.getElementById('circle3').style.display= "none";
@@ -33,14 +33,9 @@ head
               document.getElementById('circle6').style.display= "none";
               document.getElementById('circle5').style.display= "block";
           };
-      }
+        }
   body(onload= "check()")
-    br
-    br
-    br
-    br
-    br
-    br
+    .break
     .leftbar
     .container
       section.main
@@ -103,6 +98,7 @@ head
                     h3 Unlock this point!
                     p
                       a(href='umbrella') Find all the other points
+      a(href="/logout") GET THE LOGO
 
     //- script.
     //-   function check() {

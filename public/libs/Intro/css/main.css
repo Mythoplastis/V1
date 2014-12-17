@@ -96,7 +96,7 @@ h4{
  }
 
  .topbar:hover {
-    height: 90%;
+    height: 80%;
     background-image: url(../image/tophover2.png);
     background-size: 100% 100%;
     -webkit-transition: 1s; 

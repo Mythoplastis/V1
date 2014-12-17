@@ -1,6 +1,7 @@
 body{
-	background-image: url(../images/bg-points.jpg);
+    background-image: url(../../../assets/img/map-background2.jpg);
 	background-size: 100% 100%;
+	overflow: auto;
 }
 
 .ch-item {
@@ -18,8 +19,12 @@ body{
 	margin: 20px;
 }
 
+.break{
+	height:20%;
+	border: none;
+}
 .leftbar {
-    margin-top: -8%;
+    margin-top: -10%;
     margin-left: 3%;
     height: 35%;
     width: 7%;

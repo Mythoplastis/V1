@@ -1,99 +1,57 @@
-@import url(http://fonts.googleapis.com/css?family=Lobster);
-
-body {
-	width:100%;
-	height: 100%;
-	overflow: hidden;
-  font-family: 'Lobster', cursive;
-	/*font-family: mpact, Charcoal, sans-serif;*/
-  font-weight: bold;
-  font-size: 18px;
-  color: white;
-  text-shadow: 1px 1px #212121, 2px 2px #727272;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-html{
-    background-image: url('../../libs/Circle/images/bg-circle.jpg');
-}
-canvas{ 
-  margin: 0px; 
-  padding: 0px; 
+.mid-bar {
+  height: 30%;
   width: 100%;
+  background-color: #dadada;
+  margin-top: 17%;
   position: absolute;
-  height: 95%;
-  /*background-image: url('../../libs/Circle/images/words.jpg');*/
-}
-#submit {
-  margin-left: 45%; 
-  margin-top:1%; 
-  width: 200px; 
-  border-radius: 5px; 
-  background-color: #c6af28; 
-  height: 30px; 
-  border: none; 
-  display: none;
-}
-#umb1 {
-  display: none; 
-  padding-left: 5px; 
-  border-radius:5px; 
-  margin-right:1%; 
-  margin-left: 39%; 
-  width: 250px; 
-  height: 30px;
-}
-#umb2 {
-  display: none; 
-  padding-left: 5px; 
-  border-radius:5px; 
-  margin-right:1%; 
-  margin-left: 39%; 
-  width: 250px; 
-  height: 30px;
-}
-#umb3 {
-  display: none; 
-  padding-left: 5px; 
-  border-radius:5px; 
-  margin-right:1%; 
-  margin-left: 39%; 
-  width: 250px; 
-  height: 30px;
+  background-image: url('../../libs/circle/images/bg3.jpg');
+  border-style: solid;
+  border-width: 10px 0px 10px 0px;
+  border-color: #504939;
+  padding: 0px;
 }
 
 h1 {
-  margin-left: 5%; 
-  margin-top:5%;
-  color: white ;
-  text-align: center;
-  line-height: 20px;
-  -moz-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
--webkit-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
--o-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
--ms-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
-  /*-----------------------*/
-  text-shadow: 1px 1px #737070, 2px 2px #737070, 3px 3px #88760f, 4px 4px #88760f, 5px 5px #88760f;
-  
+  font-weight: 700;
+  font-style: bold;
+  font-size: 40px;
+  margin-left: 38%;
+  margin-top: 1%;
 }
 
-span:nth-child(3), span:nth-child(7) { 
-font-size: 45px;
+h2 {
+  margin-top: -1.5%;
+  margin-left: 34%;
 }
 
-span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
-  font-family: Lobster;
-  font-size: 50px;
+#answer {
+  margin-left: 37%;
+  margin-top: 35%;
+  height: 40px;
+  width: 25%;
+  position: absolute;
 }
 
-.btn-radio {
-  width: 80%;
-}
-.img-radio {
-  opacity: 0.5;
-  margin-bottom: 5px;
-}
-
-.space-20 {
-    margin-top: 20px;
+#subans {
+  margin-left: 43%;
+  margin-top: 39%;
+  height: 30px;
+  width: 12.5%;
+  position: absolute;
+  border-radius: 5px; 
+  background-color: black; 
+  color: white;
+  border: none;
+  display: none;
 }

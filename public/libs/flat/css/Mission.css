@@ -1,9 +1,8 @@
 .container1 {
     width: 100%;
     height: 100%;
-    background-image: url('../images/slider/alt1.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+/*    background-image: url('../images/slider/alt1.jpg');
+*/    background-repeat: repeat;
 }
 
 #canvas {
@@ -14,9 +13,8 @@
 .container2 {
     width: 100%;
     height: 100%;
-    background-image: url('../images/slider/alt2.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-image: url('../images/slider/bgblue.jpg');
+    background-repeat: repeat;
 
 }
 

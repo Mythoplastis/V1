@@ -9,64 +9,71 @@ html(lang='en')
     meta(name='author', content='Codrops')
     link(rel='shortcut icon', href='../favicon.ico')
     link(rel='stylesheet', type='text/css', href='assets/css/books.css')
-    //- script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
     link(href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
     script(type='text/javascript', src='assets/js/books.js')
   body
       h1#title(style="position: absolute; color: #575656; font-size: 7px; font-weight: bold;") 
         span Try Different Combination Of Switches To See All The Clues!
-    .container
-      .toggle
-        input#M(type='checkbox')
-        span.button
-        span.label M
-      .toggle
-        input#C(type='checkbox')
-        span.button
-        span.label C
-      .toggle
-        input#R(type='checkbox')
-        span.button
-        span.label R
-          //- img#aks(src='../../libs/Circle/images/christie.png', style="margin-top:10%; margin-left: 5%; position: absolute; display:none;")
-          //- img#beyer(src='../../libs/Circle/images/beyer.png', style="margin-top:34%; margin-left: 15%; position: absolute; display:none;")
-          //- img#grad(src='../../libs/Circle/images/grad.png', style="margin-top:10%; margin-left: 70%; position: absolute; display:none;")
-
-          //- .col-md-8(style="margin-left: 20%;")  
-          //-     input#answer.form-control(type="text", placeholder="Just Type the Name of It!")
-          //-     br
-          //-     input(type="button", class="button", id="books", value="CHECK!", disabled="disabled", onclick="showDiv()")
-
-      //- .scene
-      //-   .clouds.parallax(data-offset='90')
-      //-   .trees.parallax(data-offset='30')
-      //-   .grass.parallax(data-offset='20')
-      //-   .buildings.parallax(data-offset='50')
-      //-   .ground
-
-      //- script.cssdeck(src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js')
-
-
-    //- script.
-    //-   $('#M').change(function(){
-    //-         if(this.checked) {
-    //-           document.getElementById('aks').style.display='block';
-    //-         } else {
-    //-           document.getElementById('aks').style.display='none';
-    //-         }
-    //-     });
-    //-   $('#C').change(function(){
-    //-         if(this.checked) {
-    //-           document.getElementById('beyer').style.display='block';
-    //-         } else {
-    //-           document.getElementById('beyer').style.display='none';
-    //-         }
-    //-     });
-    //-   $('#R').change(function(){
-    //-         if(this.checked) {
-    //-           document.getElementById('grad').style.display='block';
-    //-         } else {
-    //-           document.getElementById('grad').style.display='none';
-    //-         }
-    //-     });
+      .container
+        .toggle
+          input#M(type='checkbox')
+          span.button
+          span.label M
+        .toggle
+          input#C(type='checkbox')
+          span.button
+          span.label C
+        .toggle
+          input#R(type='checkbox')
+          span.button
+          span.label R
+      
+      img#aks.animated.fadeInUp(src='../../libs/Circle/images/balloons.png', style="margin-top:7%; margin-left: 10%; position: absolute; display: none;")
+      img#plane.animated.fadeInLeft(src='../../libs/Circle/images/plane.png', style="margin-top:23%; margin-left: 50%; position: absolute; display: none;")
+      img#air.animated.fadeInUp(src='../../libs/Circle/images/airballoon.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
+      img#fire.animated.fadeInUp(src='../../libs/Circle/images/fire.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
+    script.
+      $('#M').change(function(){
+            if(this.checked) {
+              document.getElementById('aks').style.display='block';
+            } else {
+              document.getElementById('aks').style.display='none';
+            }
+        });
+      $('#C').change(function(){
+            if(this.checked) {
+              document.getElementById('plane').style.display='block';
+            } else {
+              document.getElementById('plane').style.display='none';
+            }
+        });
+      $('#R').change(function(){
+            if(this.checked) {
+              document.getElementById('air').style.display='block';
+            } else {
+              document.getElementById('air').style.display='none';
+            }
+        });
+      //- $('#R').change(function(){
+      //-       if(this.checked $$ document.getElementById('M').checked) {
+      //-         document.getElementById('fire').style.display='block';
+      //-       } else {
+      //-         document.getElementById('fire').style.display='none';
+      //-       }
+      //-   });
+      //- $('#R').change(function(){
+      //-       if(this.checked $$ document.getElementById('C').checked) {
+      //-         document.getElementById('air').style.display='block';
+      //-       } else {
+      //-         document.getElementById('air').style.display='none';
+      //-       }
+      //-   });
+      //- $('#M').change(function(){
+      //-       if(this.checked $$ document.getElementById('C').checked) {
+      //-         document.getElementById('air').style.display='block';
+      //-       } else {
+      //-         document.getElementById('air').style.display='none';
+      //-       }
+      //-   });
