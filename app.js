@@ -49,11 +49,16 @@ var UserSchema = new mongoose.Schema({
 var User = mongoose.model('users', UserSchema);
 
 var MissionSchema = new mongoose.Schema({
+        author: String,
         umb1: String,
         umb2: String,
         umb3: String,
-        author: String
+        circle: Number,
+        flag1: String,
+        falg2: String,
+        books: String,
 });
+
 
 var Missions = mongoose.model('missions', MissionSchema);
 
@@ -187,6 +192,14 @@ app.get('/umbrella', function (req, res) {
         res.redirect('/');
     }
 });
+app.get('/circletwo', function (req, res) {
+
+    if (req.session.user) {
+        res.render('circletwo');
+    } else {
+        res.redirect('/');
+    }
+});
 app.get('/logout', function (req, res) {
 
     if (req.session.user) {
@@ -280,6 +293,15 @@ app.get('/samples', function (req, res) {
 
     if (req.session.user) {
         res.render('samples');
+    } else {
+        res.redirect('/');
+    }
+});
+
+app.get('/flag', function (req, res) {
+
+    if (req.session.user) {
+        res.render('flag');
     } else {
         res.redirect('/');
     }

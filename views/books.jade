@@ -16,7 +16,7 @@ html(lang='en')
   body
       h1#title(style="position: absolute; color: #575656; font-size: 7px; font-weight: bold;") 
         span Try Different Combination Of Switches To See All The Clues!
-      .container
+      .container#box
         .toggle
           input#M(type='checkbox')
           span.button
@@ -31,9 +31,17 @@ html(lang='en')
           span.label R
       
       img#aks.animated.fadeInUp(src='../../libs/Circle/images/balloons.png', style="margin-top:7%; margin-left: 10%; position: absolute; display: none;")
-      img#plane.animated.fadeInLeft(src='../../libs/Circle/images/plane.png', style="margin-top:23%; margin-left: 50%; position: absolute; display: none;")
+      img#plane.animated.fadeInLeft(src='../../libs/Circle/images/plane.png', style="margin-top:37%; margin-left: 30%; position: absolute; display: none;")
       img#air.animated.fadeInUp(src='../../libs/Circle/images/airballoon.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
       img#fire.animated.fadeInUp(src='../../libs/Circle/images/fire.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
+      input#Beyer.form-control(type='text', name='beyer', placeholder="Name the Place")
+      h2#titleone
+        span#title(style="font-size: 24px; color: #535353; margin-top: 20%; margin-left: -20%; position:absolute;") Name this one and only vegetated building in the campus!
+      input#check.check(type="button", value="Check your answer!", onclick="showDiv()")
+      h1#2
+        span(style="display:none; margin-left:46%; color: #535353;") WELL DONE! YOU FOUND THE LOGO!
+      img#circle(src="libs/Circle/images/bookslogo.png" style="display:none; margin-left: 42%;")
+      input#submit.submit(type="button", value="SUBMIT", style="display:none;")
     script.
       $('#M').change(function(){
             if(this.checked) {
@@ -56,24 +64,24 @@ html(lang='en')
               document.getElementById('air').style.display='none';
             }
         });
-      //- $('#R').change(function(){
-      //-       if(this.checked $$ document.getElementById('M').checked) {
-      //-         document.getElementById('fire').style.display='block';
-      //-       } else {
-      //-         document.getElementById('fire').style.display='none';
-      //-       }
-      //-   });
-      //- $('#R').change(function(){
-      //-       if(this.checked $$ document.getElementById('C').checked) {
-      //-         document.getElementById('air').style.display='block';
-      //-       } else {
-      //-         document.getElementById('air').style.display='none';
-      //-       }
-      //-   });
-      //- $('#M').change(function(){
-      //-       if(this.checked $$ document.getElementById('C').checked) {
-      //-         document.getElementById('air').style.display='block';
-      //-       } else {
-      //-         document.getElementById('air').style.display='none';
-      //-       }
-      //-   });
+
+    script.
+      function showDiv() { 
+       if ($('#Beyer').val() == 'Beyer Building' || $('#Beyer').val() == 'beyer building' || $('#Beyer').val() == 'beyer' ) {
+          document.getElementById('box').style.display='none';
+          document.getElementById('aks').style.display='none';
+          document.getElementById('Beyer').style.display='none';
+          document.getElementById('plane').style.display='none';
+          document.getElementById('air').style.display='none';
+          document.getElementById('fire').style.display='none';
+          document.getElementById('title').style.display='none';
+          document.getElementById('check').style.display='none';
+          document.getElementById('titleone').style.display='none';
+          document.getElementById('2').style.display='block';
+          document.getElementById('submit').style.display='block';
+          document.getElementById('circle').style.display='block';
+
+        } else {
+          alert('wrong');
+        }       
+      }

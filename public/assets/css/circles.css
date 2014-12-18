@@ -13,7 +13,7 @@ canvas {
   height: 30%;
   width: 100%;
   background-color: #dadada;
-  margin-top: 17%;
+  margin-top: 14%;
   position: absolute;
   background-image: url('../../libs/circle/images/bg3.jpg');
   border-style: solid;
@@ -54,4 +54,25 @@ h2 {
   color: white;
   border: none;
   display: none;
+}
+
+.submit {
+  margin-left: 41%;
+  margin-top: 21%;
+  height: 30px;
+  width: 12.5%;
+  position: absolute;
+  border-radius: 5px; 
+  background-color: black; 
+  color: white;
+  border: none;
+  display: none;
+}
+
+.checkbox{
+   background-image: url('assets/img/emo1.png');
+   margin-left: 2%; 
+   margin-top:2%; 
+   position: absolute; 
+   display: none;
 }

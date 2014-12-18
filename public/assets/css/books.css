@@ -231,3 +231,27 @@ span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
   -webkit-animation-name: fadeInLeft;
           animation-name: fadeInLeft;
 }
+
+#beyer {
+  width:20%;
+  height: 5%;
+  border: solid;
+  border-color: #535353;
+  border-width: 2px;
+  margin-top: 25%;
+  position: absolute;
+  margin-left: -10%;
+  padding: 5px;
+
+}
+
+#check {
+  margin-top:27%; 
+  margin-left: -7%;
+  width: 200px; 
+  border-radius: 5px; 
+  background-color: #67896c; 
+  height: 30px; 
+  border: none; 
+  position: absolute;
+}

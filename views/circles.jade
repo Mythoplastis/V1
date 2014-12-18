@@ -14,34 +14,59 @@ html(lang='en')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
     script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
 
-  body
+  body#body
       canvas#canvas
-      .mid-bar  
-        h1 ARE YOU READY?! 
-        h2 Use the letters and find where the circle point is!
+      .mid-bar#mid  
+        h1#1 ARE YOU READY?! 
+        h2#4 Use the letters and find where the circle point is!
         input.clues(type="button", id="clues", value="CLICK HERE TO REVEAL THE LETTERS!", style="margin-left: 40%; margin-top:1%; border-radius: 5px; background-color: #67896c; height: 40px; border: none;")
+        h2#5(style="display:none; margin-left:23%; margin-top: 2%;") How do you feel when you see the university place or go into it? :)
+      h1#2(style="display:none; margin-left:26%;") WELL DONE! YOU FOUND THE LOGO!
+      img#circle(src="libs/Circle/images/circle-logo.png" style="display:none; margin-left: 42%;")
+      input#submit.submit(type="button", value="SUBMIT")
 
       .tag#letters(style="display: none; margin-top: 3%; margin-left: 1%;")
-        span U
-        span n
-        span i
-        span v
-        span e
-        span r
-        span s
-        span e
-        span -
-        span P
-        span l
-        span a
-        span c
-        span i
-        span t
-        span y
+        span Universe Placity
       .bg
       input#answer.form-control(type='text', placeholder="NAME THIS TIN-SHAPED PLACE IN THE CAMPUS!", style="display: none;")
       input#subans.check(type="button", value="Check!", onclick="showDiv()")
-
+      form#form.form.form-horizontal(style="display:none; margin-top:5%; margin-left: 25%; position: absolute;")
+          fieldset
+              .form-group
+                label.col-md-4.control-label(for='radios') FEELING LIKE:
+                |   
+                br
+                br
+                .col-md-4
+                  .radio
+                    label(for='radios-0')
+                      input#radios-0(type='radio', name='radios', value='1', checked='checked')
+                      |      Seeing an old friend!
+                  |   
+                  .radio
+                    label(for='radios-1')
+                      input#radios-1(type='radio', name='radios', value='2')
+                      |      Hearing your facourite song!
+                  |   
+                  .radio
+                    label(for='radios-2')
+                      input#radios-2(type='radio', name='radios', value='3')
+                      |      The line for the ride I am waiting for isn't too long but it's still long enough to have to wait a little bit!
+                  |   
+                  .radio
+                    label(for='radios-3')
+                      input#radios-3(type='radio', name='radios', value='4')
+                      |      I asked for a tattoo of a "skull and crossbones" and instead got a tattoo of a "seagull and cellphones"!
+                  |   
+                  .radio
+                    label(for='radios-4')
+                      input#radios-4(type='radio', name='radios', value='5')
+                      |      .......
+                  |   
+                  .radio
+                    label(for='radios-5')
+                      input#radios-5(type='radio', name='radios', value='6')
+                      |       ......
 
     script.
       $('.clues').click( function() {
@@ -49,12 +74,26 @@ html(lang='en')
         document.getElementById('clues').style.display='none';
         document.getElementById('answer').style.display='block';
         document.getElementById('subans').style.display='block';
+
       });    
 
     script.
       function showDiv() { 
        if ($('#answer').val() == 'university place' || $('#answer').val() == 'University Place' || $('#answer').val() == 'University place' ) {
-          window.location.href = 'missions'        
+            document.getElementById('canvas').style.display='none';
+            document.getElementById('body').style.backgroundImage='url(assets/img/map-background3.jpg)';
+            document.getElementById('2').style.display='block';
+            document.getElementById('1').style.display='none';
+            document.getElementById('answer').style.display='none';
+            document.getElementById('subans').style.display='none';
+            document.getElementById('letters').style.display='none';
+            document.getElementById('4').style.display='none';
+            document.getElementById('circle').style.display='block';
+            document.getElementById('form').style.display='block';
+            document.getElementById('5').style.display='block';
+            document.getElementById('mid').style.display='none';
+            document.getElementById('submit').style.display= 'block';
+
           } else {
           alert('wrong');
         }       
