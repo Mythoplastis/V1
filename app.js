@@ -298,6 +298,15 @@ app.get('/samples', function (req, res) {
     }
 });
 
+app.get('/point6', function (req, res) {
+
+    if (req.session.user) {
+        res.render('point6');
+    } else {
+        res.redirect('/');
+    }
+});
+
 app.get('/flag', function (req, res) {
 
     if (req.session.user) {

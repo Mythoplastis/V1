@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
 body {
   overflow: hidden;
+  background-image:url(../../libs/Circle/images/bg-flag1.jpg);
 }
 
 @-moz-keyframes glitch {
@@ -525,11 +526,11 @@ body {
   font: 35px "Roboto", helvetica, sans-serif;
   font-font-weight: 100;
   letter-spacing: 0.3em;
-  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=20);
+  /*background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=20);*/
   text-shadow: 2px 0 1px #f6050a, -2px 0 1px #1cf2f2;
-  -moz-animation: noise 0.3s infinite;
-  -webkit-animation: noise 0.3s infinite;
-  animation: noise 0.3s infinite;
+  -moz-animation: noise 6s infinite;
+  -webkit-animation: noise 6s infinite;
+  animation: noise 6s infinite;
 }
 .glitch:before {
   content: "";
@@ -543,17 +544,67 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=40);
-  -moz-animation: bar 0.5s infinite;
-  -webkit-animation: bar 0.5s infinite;
-  animation: bar 0.5s infinite;
+  /*background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=40);*/
+  -moz-animation: bar 6s infinite;
+  -webkit-animation: bar 6s infinite;
+  animation: bar 6s infinite;
 }
 .glitch span {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   z-index: 1;
-  -moz-animation: glitch 3s infinite alternate;
-  -webkit-animation: glitch 3s infinite alternate;
-  animation: glitch 3s infinite alternate;
+  -moz-animation: glitch 6s infinite alternate;
+  -webkit-animation: glitch 6s infinite alternate;
+  animation: glitch 6s infinite alternate;
+}
+
+#umb1 {
+  display: none; 
+  padding-left: 5px; 
+  border-radius:5px; 
+  margin-right:1%; 
+  margin-left: 39%; 
+  width: 250px; 
+  height: 30px;
+}
+#umb2 {
+  display: none; 
+  padding-left: 5px; 
+  border-radius:5px; 
+  margin-right:1%; 
+  margin-left: 39%; 
+  width: 250px; 
+  height: 30px;
+}
+#umb3 {
+  display: none; 
+  padding-left: 5px; 
+  border-radius:5px; 
+  margin-right:1%; 
+  margin-left: 39%; 
+  width: 250px; 
+  height: 30px;
+}
+
+#submit {
+  margin-left: 41%; 
+  margin-top:1%; 
+  width: 200px; 
+  border-radius: 5px; 
+  background-color: #67896c; 
+  height: 30px; 
+  border: none; 
+  display: none;
+}
+#showclues {
+  width: 30%;
+  color: white; 
+  border-radius: 5px; 
+  background-color: #676f7d; 
+  margin-left: 20%;
+  margin-top: 2%;
+  height: 30px; 
+  border: none; 
+  display:none;
 }

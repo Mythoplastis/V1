@@ -1,0 +1,49 @@
+html(lang='en')
+  head
+    title Mythoplastis-Flag Point
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/6.css') 
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.js') 
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.css') 
+
+
+
+  body#body
+    #container
+      img#ballon(src="libs/Circle/images/puzzle1.png")
+      img#ballon1(src="libs/Circle/images/puzzle1.png")
+      img#ballon2(src="libs/Circle/images/puzzle1.png")
+      input#answer.form-control(type='text', placeholder="What Bank Was this place?")
+
+    script.
+
+          $('#ballon').draggable();
+          $('#ballon1').draggable();
+          $('#ballon2').draggable();
+
+          //- $('#canvas').click(function ($event) {
+          //-     var $ballon = $('#ballon');
+
+          //-     $ballon.position({
+          //-         of:$event,
+          //-         within:'#canvas',
+          //-         collision:'fit fit'
+          //-     });
+
+          //- });
+
+          //- $('#draw').click(function () {
+          //-     var $ballon = $('#ballon'),
+          //-         $canvas = $('#canvas');
+          //-     var ballon_x = $ballon.offset().left - $canvas.offset().left,
+          //-         ballon_y = $ballon.offset().top - $canvas.offset().top;
+
+          //-     context.drawImage(ballon, ballon_x, ballon_y);
+
+          //-     $ballon.hide();
+          //-     $(this).attr('disabled', 'disabled');
+          //- });
+      //- });

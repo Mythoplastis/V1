@@ -4,20 +4,57 @@ html(lang='en')
     link(rel='shortcut icon', href='../favicon.ico')
     link(rel='stylesheet', type='text/css', href='assets/css/flag.css')     
     script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
-  body
-    .glitch
+  body#body
+    .glitch#1
         span Here are some clues for you!
-    .glitch(style="margin-top: 7%; font-size: 22px; margin-left: 10%;")
+    .glitch#2(style="margin-top: 7%; font-size: 22px; margin-left: 10%;")
         span Name the place we have hide the logo!
-    .glitch(style="margin-left: -80%; margin-top: -30%;")        
+    .glitch#3(style="margin-left: -80%; margin-top: -30%;")        
         span
           img#foot(src="libs/Circle/images/foot.png")
-    .glitch(style="margin-left: -60%; margin-top: 30%;")        
+    .glitch#4(style="margin-left: -60%; margin-top: 30%;")        
         span
           img#bar(src="libs/Circle/images/bar.png")
-    .glitch(style="margin-left: 60%; margin-top: 30%;")        
+    .glitch#5(style="margin-left: 60%; margin-top: 30%;")        
         span
           img#societies(src="libs/Circle/images/societies.png")
-    .glitch(style="margin-left: 10%; margin-top: -30%;")        
+    .glitch#6(style="margin-left: 10%; margin-top: -30%;")        
         span
           img#biko(src="libs/Circle/images/biko.png")
+    .glitch#7(style="margin-left: 30%; margin-top: 15%;")        
+        span
+        input#takeway.form-control(type="text", placeholder="Just Type the Name of It!", style="padding-left: 5px; margin-right: 1%; border-radius:5px; width: 250px; height: 30px;")
+        input#subans.check(type="button", value="Check!", onclick="showDiv()")
+    h2#inst(style="display: none; margin-left: 36%; margin-top:2%; font-weight: bold; text-shadow: 1px 1px #454546;") CONGRAT! YOU GOT THE LOGO!
+    img#flag(src="libs/Circle/images/logo-flag.png" style="display:none; margin-left: 43%;")
+    h2#insti(style="display: none; margin-left: 18%; font-weight: bold; text-shadow: 1px 1px #454546;") TO GET THE LOGO GIVE US THE THREE WORDS THAT YOU WILL TAG TO THIS PLACE!
+    form.umbrella(method='POST', action='/Submitted')
+      fieldset(style="border:none;")
+        input#umb1.form-control(type='text', name='umb1', placeholder="Word #1")
+        input#umb2.form-control(type='text', name='umb2', placeholder="Word #2")
+        input#umb3.form-control(type='text', name='umb3', placeholder="Word #3")
+        input#submit.umbrel(type='submit', class="button", value="GET THE LOGO")      
+    script.
+      function showDiv() { 
+       if ($('#takeway').val() == 'studient union' || $('#takeway').val() == 'Student Union' || $('#takeway').val() == 'union' ) {
+          document.getElementById('1').style.display='none';
+          document.getElementById('2').style.display='none';
+          document.getElementById('3').style.display='none';
+          document.getElementById('4').style.display='none';
+          document.getElementById('5').style.display='none';
+          document.getElementById('6').style.display='none';
+          document.getElementById('7').style.display='none';
+          document.getElementById('umb1').style.display='block';
+          document.getElementById('umb2').style.display='block';
+          document.getElementById('umb3').style.display='block';
+          document.getElementById('submit').style.display='block';
+          document.getElementById('insti').style.display='block';
+          document.getElementById('inst').style.display='block';
+          document.getElementById('flag').style.display='block';
+          document.getElementById('body').style.backgroundImage='url(libs/Circle/images/flag-bg.jpg)';
+
+
+        } else {
+          alert('wrong');
+        }       
+      }
