@@ -219,15 +219,6 @@ app.get('/locations', function (req, res) {
     }
 });
 
-app.get('/5points', function (req, res) {
-    var umbrella = req.session.user.Umb;
-    var circle = req.session.user.circle;
-    if (req.session.user) {
-        res.render('5points', {umbrella: umbrella, circle: circle});
-    } else {
-        res.redirect('/');
-    }
-});
 
 app.get('/somelocation', function (req, res) {
 
@@ -307,6 +298,14 @@ app.get('/point6', function (req, res) {
     }
 });
 
+app.get('/point7', function (req, res) {
+
+    if (req.session.user) {
+        res.render('point7');
+    } else {
+        res.redirect('/');
+    }
+});
 app.get('/flag', function (req, res) {
 
     if (req.session.user) {
@@ -378,29 +377,35 @@ app.post("/new", function(req,res){
     });
 });
 
-app.post("/Submitted", function(req,res){ 
-    var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
-      doc.Umb = true;
-      doc.save();
-    });
-    var missions = new Missions({
-        umb1: req.body.umb1,
-        umb2: req.body.umb2,
-        umb3: req.body.umb3,
-        author: req.session.user.username,
-    });
-    missions.save(function (err, story) {
-        if (err) res.json(err);
-        else 
-        res.redirect('5points');
-    });
+app.post("/Submitted", function(req, res) {
+    var conditions = mongoose.model('users').findOne({
+            username: req.session.user.username
+        }, function(err, doc) {
+            doc.Umb = true;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+            });
+        }
+    );
+});
+
+
+app.get('/5points', function (req, res) {
+    var umbrella = req.session.user.Umb;
+    var circle = req.session.user.circle;
+    if (req.session.user) {
+        res.render('5points', {umbrella: umbrella, circle: circle});
+    } else {
+        res.redirect('/');
+    }
 });
 
 app.post("/circle-submitted", function(req,res){ 
     var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
       doc.circle = true;
       doc.save();
-        res.redirect('5points');
+        res.render('5points');
     });
     });
 

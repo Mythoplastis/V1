@@ -14,15 +14,18 @@ html(lang='en')
   body#body
     #container
       img#ballon(src="libs/Circle/images/puzzle1.png")
-      img#ballon1(src="libs/Circle/images/puzzle1.png")
-      img#ballon2(src="libs/Circle/images/puzzle1.png")
+      img#ballon1(src="libs/Circle/images/puzzle2.png")
+      img#ballon2(src="libs/Circle/images/puzzle3.png")
+      img#ballon3(src="libs/Circle/images/puzzle4.png")
       input#answer.form-control(type='text', placeholder="What Bank Was this place?")
+      h2#h1 NAME THE PLACE!
 
     script.
 
           $('#ballon').draggable();
           $('#ballon1').draggable();
           $('#ballon2').draggable();
+          $('#ballon3').draggable();
 
           //- $('#canvas').click(function ($event) {
           //-     var $ballon = $('#ballon');

@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url('../../libs/Circle/images/bg.jpg');
+    background-repeat: repeat;
+}
+#canvas {
+    border-style: solid;
+    border-color: black;
+    margin-left: 30%;
+    margin-top: 20vh;
+    position: absolute;
+}
+#background {
+    display: none;
+}
+#ballon {
+    position: absolute;
+    top: 15vh;
+    left: 5%;
+    cursor: move;
+    opacity: 0.5;
+}
+
+#ballon1 {
+    position: absolute;
+    top: 55vh;
+    left: 5%;
+    cursor: move;
+    opacity: 0.5;
+}
+
+#ballon2 {
+    position: absolute;
+    top: 80vh;
+    left: 1%;
+    cursor: move;
+    opacity: 0.5;
+}
+
+#ballon3 {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    cursor: move;
+    opacity: 0.5;
+}
+
+#title {
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    font-weight: 900;
+    margin-left: 3%;
+    margin-top: 3vh;
+    font-style: bold;
+    font-size: 34px;
+    position: absolute;
+}
+
+#subtitle {
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    font-weight: 900;
+    margin-left: 6%;
+    margin-top: 10vh;
+    font-size: 28px;
+    position: absolute;
+}
+
+#draw {
+    margin-left: 75%;
+    margin-top: 85vh;
+    position: absolute;
+    background-color: #3e3e3d;
+    color: white;
+    width: 9%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,9 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
 html{
     width:100%;
     height: 100%;
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     padding: 0;
     position: relative;
     overflow: hidden;
+    font-family: 'Lobster', cursive;
 }
 #container{
     width: 100%;
@@ -45,4 +47,21 @@ body {
     margin-top: 30vh;
     margin-left: 35%;
     position: absolute;
+}
+#ballon3 {
+    margin-top: 28vh;
+    margin-left: 50%;
+    position: absolute;
+}
+
+#h1 {
+    font-family: 'Francois One', sans-serif;
+    text-shadow: 1px 1px #a6a332, 2px 2px #4b442b;
+    text-align: center;
+    font-style: bold;
+    font-weight: 900;
+    margin-top: 63vh;
+    margin-left: 40%;
+    position: absolute;
+    color:#4b442b;
 }

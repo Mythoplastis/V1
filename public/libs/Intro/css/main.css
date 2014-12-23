@@ -1,11 +1,10 @@
-
 html, body {
     height: 100%;
     width: 100%;
 }
 
 body {
-    background-image: url(../image/bg3.jpg);
+    background-image: url(../image/main.jpg);
     background-size: 100% 100%;
     overflow: hidden;
     font-family: Lato;
@@ -40,7 +39,7 @@ h4{
     width: 3px;
 }
 .topbar {
-    height: 9%;
+    height: 9vh;
     width: 80%;
     display: inline-block;
     position: fixed;
@@ -55,12 +54,12 @@ h4{
     height: 1px;
     background-color: none;
     display: block;
-    margin-top: 9%;
+    margin-top: 9vh;
 }
 
 .leftbar {
-    margin-top: 7%;
-    height: 80%;
+    margin-top: 10vh;
+    height: 80vh;
     width: 5%;
     background-image: url(../image/bar.png);
     background-size: 100% 100%;
@@ -68,9 +67,9 @@ h4{
 }
 
 .rightbar{
-    margin-top: 7%;
+    margin-top: 10vh;
     margin-right: 1%;
-    height: 80%;
+    height: 80vh;
     width: 5%;
     background-image: url(../image/rightbar.png);
     background-size: 100% 100%;
@@ -82,7 +81,7 @@ h4{
     background-image: url(../image/barhover2.png);
     background-size: 100% 100%;
     -webkit-transition: 1s; 
-    transition-delay: 0.4s;   
+    transition-delay: 0.1s;   
 
  }
 
@@ -91,16 +90,16 @@ h4{
     background-image: url(../image/righthover.png);
     background-size: 100% 100%;
     -webkit-transition: 1s; 
-    transition-delay: 0.4s;   
+    transition-delay: 0.1s;   
 
  }
 
  .topbar:hover {
-    height: 80%;
+    height: 85vh;
     background-image: url(../image/tophover2.png);
     background-size: 100% 100%;
     -webkit-transition: 1s; 
-    transition-delay: 0.4s;   
+    transition-delay: 0.1s;   
  }
 
 .panel-body {
@@ -127,7 +126,7 @@ label{
 
 input{
     border-radius: 8px;
-    height:4.5%;
+    height:4.5vh;
     width: 250px;
     padding-left: 10px;
     margin-right: 5px;

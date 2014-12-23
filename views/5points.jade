@@ -16,23 +16,24 @@ head
     script.
       function check() {
         var umbrella = !{JSON.stringify(umbrella)};
-          if (umbrella == true) {
-              document.getElementById('umbmis').style.backgroundImage= "none";
-              document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
-              document.getElementById('info').style.display= "block";
-              document.getElementById('umb').style.display= "none";
-              document.getElementById('umb1').style.display= "none";
-              document.getElementById('umb2').style.display= "none";            
-            } 
-        var circle = !{JSON.stringify(circle)};
-          if (circle == true) {
-              document.getElementById('circle1').style.backgroundImage= "none";
-              document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
-              document.getElementById('circle3').style.display= "none";
-              document.getElementById('circle4').style.display= "none";
-              document.getElementById('circle6').style.display= "none";
-              document.getElementById('circle5').style.display= "block";
-          };
+        alert(umbrella);
+        //-   if (umbrella == true) {
+        //-       document.getElementById('umbmis').style.backgroundImage= "none";
+        //-       document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+        //-       document.getElementById('info').style.display= "block";
+        //-       document.getElementById('umb').style.display= "none";
+        //-       document.getElementById('umb1').style.display= "none";
+        //-       document.getElementById('umb2').style.display= "none";            
+        //-     } 
+        //- var circle = !{JSON.stringify(circle)};
+        //-   if (circle == true) {
+        //-       document.getElementById('circle1').style.backgroundImage= "none";
+        //-       document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+        //-       document.getElementById('circle3').style.display= "none";
+        //-       document.getElementById('circle4').style.display= "none";
+        //-       document.getElementById('circle6').style.display= "none";
+        //-       document.getElementById('circle5').style.display= "block";
+        //-   };
         }
   body(onload= "check()")
     .break
@@ -88,7 +89,7 @@ head
                   .ch-info-back
                     h3 Unlock this point!
                     p
-                      a(href='umbrella') Find all the other points
+                      a(href='point6') Find all the other points
           li
             .ch-item.ch-img-6
               .ch-info-wrap
@@ -97,7 +98,7 @@ head
                   .ch-info-back
                     h3 Unlock this point!
                     p
-                      a(href='umbrella') Find all the other points
+                      a(href='point7') Find all the other points
       a(href="/logout") GET THE LOGO
 
     //- script.
