@@ -16,15 +16,14 @@ head
     script.
       function check() {
         var umbrella = !{JSON.stringify(umbrella)};
-        alert(umbrella);
-        //-   if (umbrella == true) {
-        //-       document.getElementById('umbmis').style.backgroundImage= "none";
-        //-       document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
-        //-       document.getElementById('info').style.display= "block";
-        //-       document.getElementById('umb').style.display= "none";
-        //-       document.getElementById('umb1').style.display= "none";
-        //-       document.getElementById('umb2').style.display= "none";            
-        //-     } 
+          if (umbrella == 'true') {
+              document.getElementById('umbmis').style.backgroundImage= "none";
+              document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('info').style.display= "block";
+              document.getElementById('umb').style.display= "none";
+              document.getElementById('umb1').style.display= "none";
+              document.getElementById('umb2').style.display= "none";            
+            }; 
         //- var circle = !{JSON.stringify(circle)};
         //-   if (circle == true) {
         //-       document.getElementById('circle1').style.backgroundImage= "none";

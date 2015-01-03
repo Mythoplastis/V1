@@ -385,6 +385,7 @@ app.post("/Submitted", function(req, res) {
             doc.save(function(err) {
                 if (err) return res.json("error");
                 res.redirect('5points');
+                req.session.user.Umb = 'true';
             });
         }
     );
