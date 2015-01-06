@@ -1,0 +1,46 @@
+body{
+  overflow:hidden;
+  background-image: url('../../../assets/img/intro.jpg');
+  font-family: Lato;
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 8vh;
+}
+
+h2 {
+  color: #363535;
+  font-family: 'Lobster'; 
+  font-size: 4vh;
+  text-shadow: 1px 1px 1px #7d7c7c;
+}
+
+
+h3 {
+  color: #6d4141;
+  font-family: 'Lobster'; 
+  font-size: 4vh;
+  margin-left: 8%;
+}
+
+.container {
+	width: 70%;
+	height: 70vh;
+	margin-left: 5%;
+	margin-top: 23vh;
+	position: absolute;
+  text-align: justify;
+  text-justify: distribute;
+}
+
+.submit {
+  font-family: lato;
+  color: #343233;
+  background-color: #898787;
+  height: 30px;
+  width: 140px;
+  border: none;
+  border-radius: 3px;
+}

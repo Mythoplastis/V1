@@ -28,12 +28,13 @@ html(lang='en')
     h2#inst(style="display: none; margin-left: 36%; margin-top:2%; font-weight: bold; text-shadow: 1px 1px #454546;") CONGRAT! YOU GOT THE LOGO!
     img#flag(src="libs/Circle/images/logo-flag.png" style="display:none; margin-left: 43%;")
     h2#insti(style="display: none; margin-left: 18%; font-weight: bold; text-shadow: 1px 1px #454546;") TO GET THE LOGO GIVE US THE THREE WORDS THAT YOU WILL TAG TO THIS PLACE!
-    form.umbrella(method='POST', action='/Submitted')
+    form.umbrella(method='POST', action='/flagsub')
       fieldset(style="border:none;")
-        input#umb1.form-control(type='text', name='umb1', placeholder="Word #1")
-        input#umb2.form-control(type='text', name='umb2', placeholder="Word #2")
-        input#umb3.form-control(type='text', name='umb3', placeholder="Word #3")
-        input#submit.umbrel(type='submit', class="button", value="GET THE LOGO")      
+        input#flag1.form-control(type='text', name='flag1', placeholder="Word #1")
+        input#flag2.form-control(type='text', name='flag2', placeholder="Word #2")
+        input#flag3.form-control(type='text', name='flag3', placeholder="Word #3")
+        input#submit.umbrel(type='submit', class="button", value="GET THE LOGO", style="display: none;")      
+    
     script.
       function showDiv() { 
        if ($('#takeway').val() == 'studient union' || $('#takeway').val() == 'Student Union' || $('#takeway').val() == 'union' ) {
@@ -44,9 +45,9 @@ html(lang='en')
           document.getElementById('5').style.display='none';
           document.getElementById('6').style.display='none';
           document.getElementById('7').style.display='none';
-          document.getElementById('umb1').style.display='block';
-          document.getElementById('umb2').style.display='block';
-          document.getElementById('umb3').style.display='block';
+          document.getElementById('flag1').style.display='block';
+          document.getElementById('flag2').style.display='block';
+          document.getElementById('flag3').style.display='block';
           document.getElementById('submit').style.display='block';
           document.getElementById('insti').style.display='block';
           document.getElementById('inst').style.display='block';
@@ -58,3 +59,7 @@ html(lang='en')
           alert('wrong');
         }       
       }
+    script.
+      $('button.umbrel').click( function() {
+      $('form.umbrella').submit();
+      });

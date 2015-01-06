@@ -559,7 +559,7 @@ body {
   animation: glitch 6s infinite alternate;
 }
 
-#umb1 {
+#flag1 {
   display: none; 
   padding-left: 5px; 
   border-radius:5px; 
@@ -568,7 +568,7 @@ body {
   width: 250px; 
   height: 30px;
 }
-#umb2 {
+#flag2 {
   display: none; 
   padding-left: 5px; 
   border-radius:5px; 
@@ -577,7 +577,7 @@ body {
   width: 250px; 
   height: 30px;
 }
-#umb3 {
+#flag3 {
   display: none; 
   padding-left: 5px; 
   border-radius:5px; 

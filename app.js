@@ -48,20 +48,22 @@ var UserSchema = new mongoose.Schema({
 
 var User = mongoose.model('users', UserSchema);
 
+// Missions database structure
 var MissionSchema = new mongoose.Schema({
         author: String,
         umb1: String,
         umb2: String,
         umb3: String,
-        circle: Number,
+        circle: String,
         flag1: String,
         falg2: String,
-        books: String,
+        falg3: String,
+        books: String
 });
-
-
 var Missions = mongoose.model('missions', MissionSchema);
 
+
+// stories database structure
 var StorySchema = new mongoose.Schema({
     text: String,
     posted: Date,
@@ -219,6 +221,15 @@ app.get('/locations', function (req, res) {
     }
 });
 
+app.get('/introduction', function (req, res) {
+
+    if (req.session.user) {
+        res.render('introduction');
+    } else {
+        res.redirect('/');
+    }
+});
+
 
 app.get('/somelocation', function (req, res) {
 
@@ -271,7 +282,7 @@ app.post("/samples", userExist, function (req, res) {
                 if(user){
                     req.session.regenerate(function(){
                         req.session.user = user;
-                        res.render('missions');
+                        res.redirect('introduction');
  
                     });
                 }
@@ -391,24 +402,39 @@ app.post("/Submitted", function(req, res) {
     );
 });
 
+app.post("/misst", function(req,res){
+    var missions = new Missions({
+        author: req.session.user.username,
+        umb1: req.body.umb1,
+        umb2: req.body.umb2,
+        umb3: req.body.umb3,
+        circle: req.body.circle,
+        flag1: req.body.flag1,
+        flag2: req.body.flag2,
+        flag3: req.body.flag3,
+        books: req.body.books
+    });
+
+    missions.save(function (err, missions) {
+        if (err) res.json(err);
+        //res.end('Registration '+user.username +' Ok!');
+        else 
+          res.redirect('locations');
+          console.log("missions started!");    
+    });
+});
 
 app.get('/5points', function (req, res) {
     var umbrella = req.session.user.Umb;
     var circle = req.session.user.circle;
+    var books = req.session.user.books;
+    var flag = req.session.user.flag;
     if (req.session.user) {
-        res.render('5points', {umbrella: umbrella, circle: circle});
+        res.render('5points', {umbrella: umbrella, circle: circle, books: books, flag: flag});
     } else {
         res.redirect('/');
     }
 });
-
-app.post("/circle-submitted", function(req,res){ 
-    var conditions = mongoose.model('users').findOne({username: req.session.user.username}, function (err, doc){
-      doc.circle = true;
-      doc.save();
-        res.render('5points');
-    });
-    });
 
 app.get('/portfolio', function (req, res) {
 
@@ -428,6 +454,83 @@ app.get('/missions', function (req, res) {
     }
 });
 
+app.post("/Circlesub", function(req, res) {
+    var conditions = mongoose.model('users').findOne({
+            username: req.session.user.username
+        }, function(err, doc) {
+            doc.circle = true;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                req.session.user.circle = 'true';
+                console.log('submitted');
+            });
+        }
+    );
+    var condition = mongoose.model('missions').findOne({
+            author: req.session.user.username
+        }, function(err, doc) {
+            doc.circle = req.body.radios;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+                console.log('saved!');
+            });
+        }
+    );
+});
+
+app.post("/Booksub", function(req, res) {
+    var conditions = mongoose.model('users').findOne({
+            username: req.session.user.username
+        }, function(err, doc) {
+            doc.books = true;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                req.session.user.books = 'true';
+                console.log('saved');
+            });
+        }
+    );
+    var condition = mongoose.model('missions').findOne({
+            author: req.session.user.username
+        }, function(err, doc) {
+            doc.books = req.body.radios;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+                console.log('saved!');
+            });
+        }
+    );
+});
+
+
+app.post("/flagsub", function(req, res) {
+    var conditions = mongoose.model('users').findOne({
+            username: req.session.user.username
+        }, function(err, doc) {
+            doc.flag = true;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                req.session.user.flag = 'true';
+                console.log('saved');
+            });
+        }
+    );
+    var condition = mongoose.model('missions').findOne({
+            author: req.session.user.username
+        }, function(err, doc) {
+            doc.flag1 = req.body.flag1;
+            doc.flag2 = req.body.flag2;
+            doc.flag3 = req.body.flag3;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+                console.log('saved!');
+            });
+        }
+    );
+});
 /*
 app.get('/ViewMode', function (req, res) {
 

@@ -25,7 +25,7 @@ head
     .container
       .row.mt
           h1(style="color: #3b3b39; font-family: Georgia, serif; font-size: 28px; font-weight: bold; margin-left: 1%; text-align: center;") THERE ARE PLENTLY OF THINGS YOU CAN DO HERE!
-          h1(style="color: #3b3b39; font-family: Georgia, serif; font-size: 20px; margin-left: 1%; text-align: center;") Start With Our Missions or Tell Us Your Stories and Help Us Define Our Missions! Wanna Try Both?! No Worries You Can Always Come Back Here!        
+          h1(style="color: #3b3b39; font-family: Georgia, serif; font-size: 20px; margin-left: 1%; text-align: center;") Start With Our Missions or Tell Us Your Stories! Want to Try Both?! No Worries You Can Always Come Back Here!        
             br
             br
 
@@ -37,8 +37,7 @@ head
         br
         br
         .col-md-12
-          button(class= 'mission' style="background-image: url(../../../libs/flat/images/slider/button2.jpg);")
-            a(href='/portfolio') WE NEED YOUR STORIES              
+          button.stories(class= 'mission' style="background-image: url(../../../libs/flat/images/slider/button2.jpg);")
         br
 
 
@@ -70,5 +69,9 @@ head
       });
     script.
       $('button.longmission').click(function() {
+      window.location.href = '/locations';
+      });
+    script.
+      $('button.stories').click(function() {
       window.location.href = '/new';
       });

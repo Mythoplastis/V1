@@ -255,3 +255,21 @@ span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
   border: none; 
   position: absolute;
 }
+
+fieldset {
+  margin-top: -8vh;
+  margin-left: -15%;
+  border: none;
+  text-align: left;
+}
+
+.submit {
+  margin-top:28vh; 
+  margin-left: 60%;
+  width: 200px; 
+  border-radius: 5px; 
+  background-color: #67896c; 
+  height: 30px; 
+  border: none; 
+  position: absolute;
+}

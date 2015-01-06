@@ -138,4 +138,15 @@ a.expand {
   border-radius: 30px;
 }
 
-
+.leftbar {
+    margin-top: 30%;
+    margin-left: 40%;
+    height: 35%;
+    width: 7%;
+    background-image: url(../../images/banner.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-top: 5px;
+    border-color: #4e5247;
+    position: fixed;
+}
