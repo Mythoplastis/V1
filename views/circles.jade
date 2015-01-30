@@ -1,87 +1,117 @@
 html(lang='en')
   head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Circle Point
-    meta(name='description', content='Circle Hover Effects with CSS Transitions')
-    meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
-    meta(name='author', content='Codrops')
+    title Mythoplastis-Flag Point
     link(rel='shortcut icon', href='../favicon.ico')
-    link(rel='stylesheet', type='text/css', href='assets/css/circles.css')
-    link(rel='stylesheet', type='text/css', href='assets/css/unstable-font.css')
-    link(href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
-    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+    link(rel='stylesheet', type='text/css', href='assets/css/circle2.css') 
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.js') 
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.css') 
+
+
 
   body#body
-      canvas#canvas
-      .mid-bar#mid  
-        h1#1 ARE YOU READY?! 
-        h2#4 Use the letters and find where the circle point is!
-        input.clues(type="button", id="clues", value="CLICK HERE TO REVEAL THE LETTERS!", style="margin-left: 40%; margin-top:1%; border-radius: 5px; background-color: #67896c; height: 40px; border: none;")
-        h2#5(style="display:none; margin-left:23%; margin-top: 2%;") How do you feel when you see the university place or go into it? :)
-      h1#2(style="display:none; margin-left:26%;") WELL DONE! YOU FOUND THE LOGO!
-      img#circle(src="libs/Circle/images/circle-logo.png" style="display:none; margin-left: 42%;")
+    #container
+      img#piece(src="libs/Circle/images/1.png")
+      img#piece1(src="libs/Circle/images/4.png")
+      img#piece2(src="libs/Circle/images/20.png")
+      img#piece3(src="libs/Circle/images/piece4.png")
+      img#piece4(src="libs/Circle/images/2.png")
+      img#piece5(src="libs/Circle/images/piece4.png")
+      img#piece6(src="libs/Circle/images/14.png")
+      img#piece7(src="libs/Circle/images/piece2.png")
+      img#piece8(src="libs/Circle/images/3.png")
+      img#piece9(src="libs/Circle/images/15.png")
+      img#piece10(src="libs/Circle/images/piece5.png")
+      img#piece11(src="libs/Circle/images/13.png")
+      img#piece12(src="libs/Circle/images/piece3.png")
+      img#piece13(src="libs/Circle/images/5.png")
+      img#piece14(src="libs/Circle/images/piece2.png")
+      img#piece15(src="libs/Circle/images/12.png")
+      img#piece16(src="libs/Circle/images/19-1.png")
+      img#piece17(src="libs/Circle/images/piece5.png")
+      img#piece18(src="libs/Circle/images/6.png")
+      img#piece19(src="libs/Circle/images/piece3.png")
+      img#piece20(src="libs/Circle/images/11.png")
+      img#piece21(src="libs/Circle/images/18.png")
+      img#piece22(src="libs/Circle/images/piece1.png")
+      img#piece23(src="libs/Circle/images/7.png")
+      img#piece24(src="libs/Circle/images/piece4.png")
+      img#piece25(src="libs/Circle/images/10.png")
+      img#piece26(src="libs/Circle/images/piece2.png")
+      img#piece27(src="libs/Circle/images/17.png")
+      img#piece28(src="libs/Circle/images/8.png")
+      img#piece29(src="libs/Circle/images/piece5.png")
+      img#piece30(src="libs/Circle/images/9.png")
+      img#piece31(src="libs/Circle/images/piece4.png")
+      img#piece32(src="libs/Circle/images/16.png")
+      img#piece33(src="libs/Circle/images/piece4.png")
+      img#piece34(src="libs/Circle/images/piece2.png")
+      img#piece35(src="libs/Circle/images/piece3.png")
+      img#piece36(src="libs/Circle/images/piece4.png")
+      img#piece37(src="libs/Circle/images/piece1.png")
+      img#piece38(src="libs/Circle/images/piece2.png")
 
-      .tag#letters(style="display: none; margin-top: 3%; margin-left: 1%;")
-        span Universe Placity
-      .bg
-      input#answer.form-control(type='text', placeholder="NAME THIS TIN-SHAPED PLACE IN THE CAMPUS!", style="display: none;")
       input#subans.check(type="button", value="Check!", onclick="showDiv()")
-      form#form.circle(method='POST', action='/Circlesub', style="display:none;")
-          fieldset
-              .form-group
-                input#radios-0(type='radio', name='radios', value='happy', checked='checked')
-                |      Seeing an old friend!
-                br
-                input#radios-1(type='radio', name='radios', value='indifference')
-                |      Hearing your facourite song!
-                br
-                input#radios-2(type='radio', name='radios', value='sad')
-                |      The line for the ride I am waiting for isn't too long but it's still long enough to have to wait a little bit!
-                br
-                input#radios-3(type='radio', name='radios', value='awful')
-                |      I asked for a tattoo of a "skull and crossbones" and instead got a tattoo of a "seagull and cellphones"!
-                br
-          input#submit.circ(type='submit', class="button", value="GET THE LOGO")
 
- 
+      input#answer.form-control(type='text', placeholder="The Owner")
+      h2#h1 WHO IS THE OWNER OF THIS PLACE NOW?!
 
     script.
-      $('.clues').click( function() {
-        document.getElementById('letters').style.display='block';
-        document.getElementById('clues').style.display='none';
-        document.getElementById('answer').style.display='block';
-        document.getElementById('subans').style.display='block';
-
-      });    
+      
+      $('#piece').draggable();
+      $('#piece1').draggable();
+      $('#piece2').draggable();
+      $('#piece3').draggable();
+      $('#piece4').draggable();
+      $('#piece5').draggable();
+      $('#piece6').draggable();
+      $('#piece7').draggable();
+      $('#piece8').draggable();
+      $('#piece9').draggable();
+      $('#piece10').draggable();
+      $('#piece11').draggable();
+      $('#piece12').draggable();
+      $('#piece13').draggable(); 
+      $('#piece14').draggable();
+      $('#piece15').draggable();
+      $('#piece16').draggable();
+      $('#piece17').draggable();
+      $('#piece18').draggable();
+      $('#piece19').draggable();
+      $('#piece20').draggable();    
+      $('#piece21').draggable();    
+      $('#piece22').draggable();    
+      $('#piece23').draggable();        
+      $('#piece24').draggable();        
+      $('#piece25').draggable();        
+      $('#piece26').draggable();        
+      $('#piece27').draggable();        
+      $('#piece28').draggable();        
+      $('#piece29').draggable();        
+      $('#piece30').draggable();      
+      $('#piece31').draggable();        
+      $('#piece32').draggable();          
+      $('#piece33').draggable();    
+      $('#piece34').draggable();    
+      $('#piece35').draggable();        
+      $('#piece36').draggable();        
+      $('#piece37').draggable();        
+      $('#piece38').draggable();        
+      $('#piece39').draggable();        
+      $('#piece40').draggable();        
+      $('#piece41').draggable();        
+      $('#piece42').draggable();      
+      $('#piece43').draggable();        
+      $('#piece44').draggable();        
 
     script.
       function showDiv() { 
-       if ($('#answer').val() == 'university place' || $('#answer').val() == 'University Place' || $('#answer').val() == 'University place' ) {
-            document.getElementById('canvas').style.display='none';
-            document.getElementById('body').style.backgroundImage='url(assets/img/map-background3.jpg)';
-            document.getElementById('2').style.display='block';
-            document.getElementById('1').style.display='none';
-            document.getElementById('answer').style.display='none';
-            document.getElementById('subans').style.display='none';
-            document.getElementById('letters').style.display='none';
-            document.getElementById('4').style.display='none';
-            document.getElementById('circle').style.display='block';
-            document.getElementById('form').style.display='block';
-            document.getElementById('5').style.display='block';
-            document.getElementById('mid').style.display='none';
-            document.getElementById('submit').style.display= 'block';
+       if ($('#answer').val() == 'RBS' || $('#answer').val() == 'rbs' || $('#answer').val() == 'rbs bank' || $('#answer').val() == 'RBS bank' ) {
+            window.location = "circletwo";
 
           } else {
           alert('wrong');
         }       
       }
-    script.
-      $('button.circ').click( function() {
-      $('form.circle').submit();
-      });
-
-    script(type='text/javascript', src='assets/js/circles.js')    
-    script(src='libs/flat/js/jquery.js')

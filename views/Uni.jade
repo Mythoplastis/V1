@@ -1,0 +1,58 @@
+html(lang='en')
+  head
+    title Mythoplastis-Flag Point
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/uni.css') 
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+
+
+
+  body#body
+    #container
+      img#piece.shake(src="libs/Circle/images/tin-can.png")
+      img#piece1.shake(src="libs/Circle/images/tin-can.png")
+      img#piece2.shake(src="libs/Circle/images/tin-can2.png", data-toggle="modal", data-target="#myModal")
+      img#piece3.shake(src="libs/Circle/images/tin-can.png")
+      img#piece4.shake(src="libs/Circle/images/tin-can.png")
+      img#piece5.shake(src="libs/Circle/images/tin-can2.png")
+      img#piece6.shake(src="libs/Circle/images/tin-can.png")
+      img#piece7.shake(src="libs/Circle/images/tin-can.png", data-toggle="modal", data-target="#myModal4")
+      img#piece8.shake(src="libs/Circle/images/tin-can.png", data-toggle="modal", data-target="#myModal3")
+      img#piece9.shake(src="libs/Circle/images/tin-can2.png")
+      img#piece10.shake(src="libs/Circle/images/tin-can.png")
+      img#piece11.shake(src="libs/Circle/images/tin-can.png", data-toggle="modal", data-target="#myModal2")
+      img#piece12.shake(src="libs/Circle/images/tin-can2.png")
+
+
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-body1       
+                button.btn.btn-primary(type='button') Save changes
+     
+    #myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-body2       
+                button.btn.btn-primary(type='button') Save changes
+    #myModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-body2       
+                button.btn.btn-primary(type='button') Save changes
+    #myModal4.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-dialog
+            .modal-content
+              .modal-body2       
+                button.btn.btn-primary(type='button') Save changes
+            
+
+
+      //- input#subans.check(type="button", value="Check!", onclick="showDiv()")
+
+      //- input#answer.form-control(type='text', placeholder="The Owner")
+      //- h2#h1 WHO IS THE OWNER OF THIS PLACE NOW?!
+
+

@@ -221,6 +221,14 @@ app.get('/locations', function (req, res) {
     }
 });
 
+app.get('/Uni', function (req, res) {
+
+    if (req.session.user) {
+        res.render('Uni');
+    } else {
+        res.redirect('/');
+    }
+});
 app.get('/introduction', function (req, res) {
 
     if (req.session.user) {
@@ -454,6 +462,14 @@ app.get('/missions', function (req, res) {
     }
 });
 
+app.get('/circletwo', function (req, res) {
+
+    if (req.session.user) {
+        res.render('circletwo');
+    } else {
+        res.redirect('/');
+    }
+});
 app.post("/Circlesub", function(req, res) {
     var conditions = mongoose.model('users').findOne({
             username: req.session.user.username

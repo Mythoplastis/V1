@@ -73,6 +73,7 @@ head
         var umbrella = !{JSON.stringify(umbrella)};               
           if (flag == 'true' || flag == true && books == 'true' || books == true && circle == 'true' || circle == true && umbrella == 'true' || umbrella == true) {
               document.getElementById('5').style.opacity= "1";
+              $('.ch-img-5').css("background-image", "url('libs/circle/images/unlocked.jpg');")              
           };
       };
   body(onload= "check4(); check(); check2(); check3(); check5()")
@@ -90,7 +91,7 @@ head
                     img#circle5(src="libs/Circle/images/circle-logo.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
                     h3#circle3 It's All Circles!
                     p#circle4
-                      a#circle6(href='circles') Start Here!
+                      a#circle6(href='Uni') Start Here!
 
           li
             .ch-item.ch-img-2#books1
@@ -131,9 +132,9 @@ head
                   .ch-info-back
                     h3 Unlock this point!
                     p
-                      a(href='point6') Find all the other points
+                      a(href='circles') Find all the other points
           li
-            .ch-item.ch-img-6
+            .ch-item.ch-img-6#6
               .ch-info-wrap
                 .ch-info
                   .ch-info-front.ch-img-6

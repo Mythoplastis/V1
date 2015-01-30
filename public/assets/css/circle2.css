@@ -1,0 +1,309 @@
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
+html{
+    width:100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width:100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Lobster', cursive;
+}
+#container{
+    width: 100%;
+    height: 100%;
+    background-image:url(../../libs/Circle/images/Circle-background.jpg);
+    background-size: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+#answer {
+    margin-left: 38%;
+    margin-top: 85vh;
+    width: 20%;
+    height: 30px;
+    position: absolute;
+}
+
+#piece {
+    margin-top: 40vh;
+    margin-left: 10%;
+    position: absolute;
+}
+#piece1 {
+    margin-top: 43vh;
+    margin-left: 11%;
+    position: absolute;
+}
+#piece2 {
+    margin-top: 37vh;
+    margin-left: 13%;
+    position: absolute;
+}
+#piece3 {
+    margin-top: 45vh;
+    margin-left: 10%;
+    position: absolute;
+}
+
+#piece4 {
+    margin-top: 42vh;
+    margin-left: 13%;
+    position: absolute;
+}
+
+#piece5 {
+    margin-top: 37vh;
+    margin-left: 7%;
+    position: absolute;
+}
+
+#piece6 {
+    margin-top: 45vh;
+    margin-left: 7%;
+    position: absolute;
+}
+
+#piece7 {
+    margin-top: 37vh;
+    margin-left: 5%;
+    position: absolute;
+}
+
+#piece8 {
+    margin-top: 36vh;
+    margin-left: 8%;
+    position: absolute;
+}
+
+#piece9 {
+    margin-top: 30vh;
+    margin-left: 7%;
+    position: absolute;
+}
+
+#piece10 {
+    margin-top: 50vh;
+    margin-left: 5%;
+    position: absolute;
+}
+
+#piece11 {
+    margin-top: 51vh;
+    margin-left: 10%;
+    position: absolute;
+}
+
+#piece12 {
+    margin-top: 37vh;
+    margin-left: 7%;
+    position: absolute;
+}
+
+#piece13 {
+    margin-top: 40vh;
+    margin-left: 90%;
+    position: absolute;
+}
+#piece14 {
+    margin-top: 43vh;
+    margin-left: 89%;
+    position: absolute;
+}
+#piece15 {
+    margin-top: 37vh;
+    margin-left: 80%;
+    position: absolute;
+}
+#piece16 {
+    margin-top: 45vh;
+    margin-left: 90%;
+    position: absolute;
+}
+
+#piece17 {
+    margin-top: 42vh;
+    margin-left: 87%;
+    position: absolute;
+}
+
+#piece18 {
+    margin-top: 37vh;
+    margin-left: 81%;
+    position: absolute;
+}
+
+#piece19 {
+    margin-top: 45vh;
+    margin-left: 83%;
+    position: absolute;
+}
+
+#piece20 {
+    margin-top: 37vh;
+    margin-left: 90%;
+    position: absolute;
+}
+
+#piece21 {
+    margin-top: 36vh;
+    margin-left: 88%;
+    position: absolute;
+}
+
+#piece22 {
+    margin-top: 30vh;
+    margin-left: 87%;
+    position: absolute;
+}
+
+#piece23 {
+    margin-top: 50vh;
+    margin-left: 88%;
+    position: absolute;
+}
+
+#piece24 {
+    margin-top: 51vh;
+    margin-left: 83%;
+    position: absolute;
+}
+
+#piece25 {
+    margin-top: 37vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece26 {
+    margin-top: 42vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece27 {
+    margin-top: 32vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece28 {
+    margin-top: 35vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece29 {
+    margin-top: 37vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece30 {
+    margin-top: 40vh;
+    margin-left: 85%;
+    position: absolute;
+}
+
+#piece31 {
+    margin-top: 30vh;
+    margin-left: 90%;
+    position: absolute;
+}
+
+#piece32 {
+    margin-top: 42vh;
+    margin-left: 80%;
+    position: absolute;
+}
+
+#piece33 {
+    margin-top: 42vh;
+    margin-left: 15%;
+    position: absolute;
+}
+#piece34 {
+    margin-top: 37vh;
+    margin-left: 85%;
+    position: absolute;
+}
+#piece35 {
+    margin-top: 45vh;
+    margin-left: 5%;
+    position: absolute;
+}
+#piece36 {
+    margin-top: 42vh;
+    margin-left: 10%;
+    position: absolute;
+}
+#piece37 {
+    margin-top: 40vh;
+    margin-left: 80%;
+    position: absolute;
+}
+#piece38 {
+    margin-top: 36vh;
+    margin-left: 80%;
+    position: absolute;
+}
+
+#subans {
+    border-radius: 5px;
+    margin-left: 43%;
+    margin-top: 91vh;
+    position: absolute;
+    width: 10%;
+    height: 30px;
+    background-color: #4e4e4f;
+    color: white;
+    border: none;
+}
+
+#h1 {
+    font-family: 'Francois One', sans-serif;
+    text-shadow: 1px 1px #686868, 2px 2px #686868;
+    text-align: center;
+    font-style: bold;
+    font-weight: 900;
+    margin-top: 77vh;
+    margin-left: 30%;
+    position: absolute;
+    color:#252524;
+}
+
+h2 {
+    font-family: 'Francois One', sans-serif;
+    text-shadow: 1px 1px #686868, 2px 2px #686868;
+    text-align: center;
+    font-style: bold;
+    font-weight: 900;
+    position: absolute;
+    color:#252524;
+}
+
+#submit {
+  margin-left: 41%;
+  margin-top: 21%;
+  height: 30px;
+  width: 12.5%;
+  position: absolute;
+  border-radius: 5px; 
+  background-color: black; 
+  color: white;
+  border: none;
+  display: none;
+}
+
+.circle {
+    margin-top: 15vh;
+    margin-left: 26%;
+}
