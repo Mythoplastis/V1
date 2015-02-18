@@ -1,109 +1,105 @@
-html(lang='en')
+html
   head
     meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Books Point
-    meta(name='description', content='Clues to find books point')
-    meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
-    meta(name='author', content='Codrops')
-    link(rel='shortcut icon', href='../favicon.ico')
-    link(rel='stylesheet', type='text/css', href='assets/css/books.css')
-    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
-    link(href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    link(rel='stylesheet', href='assets/css/books.css')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
-    script(type='text/javascript', src='assets/js/books.js')
+
   body
-      h1#title(style="position: absolute; color: #575656; font-size: 7px; font-weight: bold;") 
-        span Try Different Combination Of Switches To See All The Clues!
-      .container#box
-        .toggle
-          input#M(type='checkbox')
-          span.button
-          span.label M
-        .toggle
-          input#C(type='checkbox')
-          span.button
-          span.label C
-        .toggle
-          input#R(type='checkbox')
-          span.button
-          span.label R
-      
-      img#aks.animated.fadeInUp(src='../../libs/Circle/images/balloons.png', style="margin-top:7%; margin-left: 10%; position: absolute; display: none;")
-      img#plane.animated.fadeInLeft(src='../../libs/Circle/images/plane.png', style="margin-top:37%; margin-left: 30%; position: absolute; display: none;")
-      img#air.animated.fadeInUp(src='../../libs/Circle/images/airballoon.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
-      img#fire.animated.fadeInUp(src='../../libs/Circle/images/fire.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
-      input#Beyer.form-control(type='text', name='beyer', placeholder="Name the Place")
-      h2#titleone
-        span#title(style="font-size: 24px; color: #535353; margin-top: 20%; margin-left: -20%; position:absolute;") Name this one and only vegetated building in the campus!
-      input#check.check(type="button", value="Check your answer!", onclick="showDiv()")
-      h1#2
-        span#3(style="display:none; margin-left:-25%; color: #535353;") WELL DONE! YOU FOUND THE LOGO AND THE PIECE OF PUZZLE!
-      img#circle(src="libs/Circle/images/bookslogo.png" style="display:none; margin-left: 42%;")
-      //- img#puzzle(src="libs/Circle/images/bookslogo.png" style="display:none; margin-left: 42%;") --- this would be the image of the puzzle piece for this one!
-      form#form.books(method='POST', action='/Booksub', style="display:none; margin-left:30%; margin-top: 10vh;")
-          fieldset
-              .form-group
-                input#radios-0(type='radio', name='radios', value='happy', checked='checked')
-                |      Seeing an old friend!
-                br
-                input#radios-1(type='radio', name='radios', value='indifference')
-                |      Hearing your facourite song!
-                br
-                input#radios-2(type='radio', name='radios', value='sad')
-                |      The line for the ride I am waiting for isn't too long but it's still long enough to have to wait a little bit!
-                br
-                input#radios-3(type='radio', name='radios', value='awful')
-                |      I asked for a tattoo of a "skull and crossbones" and instead got a tattoo of a "seagull and cellphones"!
-                br
-          input#submit.book(type='submit', class="button", value="GET THE LOGO")
-    script.
-      $('#M').change(function(){
-            if(this.checked) {
-              document.getElementById('aks').style.display='block';
-            } else {
-              document.getElementById('aks').style.display='none';
-            }
-        });
-      $('#C').change(function(){
-            if(this.checked) {
-              document.getElementById('plane').style.display='block';
-            } else {
-              document.getElementById('plane').style.display='none';
-            }
-        });
-      $('#R').change(function(){
-            if(this.checked) {
-              document.getElementById('air').style.display='block';
-            } else {
-              document.getElementById('air').style.display='none';
-            }
-        });
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") Memories Covered in Plants!
+      h4#2.text-center.wowload.fadeInUp(style="margin-top:10%; margin-bottom: 0%;") Police found few things in John's suitcase. 
+      h4#3.text-center.wowload.fadeInUp(style="margin-top:0%; margin-bottom: 0%;") Look through his stuff and figure out what you can find from things they have found.
+      button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Click To Start!
+      .contain
+        .scene#4(style="display: none;")
+          .magic#5(style="display:none;")
+          button#submit.btn.btn-default.submit(type='submit', onclick="showDiv2()") I GOT IT! GET ME OUT OF HERE!
 
-    script.
+
+  script(src='libs/flat/js/jquery.js')
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')
+  script.
       function showDiv() { 
-       if ($('#Beyer').val() == 'Beyer Building' || $('#Beyer').val() == 'beyer building' || $('#Beyer').val() == 'beyer' ) {
-          document.getElementById('box').style.display='none';
-          document.getElementById('aks').style.display='none';
-          document.getElementById('Beyer').style.display='none';
-          document.getElementById('plane').style.display='none';
-          document.getElementById('air').style.display='none';
-          document.getElementById('fire').style.display='none';
-          document.getElementById('title').style.display='none';
-          document.getElementById('check').style.display='none';
-          document.getElementById('titleone').style.display='none';
-          document.getElementById('2').style.display='block';
-          document.getElementById('3').style.display='block';
-          document.getElementById('form').style.display='block';
+          document.getElementById('1').style.display='none';
+          document.getElementById('2').style.display='none';
+          document.getElementById('3').style.display='none';
+          document.getElementById('show').style.display='none';
+          document.getElementById('4').style.display='block';
+          document.getElementById('5').style.display='block';
           document.getElementById('submit').style.display='block';
-          document.getElementById('circle').style.display='block';
+        }
 
-        } else {
-          alert('wrong');
-        }       
-      }
-    script.
-      $('button.book').click( function() {
-      $('form.books').submit();
+  script.
+    $(document).ready(function() {
+      var $magic = $(".magic"),
+          magicWHalf = $magic.width() / 2;
+      $(document).on("mousemove", function(e) {
+        $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
+      });
+    });
+  script.
+      $('button.submit').click(function() {
+      window.location.href = '/books-continued';
       });

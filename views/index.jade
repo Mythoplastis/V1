@@ -1,57 +1,406 @@
 html
-  head(lang='en')
-    meta(charset='utf-8')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-    title Mythoplastis
-    meta(name='description', content='CUPS - Mythoplastis - A Planning Phd on puplic participation')
-    meta(name='keywords', content='cups, uom, university of manchester, planning, gaming, public participation')
-    meta(property='og:title', content='')
-    link(rel='stylesheet', type='text/css', href='libs/Intro/css/bootstrap-modal-bs3patch.css')
-    link(rel='stylesheet', type='text/css', href='libs/Intro/css/bootstrap-modal.css')
-    link(rel='stylesheet', href='libs/Intro/css/font-awesome.min.css')
-    link(rel='stylesheet', type='text/css', href='libs/Intro/css/main.css')
-    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
   body
-    .topbar
-      .panel-body
-          .break
-          h2 ALREADY A MEMBER? SIGN IN HERE! 
-          form.loginForm(method='POST', action='/logedin')
-            fieldset
-              label.col-md-4.control-label(for='textinput') Your Email:
-              input#email.form-control.input-lg(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', data-required='true')
-              label.col-md-4.control-label(for='passwordinput')  Your Password: 
-              input#password.form-control.input-lg(type='password', name='passwordlog', placeholder='Password')
-              button.loginButton.btn.btn-success.pull-right(type='submit')  Sign in 
-          hr.colorgraph
-          h2 REGISTER HERE!
-          h4 The information you give us in the registration form will only be used for the research purposes. None of the information will be shown public.
-          br
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menu', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
 
-          form.registerForm(method='POST', action='/samples')
-            fieldset
-              .row
-                label.col-md-4.control-label(for='fullName') Full Name:
-                input#text.input2.form-control.input-md(name='fullName', type='text', placeholder='*Please enter a valid email address', required='')
-                label.label2.col-md-4.control-label(for='age') Your Age    :
-                input#text.input2.form-control.input-md(name='age', type='text', placeholder='*How old are you?', required='')
-              .row
-                label.col-md-4.control-label(for='city') Postcode:
-                input#text.input2.form-control.input-md(name='city', type='text', placeholder='*Please enter the valid postcode', required='')
-                label.label2.col-md-4.control-label(for='job') Your Job:
-                input#text.input2.form-control.input-md(name='job', type='text', placeholder='*What you do for living?', required='')
-              .row
-                label.col-md-4.control-label(for='username') Username:
-                input#text.form-control.input-md(name='username', type='text', placeholder='*what do you want to be called here?', required='')
-                label.label2.col-md-4.control-label(for='password') Password:
-                input#test.form-control.input-md(name='password', type='text', placeholder='*choose a password', required='')
-              .row
-                label.col-md-4.control-label(for='email') Your Email:
-                input#email.form-control.input-md(name='email', type='email', placeholder='*PLease enter a valid email address?', required='')
-                button.registerButton.btn.btn-success.pull-right(type='submit') Start Exploring Now!           
+    #home
+      // Slider Starts
+      .banner
+        img.img-responsive(src='libs/coffee/images/back.jpg', alt='banner')
+        |           
+        .caption
+          .caption-wrapper
+            .caption-info
+              //- i.fa.fa-coffee.fa-5x.animated.bounceInDown
+              |               
+              h1.animated.bounceInUp Mythoplastis
+              |               
+              p.animated.bounceInLeft Become a member of our group in Manchester and enjoy the various activities we provide. 
+              |              
+              a.explore.animated.bounceInDown(href='#menu')
+                i.fa.fa-angle-down.fa-3x
+    #menu.container.spacer.about
+      h2.text-center.wowload.fadeInUp(style="margin-top: 2%;") Creative photographers of London
+      |   
+      |   
+      .row
+        .col-sm-6.wowload.fadeInLeft
+          h4
+            i.fa.fa-pencil-square-o
+            |  Register
+          form.form-horizontal.registerForm(method='POST', action='/samples')
+              fieldset(style="margin-left:-10%; border: 3px; border-right: 5px; border-color: black;")
+                  .form-group
+                    label.col-md-4.control-label(for='Full Name') Full Name
+                    |   
+                    |   
+                    .col-md-7
+                      input.form-control.input-md(id='Full Name', name='fullName', type='text', placeholder='Please enter your full name', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='Age') Your Age
+                    |   
+                    |   
+                    .col-md-7
+                      input#Age.form-control.input-md(name='age', type='text', placeholder='How old are you?', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='Postcode') Postcode
+                    |   
+                    |   
+                    .col-md-7
+                      input#Postcode.form-control.input-md(name='city', type='text', placeholder='Please enter a valid postcode', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='Job') Your Job
+                    |   
+                    |   
+                    .col-md-7
+                      input#Job.form-control.input-md(name='job', type='text', placeholder='What you do for living!?', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='Username') Username
+                    |   
+                    |   
+                    .col-md-7
+                      input#Username.form-control.input-md(name='username', type='text', placeholder='What do you want to be called here?', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='email') Your Email
+                    |   
+                    |   
+                    .col-md-7
+                      input#email.form-control.input-md(name='email', type='text', placeholder='Please enter a valid email address', required='')
+                  // Password input
+                  .form-group
+                    label.col-md-4.control-label(for='password') Password
+                    |   
+                    .col-md-7
+                      input#password.form-control.input-md(name='password', type='password', placeholder='choose a password', required='')
 
-    .leftbar.pull-left
-    .rightbar.pull-right
+                  .form-group(style="margin-left: 37%;")
+                      label.col-md-6.control-label(for='submit')
+                        |   
+                        .col-md-7
+                          button#submit.btn.btn-success.registerButton(name='submit', style="height: 40px;") Submit
+
+
+        .col-sm-6.wowload.fadeInRight
+          h4
+            i.fa.fa-sign-in
+            |  Log in!
+          form.form-horizontal.loginForm(method='POST', action='/logedin')
+              fieldset
+                  .form-group
+                    label.col-md-4.control-label(for='textinput') Your Email:
+                    |   
+                    |   
+                    .col-md-7
+                      input.form-control.input-md(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', required='')
+                  // Text input
+                  .form-group
+                    label.col-md-4.control-label(for='passwordinput')  Your Password: 
+                    |   
+                    |   
+                    .col-md-7
+                      input#passwordlog.form-control.input-md(type='password', name='passwordlog', placeholder='Password', required='')
+                  .form-group(style="margin-left: 37%;")
+                      label.col-md-6.control-label(for='test')
+                        |   
+                        .col-md-6
+                          button#submit.btn.btn-success.loginButton(type='submit', style="height: 40px;") Sign in
+          |     
+          p
+            | By registering you are accepting the terms and condition. Please read them before joining. Our terms and conditions are not very long. it won't take you much time.
+  
+
+    #foods.clearfix.grid
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/1.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Cappuchino
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/1.jpg', title='1', data-gallery='') View more
+      |      
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/2.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Latte
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/2.jpg', title='1', data-gallery='') View more
+      |      
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/3.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Ambience
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/3.jpg', title='1', data-gallery='') View more
+      |      
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/4.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Fruits
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/4.jpg', title='1', data-gallery='') View more
+      |      
+      |      
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/5.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Breakfast
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/5.jpg', title='1', data-gallery='') View more
+      |     
+      figure.effect-oscar.wowload.fadeInUp
+        img(src='libs/coffee/images/portfolio/6.jpg', alt='img01')
+        |         
+        figcaption
+          h2 Kitchen
+          |             
+          p
+            | Lily likes to play with crayons and pencils
+            br
+            |             
+            a(href='libs/coffee/images/portfolio/6.jpg', title='1', data-gallery='') View more
+    // works
+    #partners.container.spacer
+      h2.text-center.wowload.fadeInUp Some of our happy customers
+      |   
+      .clearfix
+        .col-sm-6.col-sm-offset-3
+          #carousel-testimonials.carousel.slide.testimonails.wowload.fadeInRight(data-ride='carousel')
+            .carousel-inner
+              .item.active.animated.bounceInRight.row
+                .animated.slideInLeft.col-xs-2
+                  img.img-circle.img-responsive(alt='portfolio', src='images/team/1.jpg', width='100')
+                |       
+                .col-xs-10
+                  p
+                    | I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+                  |       
+                  |       
+                  span
+                    | Angel Smith - 
+                    b eshop Canada
+              |       
+              .item.animated.bounceInRight.row
+                .animated.slideInLeft.col-xs-2
+                  img.img-circle.img-responsive(alt='portfolio', src='images/team/2.jpg', width='100')
+                |       
+                .col-xs-10
+                  p
+                    | No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+                  |       
+                  span
+                    | John Partic - 
+                    b Crazy Pixel
+              |       
+              .item.animated.bounceInRight.row
+                .animated.slideInLeft.col-xs-2
+                  img.img-circle.img-responsive(alt='portfolio', src='images/team/3.jpg', width='100')
+                |       
+                .col-xs-10
+                  p
+                    | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.
+                  |       
+                  span
+                    | Harris David - 
+                    b Jet London
+            // Indicators
+            ol.carousel-indicators
+              li.active(data-target='#carousel-testimonials', data-slide-to='0')
+              |     
+              li(data-target='#carousel-testimonials', data-slide-to='1')
+              |     
+              li(data-target='#carousel-testimonials', data-slide-to='2')
+            // Indicators
+      // team
+      h3.text-center.wowload.fadeInUp Our Chefs
+      p.text-center.wowload.fadeInLeft Our chefs that is making everything possible
+      .row.grid.team.wowload.fadeInUpBig
+        .col-sm-3.col-xs-6
+          figure.effect-chico
+            img.img-responsive(src='images/team/8.jpg', alt='img01')
+            |         
+            figcaption
+              p
+                b Barbara Husto
+                br
+                | Senior Chef
+        |     
+        .col-sm-3.col-xs-6
+          figure.effect-chico
+            img(src='images/team/10.jpg', alt='img01')
+            |         
+            figcaption
+              p
+                b Barbara Husto
+                br
+                | Chef
+        |     
+        .col-sm-3.col-xs-6
+          figure.effect-chico
+            img(src='images/team/12.jpg', alt='img01')
+            |         
+            figcaption
+              p
+                b Barbara Husto
+                br
+                | Asst Chef
+        |     
+        .col-sm-3.col-xs-6
+          figure.effect-chico
+            img(src='images/team/17.jpg', alt='img01')
+            |         
+            figcaption
+              p
+                b Barbara Husto
+                br
+                | Asst Chef
+      // team
+    // About Starts
+    .highlight-info
+      .overlay.spacer
+        .container
+          .row.text-center.wowload.fadeInDownBig
+            .col-sm-3.col-xs-6
+              i.fa.fa-smile-o.fa-5x
+              h4 24152 Clients
+            | &#x9;
+            .col-sm-3.col-xs-6
+              i.fa.fa-thumbs-up.fa-5x
+              h4 25 Variety
+            | &#x9;
+            .col-sm-3.col-xs-6
+              i.fa.fa-history.fa-5x
+              h4 15 yrs old
+            | &#x9;
+            .col-sm-3.col-xs-6
+              i.fa.fa-map-marker.fa-5x
+              h4 2 Locations
+    // About Ends
+    #contact.spacer
+      // Contact Starts
+      .container.contactform.center
+        h2.text-center.wowload.fadeInUp Reservation
+        |   
+        .row.wowload.fadeInLeftBig
+          .col-sm-6.col-sm-offset-3.col-xs-12
+            input(type='text', placeholder='Name')
+            |         
+            input(type='text', placeholder='Company')
+            |         
+            textarea(rows='5', placeholder='Message')
+            |         
+            button.btn.btn-primary
+              i.fa.fa-paper-plane
+              |  Send
+    #map
+    // Contact Ends
+    // Footer Starts
+    .footer.text-center.spacer
+      p.wowload.flipInX
+        a(href='#')
+          i.fa.fa-facebook.fa-2x
+        |  
+        a(href='#')
+          i.fa.fa-instagram.fa-2x
+        |  
+        a(href='#')
+          i.fa.fa-twitter.fa-2x
+        |  
+        a(href='#')
+          i.fa.fa-flickr.fa-2x
+      | Copyright 2014 Cyrus Creative Studio. All rights reserved.
+    // # Footer Ends
+    a.gototop(href='#home')
+      i.fa.fa-angle-up.fa-3x
+    // The Bootstrap Image Gallery lightbox, should be a child element of the document body
+    #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+      // The container for the modal slides
+      .slides
+      // Controls for the borderless lightbox
+      h3.title Title
+      |     
+      a.prev &lsaquo;
+      |     
+      a.next &rsaquo;
+      |     
+      a.close &times;
+
     script.
       $('button.registerButton').click( function() {
       $('form.registerForm').submit();
@@ -59,3 +408,16 @@ html
       $('button.loginButton').click( function() {
       $('form.loginForm').submit();
       });
+    script(src='libs/coffee/assets/jquery.js')
+    // wow script
+    script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+    script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+    script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+    script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+    script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+    script(src='libs/coffee/assets/script.js')

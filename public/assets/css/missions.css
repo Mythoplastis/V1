@@ -1,11 +1,5 @@
 body {
-    background-color: #f2f2f2;
-    background-image: url(../../../assets/img/map-background.jpg);
-    border-radius: 0px;
-    font-family: Lato;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
+    /*background-image: url(../../../libs/coffee/images/back3.jpg);*/
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,8 +89,10 @@ hr {
     padding: 2px;
 }
 .mission {
-    background-color: #848484;
+    /*background-color: #848484;*/
     border-radius: 15px;
+    border-color: #4e4a45;
+    border: 3px 3px 3px;
     padding-left: 4%;
     padding-top: 2%;
     height: 160px;

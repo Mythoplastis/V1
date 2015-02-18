@@ -12,9 +12,11 @@ body {
 #canvas {
     border-style: solid;
     border-color: black;
-    margin-left: 30%;
-    margin-top: 20vh;
+    margin-left: 20%;
+    margin-top: 5vh;
     position: absolute;
+    width: 60%;
+    height: 50vh;
 }
 #background {
     display: none;
@@ -72,7 +74,7 @@ body {
     position: absolute;
 }
 
-#draw {
+/*#draw {
     margin-left: 75%;
     margin-top: 85vh;
     position: absolute;
@@ -82,4 +84,4 @@ body {
     height: 35px;
     border: none;
     border-radius: 5px;
-}
+}*/

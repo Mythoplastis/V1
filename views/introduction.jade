@@ -1,51 +1,190 @@
-html(lang='en')
-head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='description', content='')
-    meta(name='author', content='')
-    title Home | Flat Theme
-    link(href='/libs/flat/css/bootstrap.min.css', rel='stylesheet')
-    link(href='/libs/flat/css/font-awesome.min.css', rel='stylesheet')
-    link(href='/assets/css/intro.css', rel='stylesheet')
-    link(href='/libs/flat/css/font2.css', rel='stylesheet')      
-    script(src='js/html5shiv.js')
-    script(src='js/respond.min.js')
-    link(rel='shortcut icon', href='images/ico/favicon.ico')
-    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext', rel='stylesheet', type='text/css')
-    script(src='libs/flat/js/jquery-1.9.1.min.js')
-    script(src='libs/flat/js/modernizr.js')
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+  body
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
 
-body
-       
-  //- h1.Pull-left Welcome To Mythoplastis
-  .container
-    //- h2
-    //-     | Meet John! He is now 65. He has born and raised in Manchester but he moved to Italy in 2002. 
-    //-     | Recently he had a severe head injury. As a result of this injury he lost a big part of his memory. 
-    //-     | Doctors in Italy are trying to recover his memory. they have spent a lot of time making John telling them whatever he remembers. 
-    //-     | But they don't know the places he talks about and describe. They have send us all the things he has said and asks us to identify where these places are.
-    //-     | The only way for John to get better is hearing stories about places he has been before. The more story he hears the more the chance will be that he remembers his past life.
-    //-     | So by joining Mythoplastis you can help John in two ways:
-    //- h2 1) Help nurses finding places by completeing missions based on John's memory!
-    //- h2 2) Or by telling stories about different places in Manchester.
-    button.submit.pull-right START!
-    form.5missions(method='POST', action='/misst', name="5missions")
-      fieldset(style="border:none;")
-        input#umb1.form-control(type='text', name='umb1', style="display: none;", value="x")
-        input#umb2.form-control(type='text', name='umb2', style="display: none;", value="x")
-        input#umb3.form-control(type='text', name='umb3', style="display: none;", value="x")
-        input#circle.form-control(type='text', name='circle', style="display: none;", value="1")
-        input#books.form-control(type='text', name='books', style="display: none;", value="1")
-        input#flag1.form-control(type='text', name='flag1', style="display: none;", value="x")
-        input#flag2.form-control(type='text', name='flag2', style="display: none;", value="x")
-        input#flag3.form-control(type='text', name='flag3', style="display: none;", value="x")
-    
+
+    #menuw.container.spacer.about
+      h2.text-center.wowload.fadeInUp(style="margin-top: 2%;") Meet John!
+      |   
+      |   
+      //- #circle-menu
+      //-     a.menu-trigger(,='', href='#', data-open='MENU', data-close='KAPAT')
+      //-       |   
+      //-       ul
+      //-         li
+      //-           a(href='') Anasayfa
+      //-         |     
+      //-         li
+      //-           a(href='') Hakk&imath;m&imath;zda
+      //-         |     
+      //-         li
+      //-           a(href='') Galeri
 
 
-  script(src='libs/flat/js/jquery.js')
-  script(src='libs/flat/js/bootstrap.min.js')
-  script.
-    $('button.submit').click(function() {
-        $('form.5missions').submit();    
-    });
+      #contain
+        #container-john
+          #square.magictime.puffIn
+      //- .row
+      //-   .col-sm-6.wowload.fadeInLeft
+      //-     h4
+      //-       i.fa.fa-pencil-square-o
+      //-       |  Register
+      //-     form.form-horizontal.registerForm(method='POST', action='/samples')
+      //-         fieldset(style="margin-left:-10%; border: 3px; border-right: 5px; border-color: black;")
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='Full Name') Full Name
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input.form-control.input-md(id='Full Name', name='fullName', type='text', placeholder='Please enter your full name', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='Age') Your Age
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#Age.form-control.input-md(name='age', type='text', placeholder='How old are you?', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='Postcode') Postcode
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#Postcode.form-control.input-md(name='city', type='text', placeholder='Please enter a valid postcode', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='Job') Your Job
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#Job.form-control.input-md(name='job', type='text', placeholder='What you do for living!?', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='Username') Username
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#Username.form-control.input-md(name='username', type='text', placeholder='What do you want to be called here?', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='email') Your Email
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#email.form-control.input-md(name='email', type='text', placeholder='Please enter a valid email address', required='')
+      //-             // Password input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='password') Password
+      //-               |   
+      //-               .col-md-7
+      //-                 input#password.form-control.input-md(name='password', type='password', placeholder='choose a password', required='')
+
+      //-             .form-group(style="margin-left: 37%;")
+      //-                 label.col-md-6.control-label(for='submit')
+      //-                   |   
+      //-                   .col-md-7
+      //-                     button#submit.btn.btn-success.registerButton(name='submit', style="height: 40px;") Submit
+
+
+      //-   .col-sm-6.wowload.fadeInRight
+      //-     h4
+      //-       i.fa.fa-sign-in
+      //-       |  Log in!
+      //-     form.form-horizontal.loginForm(method='POST', action='/logedin')
+      //-         fieldset
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='textinput') Your Email:
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input.form-control.input-md(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', required='')
+      //-             // Text input
+      //-             .form-group
+      //-               label.col-md-4.control-label(for='passwordinput')  Your Password: 
+      //-               |   
+      //-               |   
+      //-               .col-md-7
+      //-                 input#passwordlog.form-control.input-md(type='password', name='passwordlog', placeholder='Password', required='')
+      //-             .form-group(style="margin-left: 37%;")
+      //-                 label.col-md-6.control-label(for='test')
+      //-                   |   
+      //-                   .col-md-6
+      //-                     button#submit.btn.btn-success.loginButton(type='submit', style="height: 40px;") Sign in
+      //-     |     
+      //-     p
+      //-       | By registering you are accepting the terms and condition. Please read them before joining. Our terms and conditions are not very long. it won't take you much time.
+  
+
+
+
+    script.
+      $('button.registerButton').click( function() {
+      $('form.registerForm').submit();
+      });
+      $('button.loginButton').click( function() {
+      $('form.loginForm').submit();
+      });
+    script(src='libs/coffee/assets/jquery.js')
+    // wow script
+    script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+    script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+    script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+    script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+    script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+    script(src='libs/coffee/assets/script.js')

@@ -8,108 +8,88 @@ html{
 }
 
 body {
-    width:100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-    font-family: 'Lobster', cursive;
-}
-#container{
-    width: 100%;
-    height: 100%;
-    background-image:url(../../libs/Circle/images/Uni-background.jpg);
-    background-size: 100%;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-}
-#answer {
-    margin-left: 38%;
-    margin-top: 85vh;
-    width: 20%;
-    height: 30px;
-    position: absolute;
+    background-image:url(../../libs/coffee/images/back3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #piece {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 15%;
     position: absolute;
 }
 #piece1 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 20%;
     position: absolute;
 }
 #piece2 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 25%;
     position: absolute;
 }
 #piece3 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 35%;
     position: absolute;
 }
 
 #piece4 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 45%;
     position: absolute;
 }
 
 #piece5 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 55%;
     position: absolute;
 }
 
 #piece6 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 65%;
     position: absolute;
 }
 
 #piece7 {
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 75%;
     position: absolute;
 }
 
 #piece8 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 30%;
     position: absolute;
 }
 
 #piece9 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 40%;
     position: absolute;
 }
 
 #piece10 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 50%;
     position: absolute;
 }
 
 #piece11 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 60%;
     position: absolute;
 }
 
 #piece12 {
-    margin-top: 50vh;
+    margin-top: 20vh;
     margin-left: 70%;
     position: absolute;
 }
 
 #piece13 {
-    margin-top: 40vh;
+    margin-top: 20vh;
     margin-left: 90%;
     position: absolute;
 }
@@ -290,7 +270,7 @@ h2 {
     color:#252524;
 }
 
-#submit {
+/*#submit {
   margin-left: 41%;
   margin-top: 21%;
   height: 30px;
@@ -301,7 +281,7 @@ h2 {
   color: white;
   border: none;
   display: none;
-}
+}*/
 
 .circle {
     margin-top: 15vh;
@@ -348,7 +328,7 @@ h2 {
     border: 5px 5px 5px;
     border-color: red;
     height: 400px;
-    background-image:url(../../libs/Circle/images/paper.png);
+    background-image:url(../../libs/Circle/images/modal1.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -357,7 +337,16 @@ h2 {
     border: 5px 5px 5px;
     border-color: red;
     height: 400px;
-    background-image:url(../../libs/Circle/images/paper2.png);
+    background-image:url(../../libs/Circle/images/modal2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.modal-body3 {
+    border: 5px 5px 5px;
+    border-color: red;
+    height: 400px;
+    background-image:url(../../libs/Circle/images/modal3.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }

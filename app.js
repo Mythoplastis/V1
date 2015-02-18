@@ -221,10 +221,36 @@ app.get('/locations', function (req, res) {
     }
 });
 
+app.get('/books-continued', function (req, res) {
+
+    if (req.session.user) {
+        res.render('books-continued');
+    } else {
+        res.redirect('/');
+    }
+});
+
+app.get('/Uni-Continued', function (req, res) {
+
+    if (req.session.user) {
+        res.render('Uni-Continued');
+    } else {
+        res.redirect('/');
+    }
+});
 app.get('/Uni', function (req, res) {
 
     if (req.session.user) {
         res.render('Uni');
+    } else {
+        res.redirect('/');
+    }
+});
+
+app.get('/introduction-continued', function (req, res) {
+
+    if (req.session.user) {
+        res.render('introduction-continued');
     } else {
         res.redirect('/');
     }
@@ -427,7 +453,7 @@ app.post("/misst", function(req,res){
         if (err) res.json(err);
         //res.end('Registration '+user.username +' Ok!');
         else 
-          res.redirect('locations');
+          res.redirect('introduction-continued');
           console.log("missions started!");    
     });
 });
@@ -435,10 +461,10 @@ app.post("/misst", function(req,res){
 app.get('/5points', function (req, res) {
     var umbrella = req.session.user.Umb;
     var circle = req.session.user.circle;
-    var books = req.session.user.books;
+    var Books = req.session.user.Books;
     var flag = req.session.user.flag;
     if (req.session.user) {
-        res.render('5points', {umbrella: umbrella, circle: circle, books: books, flag: flag});
+        res.render('5points', {umbrella: umbrella, circle: circle, Books: Books, flag: flag});
     } else {
         res.redirect('/');
     }
@@ -499,10 +525,10 @@ app.post("/Booksub", function(req, res) {
     var conditions = mongoose.model('users').findOne({
             username: req.session.user.username
         }, function(err, doc) {
-            doc.books = true;
+            doc.Books = true;
             doc.save(function(err) {
                 if (err) return res.json("error");
-                req.session.user.books = 'true';
+                req.session.user.Books = 'true';
                 console.log('saved');
             });
         }
@@ -510,7 +536,7 @@ app.post("/Booksub", function(req, res) {
     var condition = mongoose.model('missions').findOne({
             author: req.session.user.username
         }, function(err, doc) {
-            doc.books = req.body.radios;
+            doc.Books = req.body.radios;
             doc.save(function(err) {
                 if (err) return res.json("error");
                 res.redirect('5points');

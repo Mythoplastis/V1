@@ -1,17 +1,28 @@
-html(lang='en')
-head
+html
+  head
     meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Mythoplastis - points
-    meta(name='description', content='points to choose')
-    meta(name='keywords', content='mythoplastis')
-    meta(name='author', content='Codrops')
-    link(rel='shortcut icon', href='../favicon.ico')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
     link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
     link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
     link(rel='stylesheet', type='text/css', href='libs/circle/css/style4.css')
-    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700', rel='stylesheet', type='text/css')
     script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
     script.
       function check() {
@@ -24,7 +35,7 @@ head
               document.getElementById('umb1').style.display= "none";
               document.getElementById('umb2').style.display= "none";            
             }; 
-          }
+          };
 
     script.     
       function check2() {
@@ -41,8 +52,8 @@ head
 
     script.
       function check3() {
-        var books = !{JSON.stringify(books)};
-          if (books == 'true' || books == true) {
+        var Books = !{JSON.stringify(Books)};
+          if (Books == 'true' || Books == true) {
               document.getElementById('books1').style.backgroundImage= "none";
               document.getElementById('books2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
               document.getElementById('books3').style.display= "none";
@@ -77,8 +88,41 @@ head
           };
       };
   body(onload= "check4(); check(); check2(); check3(); check5()")
-    .break
-    .leftbar
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+      h1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") START WITH ANY OF THE POINTS BELOW!
     .container
       section.main
         ul.ch-grid
@@ -143,22 +187,28 @@ head
                     p
                       a(href='point7') Find all the other points
       a(href="/logout") GET THE LOGO
-      form.5missions(method='POST', action='/misst')
-        fieldset(style="border:none;")
-          input#umb1.form-control(type='text', name='umb1', placeholder="Word #1", style="display: none;", value="x")
-          input#umb2.form-control(type='text', name='umb2', placeholder="Word #2", style="display: none;", value="x")
-          input#umb3.form-control(type='text', name='umb3', placeholder="Word #3", style="display: none;", value="x")
-          input#circle.form-control(type='text', name='circle', placeholder="Word #3", style="display: none;", value="1")
-          input#books.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="1")
-          input#flag1.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
-          input#flag2.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
-          input#flag3.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
-
-          input#submit.umbrel(type='submit', class="button", value="GET THE LOGO",  disabled="disabled")
-
-    //- script.
-    //-   function check() {
-    //-     var umbrella = !{JSON.stringify(umbrella)};
-    //-     if (umbrella="true") {
-    //-       alert('umbrella');
-    //-   }.style.display= "none";
+  script(src='libs/flat/js/jquery.js')
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')
+  script.
+      $('button.submitcomment').click( function() {
+      $('form.subcomment').submit();
+      $('#mymodal').modal('hide');
+      });
+    script.
+      $('button.longmission').click(function() {
+      window.location.href = '/locations';
+      });
+    script.
+      $('button.stories').click(function() {
+      window.location.href = '/new';
+      });
