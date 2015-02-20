@@ -536,7 +536,7 @@ app.post("/Booksub", function(req, res) {
     var condition = mongoose.model('missions').findOne({
             author: req.session.user.username
         }, function(err, doc) {
-            doc.Books = req.body.radios;
+            doc.books = req.body.radios;
             doc.save(function(err) {
                 if (err) return res.json("error");
                 res.redirect('5points');
