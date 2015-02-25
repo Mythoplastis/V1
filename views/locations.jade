@@ -63,7 +63,7 @@ html
           .container
             .navbar-header
               // Logo Starts
-              a.navbar-brand(href='#home')
+              a.logo.navbar-brand(href='/')
                 img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
               // #Logo Ends
               button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -78,21 +78,29 @@ html
             .navbar-collapse.collapse
               ul.nav.navbar-nav.navbar-right.scroll
                 li.active
-                  a(href='#home') Home
+                  a.home(href='/') Home
                 |                  
                 li
-                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                  a.dash(href='/missions') Dashboard
                 |                  
                 li
-                  a(href='#foods') Overview
+                  a.contact(href='/') contact Us
                 |                  
                 li
-                  a(href='#partners') Partners
+                  a.out(href="/logout") Logout
                 |                  
 
-        .col-sm-3.wowload.fadeInRight(style="margin-left: -3%; margin-top: 50vh; position: absolute;")
-          p
-            | By registering you are accepting the terms and condition. Please read them before joining. Our terms and conditions are not very long. it won't take you much time.
+        .col-sm-3.wowload.fadeInRight(style="margin-left: -6%; margin-top: 30vh; position: absolute;")
+          h4(style="color: #ccb117; margin-bottom: 5vh;")
+            |Don't forget that: 
+            
+          h4(style="margin-bottom: 5vh;")
+            | Each zone has certain number of missions to be completed! 
+          h4(style="margin-bottom: 5vh;")
+            | You have the choice to complete the missions in whatever order you desire! 
+          h4(style="margin-bottom: 5vh;")
+            | If you get bored anytime you can always come back and change your mission zone! 
+
   
 
       .col-md-6(style="margin-top:10%; margin-left:30%;")
@@ -154,6 +162,27 @@ html
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+
+  script.
+      $('a.out').click(function() {
+      window.location.href = '/logout';
+      });
+  script.
+      $('a.logo').click(function() {
+      window.location.href = '/';
+      });
+  script.
+      $('a.home').click(function() {
+      window.location.href = '/';
+      });
+  script.
+      $('a.dash').click(function() {
+      window.location.href = '/missions';
+      });
+  script.
+      $('a.contact').click(function() {
+      window.location.href = '/';
+      });
     // wow script
   //- script(src='libs/flat/js/main.js')
   //- script(src='libs/flat/js/picchange.js')

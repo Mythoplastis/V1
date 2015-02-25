@@ -71,7 +71,7 @@ html
       img#piece10.shake(src="libs/Circle/images/tin-can.png")
       img#piece11.shake(src="libs/Circle/images/tin-can.png", data-toggle="modal", data-target="#myModal2")
       img#piece12.shake(src="libs/Circle/images/tin-can2.png")
-
+      .help.animated.bounceInRight
 
     #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
         .modal-dialog
@@ -99,21 +99,23 @@ html
         .col-sm-6.wowload.fadeInLeft
           h4
             i.fa.fa-pencil-square-o
-            |  Let Us Know Where John was!
+            |  We Have Few Guesses But Let Us Know Where John was!
           |     
           p
-            | There are still loads that we don't know about John, like why he saved these notes in the tins or who he has met. But at least you can help us know where they have met and that would be a great clue for John to remember what has happened there. 
+            | There are still loads that we don't know about John, like why he saved these notes in the tins or who he met. Knowing where they met will be a great clue for John to remember what happened there. 
   
 
         .col-sm-6.wowload.fadeInRight
                   .col-md-7
-                      input#answer.form-control.input-md(type='text', name='text', placeholder='Where John was when He Wrote These?', data-trigger='change', required='')
+                      input#answer.form-control.input-md(type='text', name='text', placeholder='Where John was?', data-trigger='change', required='')
                   .form-group(style="margin-left: 15%;")
                       label.col-md-6.control-label(for='test')
                         |   
                         .col-md-6
                           button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your answer!
-    script.
+
+    
+  script.
       function showDiv() { 
        if ($('#answer').val() == 'University place' || $('#answer').val() == 'visitor center' || $('#answer').val() == 'Visitor center' ) {
           window.location.href = '/Uni-Continued';
@@ -121,7 +123,10 @@ html
           alert('wrong');
         }       
       }
-
+  script.
+      $('.help').click( function() {
+          document.getElementById('answer').style.display='none';
+      });
     // wow script
   script(src='libs/coffee/assets/wow/wow.min.js')
     // boostrap
