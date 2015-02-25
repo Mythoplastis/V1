@@ -11,8 +11,6 @@ html
     link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
     link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
-    link(rel='stylesheet', href='assets/css/magic.min.css')
-    link(rel='stylesheet', href='assets/css/magic.css')
     link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
     link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
     link(rel='icon', href='images/favicon.ico', type='image/x-icon')
@@ -21,7 +19,7 @@ html
     .topbar.animated.fadeInLeftBig
     // Header Starts
     .navbar-wrapper
-      .container
+     .container
         #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
           .container
             .navbar-header
@@ -50,132 +48,94 @@ html
                   a(href='#foods') Overview
                 |                  
                 li
-                  a(href='#partners') Partners
+                  a(href='#partners') Team
                 |                  
 
 
     #menuw.container.spacer.about
       h2.text-center.wowload.fadeInUp(style="margin-top: 2%;") Meet John!
-      |   
-      |   
-      //- #circle-menu
-      //-     a.menu-trigger(,='', href='#', data-open='MENU', data-close='KAPAT')
-      //-       |   
-      //-       ul
-      //-         li
-      //-           a(href='') Anasayfa
-      //-         |     
-      //-         li
-      //-           a(href='') Hakk&imath;m&imath;zda
-      //-         |     
-      //-         li
-      //-           a(href='') Galeri
-
-
+      h2.text-center.wowload.fadeInUp(style="margin-top: 2%; font-size: 24px; font-weight: 900;") A year ago John decided to move to Italy. Two weeks ago he went to a ski trip to Alps and he had an accident. 
+          | He was hospitalized for a week but despite all the efforts his long-term memory is still not recovered. 
       #contain
         #container-john
-          #square.magictime.puffIn
-      //- .row
-      //-   .col-sm-6.wowload.fadeInLeft
-      //-     h4
-      //-       i.fa.fa-pencil-square-o
-      //-       |  Register
-      //-     form.form-horizontal.registerForm(method='POST', action='/samples')
-      //-         fieldset(style="margin-left:-10%; border: 3px; border-right: 5px; border-color: black;")
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='Full Name') Full Name
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input.form-control.input-md(id='Full Name', name='fullName', type='text', placeholder='Please enter your full name', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='Age') Your Age
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#Age.form-control.input-md(name='age', type='text', placeholder='How old are you?', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='Postcode') Postcode
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#Postcode.form-control.input-md(name='city', type='text', placeholder='Please enter a valid postcode', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='Job') Your Job
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#Job.form-control.input-md(name='job', type='text', placeholder='What you do for living!?', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='Username') Username
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#Username.form-control.input-md(name='username', type='text', placeholder='What do you want to be called here?', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='email') Your Email
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#email.form-control.input-md(name='email', type='text', placeholder='Please enter a valid email address', required='')
-      //-             // Password input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='password') Password
-      //-               |   
-      //-               .col-md-7
-      //-                 input#password.form-control.input-md(name='password', type='password', placeholder='choose a password', required='')
+          #square.animated.infinite.rotatein
+      .col-sm-4.wowload.fadeInRight(style="margin-left: 50%; position: absolute; margin-top:-10%;")
+        h4
+        |     
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Name: John Miller
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Age: 40
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Occupation: Unkown
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Place of Birth: Manchester
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Education: Unknown
+        p(style="margin-top: 0px; margin-bottom: 0px;")
+          | Address: Unkown
+      a.explore.animated.bounceInDown(href='#menu')
+        i.fa.fa-angle-down.fa-4x.fa-3xurl(style="color: white; margin-left: 48%; margin-top: 20vh;")
+    #menu.container.spacer.about
+      h2.text-center.wowload.fadeInUp He Needs Help!
+      h2.text-center.wowload.fadeInUp(style="margin-top: 2%; font-size: 24px; font-weight: 900;") The medical team in Italy is trying to help him remember things. They spend hours telling him stories about Manchester. but unfortunately they themselves don't know Manchester very well. 
+        | They have collected and recorded whatever John remembers but they can't figure out what are the places he is talking about. 
+   
+      #contain2
+        #container-nurse
+          #square2.animated.infinite.rotatein
+      h2.text-center.wowload.fadeInUp(style="margin-top: 20vh; font-size: 24px; font-weight: 900;") Continue to see how you can help him!
+      a.explore.animated.bounceInDown(href='#partners')
+        i.fa.fa-angle-down.fa-4x.fa-3xurl(style="color: white; margin-left: 48%; margin-top: 1vh;")
+    #partners.container.spacer.about
+      h2.text-center.wowload.fadeInUp(style="margin-top: -4vh;") This Is How You Can Help Him!
+      .row.grid.team.wowload.fadeInUpBig
+        .col-sm-4.col-xs-8(style="margin-left: -5%;")
+          figure.effect-chico
+            img.img-responsive(src='libs/coffee/images/team/john.png', alt='img01')
+            |         
+            figcaption
+              p
+                b Completing Missions
+                br
+                | More details
+        |     
+        .col-sm-4.col-xs-8(style="margin-left: 1%;")
+          figure.effect-chico
+            img(src='libs/coffee/images/team/john.png', alt='img01')
+            |         
+            figcaption
+              p
+                b Telling Stories
+                br
+                | More details
+        |     
+        .col-sm-4.col-xs-8(style="margin-left: 1%;")
+          figure.effect-chico
+            img(src='libs/coffee/images/team/john.png', alt='img01')
+            |         
+            figcaption
+              p
+                b Finding Logos
+                br
+                | More details
+      h2.text-center.wowload.fadeInUp(style="margin-top: 2%; font-size: 24px; font-weight: 900;") Now you know everything you need to know to start!
+      .col-md-6
+        button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px; margin-left: 80%; margin-bottom: 10vh;", onclick="showDiv()") Start The Game!   
 
-      //-             .form-group(style="margin-left: 37%;")
-      //-                 label.col-md-6.control-label(for='submit')
-      //-                   |   
-      //-                   .col-md-7
-      //-                     button#submit.btn.btn-success.registerButton(name='submit', style="height: 40px;") Submit
-
-
-      //-   .col-sm-6.wowload.fadeInRight
-      //-     h4
-      //-       i.fa.fa-sign-in
-      //-       |  Log in!
-      //-     form.form-horizontal.loginForm(method='POST', action='/logedin')
-      //-         fieldset
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='textinput') Your Email:
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input.form-control.input-md(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', required='')
-      //-             // Text input
-      //-             .form-group
-      //-               label.col-md-4.control-label(for='passwordinput')  Your Password: 
-      //-               |   
-      //-               |   
-      //-               .col-md-7
-      //-                 input#passwordlog.form-control.input-md(type='password', name='passwordlog', placeholder='Password', required='')
-      //-             .form-group(style="margin-left: 37%;")
-      //-                 label.col-md-6.control-label(for='test')
-      //-                   |   
-      //-                   .col-md-6
-      //-                     button#submit.btn.btn-success.loginButton(type='submit', style="height: 40px;") Sign in
-      //-     |     
-      //-     p
-      //-       | By registering you are accepting the terms and condition. Please read them before joining. Our terms and conditions are not very long. it won't take you much time.
-  
-
-
-
+    script(src='libs/coffee/assets/jquery.js')
     script.
       $('button.registerButton').click( function() {
       $('form.registerForm').submit();
       });
       $('button.loginButton').click( function() {
       $('form.loginForm').submit();
-      });
-    script(src='libs/coffee/assets/jquery.js')
+      }); 
+    script.
+      function showDiv() { 
+          window.location.href = '/missions';
+      }
+
     // wow script
     script(src='libs/coffee/assets/wow/wow.min.js')
     // boostrap

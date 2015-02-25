@@ -3,7 +3,7 @@
   Box-sizing: Border-box;
 }
 
-body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../../../libs/circle/images/words3.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased; overflow-x: hidden;}
+body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../../../libs/circle/images/words3.jpg) right repeat fixed #fff; -webkit-font-smoothing:antialiased; overflow-x: hidden;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -197,7 +197,7 @@ label {
 #contain{
 	width: 25%;
 	height: 25%;
-	margin-left: 38.5%;
+	margin-left: 36.5%;
 }
 #container-john{
 	position: relative;
@@ -214,4 +214,28 @@ label {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 
+}
+
+#container-nurse{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 100%
+}
+
+#square2{
+	background-image: url(../../../assets/img/john2.png);
+	position: absolute;	
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#contain2{
+	width: 25%;
+	height: 25%;
+	margin-left: 36.5%;
+	margin-top:5vh;
 }
