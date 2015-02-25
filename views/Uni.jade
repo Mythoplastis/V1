@@ -106,13 +106,45 @@ html
   
 
         .col-sm-6.wowload.fadeInRight
-                  .col-md-7
-                      input#answer.form-control.input-md(type='text', name='text', placeholder='Where John was?', data-trigger='change', required='')
-                  .form-group(style="margin-left: 15%;")
-                      label.col-md-6.control-label(for='test')
-                        |   
-                        .col-md-6
-                          button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your answer!
+                .col-sm-7 
+                    input#answer.form-control.input-md(type='text', name='text', placeholder='Where John was?', data-trigger='change', required='')
+                .form-group(style="margin-left: 15%;")
+                    label.col-md-6.control-label(for='test')
+                      |   
+                      .col-md-6
+                        button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your answer!
+
+              p#guess(style="margin-left: 15%; font-size: 20px; font-weight: bold; margin-bottom:0; display: none;")
+                | Here Are Our Guesses:          
+              .form-group#javab(style="margin-left: 30%; display:none;")
+                    .col-md-6
+                      .checkbox
+                        label(for='javab')
+                          input(type='checkbox', name='javab', id='javab-0', value='1')
+                          |       Cafe Muse
+                      |   
+                      .checkbox
+                        label(for='javab-1')
+                          input(type='checkbox', name='javab', id='javab-1', value='2')
+                          |       Zochonis Building
+                      |   
+                      .checkbox
+                        label(for='javab-2')
+                          input(type='checkbox', name='javab', id='javab-2', value='3')
+                          |       University Place
+                      |   
+                      .checkbox
+                        label(for='javab-3')
+                          input(type='checkbox', name='javab', id='javab-3', value='4')
+                          |       Student Union
+                      |   
+                      .checkbox
+                        label(for='javab-4')
+                          input(type='checkbox', name='javab', id='javab-4', value='')
+                          |       Kilburn Building
+
+                      .col-md-6
+                        button.test.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;") Check Your answer!
 
     
   script.
@@ -126,7 +158,20 @@ html
   script.
       $('.help').click( function() {
           document.getElementById('answer').style.display='none';
+          document.getElementById('submit').style.display='none';
+          document.getElementById('javab').style.display='block';
+          document.getElementById('guess').style.display='block';
+
       });
+  script.
+    $('.test').click( function() {
+      if ($('#javab-2').is(":checked")) {
+          window.location.href = '/Uni-Continued';
+      } else {
+      alert('Cmooon you can do much better than this!')
+      }
+      });
+
     // wow script
   script(src='libs/coffee/assets/wow/wow.min.js')
     // boostrap

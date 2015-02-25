@@ -278,6 +278,8 @@ h2 {
     margin-right: 0;
     margin-top: -5vh;
     background-image: url(../../assets/img/help.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 /*#submit {
   margin-left: 41%;
@@ -364,6 +366,6 @@ h2 {
 
 
 .bounceInRight {
-    -webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
-    animation-delay: 3s;
+    -webkit-animation-delay: 15s; /* Chrome, Safari, Opera */
+    animation-delay: 15s;
 }
