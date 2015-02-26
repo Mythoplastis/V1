@@ -1,0 +1,65 @@
+html(lang='en')
+  head
+    title Mythoplastis-Flag Point
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/flag.css')     
+    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+  body#body
+    .glitch#1
+        span Here are some clues for you!
+    .glitch#2(style="margin-top: 7%; font-size: 22px; margin-left: 10%;")
+        span These are photos which were captured from John's head scan!!!
+    .glitch#3(style="margin-left: -80%; margin-top: -30%;")        
+        span
+          img#foot(src="libs/Circle/images/foot.png")
+    .glitch#4(style="margin-left: -60%; margin-top: 30%;")        
+        span
+          img#bar(src="libs/Circle/images/bar.png")
+    .glitch#5(style="margin-left: 60%; margin-top: 30%;")        
+        span
+          img#societies(src="libs/Circle/images/societies.png")
+    .glitch#6(style="margin-left: 10%; margin-top: -30%;")        
+        span
+          img#biko(src="libs/Circle/images/biko.png")
+    .glitch#7(style="margin-left: 30%; margin-top: 15%;")        
+        span
+        input#takeway.form-control(type="text", placeholder="Just Type the Name of It!", style="padding-left: 5px; margin-right: 1%; border-radius:5px; width: 250px; height: 30px;")
+        input#subans.check(type="button", value="Check!", onclick="showDiv()")
+    h2#inst(style="display: none; margin-left: 36%; margin-top:2%; font-weight: bold; text-shadow: 1px 1px #454546;") CONGRAT! YOU GOT THE LOGO!
+    img#flag(src="libs/Circle/images/logo-flag.png" style="display:none; margin-left: 43%;")
+    h2#insti(style="display: none; margin-left: 18%; font-weight: bold; text-shadow: 1px 1px #454546;") TO GET THE LOGO GIVE US THE THREE WORDS THAT YOU WILL TAG TO THIS PLACE!
+    form.umbrella(method='POST', action='/flagsub')
+      fieldset(style="border:none;")
+        input#flag1.form-control(type='text', name='flag1', placeholder="Word #1")
+        input#flag2.form-control(type='text', name='flag2', placeholder="Word #2")
+        input#flag3.form-control(type='text', name='flag3', placeholder="Word #3")
+        input#submit.umbrel(type='submit', class="button", value="GET THE LOGO", style="display: none;")      
+    
+    script.
+      function showDiv() { 
+       if ($('#takeway').val() == 'studient union' || $('#takeway').val() == 'Student Union' || $('#takeway').val() == 'union' ) {
+          document.getElementById('1').style.display='none';
+          document.getElementById('2').style.display='none';
+          document.getElementById('3').style.display='none';
+          document.getElementById('4').style.display='none';
+          document.getElementById('5').style.display='none';
+          document.getElementById('6').style.display='none';
+          document.getElementById('7').style.display='none';
+          document.getElementById('flag1').style.display='block';
+          document.getElementById('flag2').style.display='block';
+          document.getElementById('flag3').style.display='block';
+          document.getElementById('submit').style.display='block';
+          document.getElementById('insti').style.display='block';
+          document.getElementById('inst').style.display='block';
+          document.getElementById('flag').style.display='block';
+          document.getElementById('body').style.backgroundImage='url(libs/Circle/images/flag-bg.jpg)';
+
+
+        } else {
+          alert('wrong');
+        }       
+      }
+    script.
+      $('button.umbrel').click( function() {
+      $('form.umbrella').submit();
+      });

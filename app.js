@@ -529,17 +529,17 @@ app.post("/Circlesub", function(req, res) {
             });
         }
     );
-    // var condition = mongoose.model('missions').findOne({
-    //         author: req.session.user.username
-    //     }, function(err, doc) {
-    //         doc.circle = req.body.radios;
-    //         doc.save(function(err) {
-    //             if (err) return res.json("error");
-    //             res.redirect('5points');
-    //             console.log('saved!');
-    //         });
-    //     }
-    // );
+    var condition = mongoose.model('missions').findOne({
+            author: req.session.user.username
+        }, function(err, doc) {
+            doc.circle = req.body.final;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+                console.log('saved!');
+            });
+        }
+    );
 });
 
 app.post("/Booksub", function(req, res) {

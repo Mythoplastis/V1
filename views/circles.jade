@@ -109,8 +109,8 @@ html(lang='en')
     script.
       function showDiv() { 
        if ($('#answer').val() == 'RBS' || $('#answer').val() == 'rbs' || $('#answer').val() == 'rbs bank' || $('#answer').val() == 'RBS bank' ) {
-            window.location = "circletwo";
-
+          document.getElementById('container').style.display='none';
+ 
           } else {
           alert('wrong');
         }       
