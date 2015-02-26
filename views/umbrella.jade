@@ -100,12 +100,7 @@ html
                     h3 LEMN SISSAY
                     p
                       | The Umbrella logo is below the rain poem on the wall! look for it on the walls of Manchester.
-      //- .break2 
-      //- h2#question(style="margin-left: 24%; font-weight: bold; text-shadow: 1px 1px #454546; ") Name the Nearest Takeaway Shop to the Umbrella Point!  
-      //- .col-md-8(style="margin-left: 45%; margin-top: 20vh;")  
-      //-     .row
-      //-       input#takeway.form-control(type="text", placeholder="Just Type the Name of It!", style="padding-left: 5px; border-radius:5px; margin-right:1%; margin-left: 24%; width: 250px; height: 35px;")
-      //-       input(type="button", class="button", id="answer", value="CHECK!", disabled="disabled", onclick="showDiv()" style="margin-left: 30.5%; margin-top:1%; width: 100px; border-radius: 5px; background-color: #67896c; height: 30px; border: none;")
+      #help.help.animated.bounceInLeft
 
       .col-sm-6.wowload.fadeInRight(style="margin-top: 20vh; margin-left: 55%;")
             .col-md-7
@@ -117,21 +112,16 @@ html
                     button#submit.btn.btn-success(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your answer!
 
       h1#4.text-center.wowload.fadeInUp(style="display: none; margin-top: 8%; font-weight: bold; font-size: 38px;") WOW! GREAT JOB!
-      h4#5.text-center.wowload.fadeInUp(style="display: none; margin-top: 0%; margin-bottom: 0%;") We found these in John's house. Check them out to find out more. 
-      h4#6.text-center.wowload.fadeInUp(style="display: none; margin-top: 0%; margin-bottom: 0%;") We think these would give us good clues to find where John used to hang out with his friend in Manchester! 
+      h4#5.text-center.wowload.fadeInUp(style="display: none; margin-top: 0%; margin-bottom: 0%;") Give Us Three Words That If We Tell John He Will Remember This Place! 
 
-
-      h2#congrat(style="display: none; margin-left: 28%; font-weight: bold; text-shadow: 1px 1px #454546;") CONGRATULATIONS! YOU FOUND THE UMBRELLA LOGO!
-      img#umbrella(src="libs/Circle/images/logo-umbrella.png" style="display:none; margin-left: 43%;")
-      h2#inst(style="display: none; margin-left: 18%; font-weight: bold; text-shadow: 1px 1px #454546;") TO GET THE LOGO GIVE US THE THREE WORDS THAT YOU WILL TAG TO THIS PLACE!
       form.umbrella(method='POST', action='/Submitted')
-        fieldset(style="border:none;")
-          input#umb1.form-control(type='text', name='umb1', placeholder="Word #1")
+        fieldset(style="border:none; margin-top: 5%;")
+          input#umb1.form-control.wowload.fadeInUp(type='text', name='umb1', placeholder="Word #1")
           br
-          input#umb2.form-control(type='text', name='umb2', placeholder="Word #2")
+          input#umb2.form-control.wowload.fadeInUp(type='text', name='umb2', placeholder="Word #2")
           br
-          input#umb3.form-control(type='text', name='umb3', placeholder="Word #3")
-          //- input.umbrel(type='submit', class="button", value="GET THE LOGO",  disabled="disabled")
+          input#umb3.form-control.wowload.fadeInUp(type='text', name='umb3', placeholder="Word #3")
+          button#show.btn.btn-success.umbrel.wowload.fadeInUp(type='submit', style="margin-left: 41%; display: none; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;") Check Your Answer!
 
 
   script.
@@ -145,10 +135,11 @@ html
           document.getElementById('takeway').style.display='none';
           document.getElementById('4').style.display='block';
           document.getElementById('5').style.display='block';
-          document.getElementById('6').style.display='block';
           document.getElementById('umb1').style.display='block';
           document.getElementById('umb2').style.display='block';
           document.getElementById('umb3').style.display='block';
+          document.getElementById('show').style.display='block';
+          document.getElementById('help').style.display='none';
 
         } else {
           alert('wrong');

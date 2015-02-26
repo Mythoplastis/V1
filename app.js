@@ -43,7 +43,7 @@ var UserSchema = new mongoose.Schema({
     circle: Boolean,
     tree: Boolean,
     Books: Boolean,
-    flag: Boolean
+    flag: Boolean,
 });
 
 var User = mongoose.model('users', UserSchema);
@@ -429,8 +429,20 @@ app.post("/Submitted", function(req, res) {
             doc.Umb = true;
             doc.save(function(err) {
                 if (err) return res.json("error");
-                res.redirect('5points');
                 req.session.user.Umb = 'true';
+            });
+        }
+    );
+    var condition = mongoose.model('missions').findOne({
+            author: req.session.user.username
+        }, function(err, doc) {
+            doc.umb1 = req.body.umb1;
+            doc.umb2 = req.body.umb2;
+            doc.umb3 = req.body.umb3;
+            doc.save(function(err) {
+                if (err) return res.json("error");
+                res.redirect('5points');
+                console.log('saved!');
             });
         }
     );
@@ -453,7 +465,7 @@ app.post("/misst", function(req,res){
         if (err) res.json(err);
         //res.end('Registration '+user.username +' Ok!');
         else 
-          res.redirect('introduction-continued');
+          res.redirect('missions');
           console.log("missions started!");    
     });
 });
@@ -496,6 +508,15 @@ app.get('/circletwo', function (req, res) {
         res.redirect('/');
     }
 });
+
+app.get('/books-continued-two', function (req, res) {
+
+    if (req.session.user) {
+        res.render('books-continued-two');
+    } else {
+        res.redirect('/');
+    }
+});
 app.post("/Circlesub", function(req, res) {
     var conditions = mongoose.model('users').findOne({
             username: req.session.user.username
@@ -508,17 +529,17 @@ app.post("/Circlesub", function(req, res) {
             });
         }
     );
-    var condition = mongoose.model('missions').findOne({
-            author: req.session.user.username
-        }, function(err, doc) {
-            doc.circle = req.body.radios;
-            doc.save(function(err) {
-                if (err) return res.json("error");
-                res.redirect('5points');
-                console.log('saved!');
-            });
-        }
-    );
+    // var condition = mongoose.model('missions').findOne({
+    //         author: req.session.user.username
+    //     }, function(err, doc) {
+    //         doc.circle = req.body.radios;
+    //         doc.save(function(err) {
+    //             if (err) return res.json("error");
+    //             res.redirect('5points');
+    //             console.log('saved!');
+    //         });
+    //     }
+    // );
 });
 
 app.post("/Booksub", function(req, res) {
@@ -536,7 +557,7 @@ app.post("/Booksub", function(req, res) {
     var condition = mongoose.model('missions').findOne({
             author: req.session.user.username
         }, function(err, doc) {
-            doc.books = req.body.radios;
+            doc.books = req.body.final;
             doc.save(function(err) {
                 if (err) return res.json("error");
                 res.redirect('5points');

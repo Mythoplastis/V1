@@ -1,8 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300);
-body {
-  overflow: hidden;
-  background-image:url(../../libs/Circle/images/bg-flag1.jpg);
-}
 
 @-moz-keyframes glitch {
   0% {
@@ -526,7 +521,8 @@ body {
   font: 35px "Roboto", helvetica, sans-serif;
   font-font-weight: 100;
   letter-spacing: 0.3em;
-  /*background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=20);*/
+  /*background-image:url(../../libs/Circle/images/bg-flag1.jpg);*/
+  background-size: 100% 100%;
   text-shadow: 2px 0 1px #f6050a, -2px 0 1px #1cf2f2;
   -moz-animation: noise 6s infinite;
   -webkit-animation: noise 6s infinite;
@@ -544,10 +540,12 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  /*background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=61&opacity=40);*/
+  /*background-image:url(../../libs/Circle/images/bg-flag1.jpg);*/
   -moz-animation: bar 6s infinite;
   -webkit-animation: bar 6s infinite;
   animation: bar 6s infinite;
+  background-size: 100% 100%;
+
 }
 .glitch span {
   display: inline-block;

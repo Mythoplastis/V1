@@ -58,56 +58,91 @@ html
                 li
                   a(href='#partners') Partners
                 |                  
-      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") So Tell Us Where is This Place is!
-      h1#4.text-center.wowload.fadeInUp(style="margin-top: 0%; font-weight: bold; font-size: 38px;") -------------------------------------
-      h4#2.text-center.wowload.fadeInUp(style="margin-top:8%; margin-bottom: 0.5%;") Knowing where this place is would be a great help for us. 
-      h4#3.text-center.wowload.fadeInUp(style="margin-top:0%; margin-bottom: 0%;") We think that John's friend who he has met several times in Manchester is either study or work in this building.
-      .col-md-4(style="margin-left: 33%; margin-top: 3%;")
-          input#answer.form-control.input-md.wowload.fadeInUp(type='text', name='text', placeholder='Where John was when He Wrote These?', data-trigger='change', required='')
-      button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Click To Start!
 
+      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") So Tell Us Where This Place Is!
+      button#back.btn.btn-success.back.wowload.fadeInUp(type='submit', style="margin-left: 42%; background-color:  #5b5a58; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="back()") See The Luggage Again!
+
+      h4#2.text-center.wowload.fadeInUp(style="margin-top:4%; margin-bottom: 0.5%;") Knowing where this place is, would be a great help for us. 
+      h4#3.text-center.wowload.fadeInUp(style="margin-top:0%; margin-bottom: 0%;") We think that John's friend who he has met several times in Manchester was either studying or working in this building.
+      p#guess(style="margin-left: 40%; margin-top: 4%; font-size: 20px; font-weight: bold; margin-bottom:0; display: none;")
+        | Here Are Our Guesses:          
+      .form-group#javab(style="margin-left: 30%; display:none;")
+            .col-md-6
+              .checkbox
+                label(for='javab')
+                  input(type='checkbox', name='javab', id='javab-0', value='1')
+                  |       Cafe Muse
+              |   
+              .checkbox
+                label(for='javab-1')
+                  input(type='checkbox', name='javab', id='javab-1', value='2')
+                  |         Kilburn Building 
+              |   
+              .checkbox
+                label(for='javab-2')
+                  input(type='checkbox', name='javab', id='javab-2', value='3')
+                  |       Zochonis Building
+              |   
+              .checkbox
+                label(for='javab-3')
+                  input(type='checkbox', name='javab', id='javab-3', value='4')
+                  |       Manchester Museum
+              |   
+              .checkbox
+                 label(for='javab-4')
+                  input(type='checkbox', name='javab', id='javab-4', value='')
+                  |     Beyer Building
+              .col-md-6
+                button.test.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px; margin-left: 58%;") Check Your answer!
+
+
+      .col-md-4(style="margin-left: 33%; margin-top: 3%;")
+          input#answer.form-control.input-md.wowload.fadeInUp(type='text', name='text', placeholder='Type the name of the building!', data-trigger='change', required='')
+      button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your Answer!
+      #help1.help.animated.bounceInLeft
+      #help2.help2.animated.bounceInRight
       h1#5.text-center.wowload.fadeInUp(style="display: none; margin-top: 8%; font-weight: bold; font-size: 38px;") Great Job!
       h4#7.text-center.wowload.fadeInUp(style="display: none; margin-top:8%; margin-bottom: 0.5%;") Now we have to know what people think about this place to send it to John 
       h4#8.text-center.wowload.fadeInUp(style="display: none; margin-top:0%; margin-bottom: 0%;") This gonna be very important for us!
-      form#form.books.wowload.fadeInUp(method='POST', action='/Booksub', style=" margin-left:25%; margin-top: 5vh; display: none;")
-            fieldset
-                .form-group
-                  input#radios-0(type='radio', name='radios', value='happy', checked='checked')
-                  |      Seeing an old friend!
-                  br
-                  input#radios-1(type='radio', name='radios', value='indifference')
-                  |      Hearing your facourite song!
-                  br
-                  input#radios-2(type='radio', name='radios', value='sad')
-                  |      The line for the ride I am waiting for isn't too long but it's still long enough to have to wait a little bit!
-                  br
-                  input#radios-3(type='radio', name='radios', value='awful')
-                  |      I asked for a tattoo of a "skull and crossbones" and instead got a tattoo of a "seagull and cellphones"!
-                  br      
-                  input#submit.book(type='submit', class="button", value="GET THE LOGO")
 
+
+  script(src='libs/flat/js/jquery.js')
+  script.
+    $('.test').click( function() {
+      if ($('#javab-4').is(":checked")) {
+          window.location.href = '/books-continued-two';
+      } else {
+      alert('Cmooon you can do much better than this!')
+      }
+      });
   script.
       function showDiv() { 
        if ($('#answer').val() == 'Beyer Building' || $('#answer').val() == 'beyer building' || $('#answer').val() == 'Beyer'  || $('#answer').val() == 'beyer'  ) {
-          document.getElementById('1').style.display='none';
-          document.getElementById('4').style.display='none';
-          document.getElementById('2').style.display='none';
-          document.getElementById('3').style.display='none';
-          document.getElementById('answer').style.display='none';
-          document.getElementById('show').style.display='none';
-          document.getElementById('5').style.display='block';
-          document.getElementById('7').style.display='block';
-          document.getElementById('8').style.display='block';
-          document.getElementById('form').style.display='block';
+        window.location.href = '/books-continued-two';
+
          } else {
           alert('wrong');
         }       
       }
   script.
+      $('.help2').click( function() {
+          document.getElementById('answer').style.display='none';
+          document.getElementById('show').style.display='none';
+          document.getElementById('back').style.display='none';
+          document.getElementById('javab').style.display='block';
+          document.getElementById('guess').style.display='block';
+          document.getElementById('help1').style.display='none';
+          document.getElementById('help2').style.display='none';
+
+      });
+  script.
     $('button.book').click( function() {
-    $('form.books').submit();
+        window.location.href = '/books-continued-two';
     });
-  script(src='libs/flat/js/jquery.js')
+  script.
+    $('button.back').click( function() {
+        window.location.href = '/books';
+    });
   script(src='libs/coffee/assets/wow/wow.min.js')
     // boostrap
   script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')

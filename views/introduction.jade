@@ -121,20 +121,24 @@ html
                 | More details
       h2.text-center.wowload.fadeInUp(style="margin-top: 2%; font-size: 24px; font-weight: 900;") Now you know everything you need to know to start!
       .col-md-6
-        button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px; margin-left: 80%; margin-bottom: 10vh;", onclick="showDiv()") Start The Game!   
+      form.5missions(method='POST', action='/misst', name="5missions")
+        fieldset(style="border:none;")
+          input#umb1.form-control(type='text', name='umb1', style="display: none;", value="x")
+          input#umb2.form-control(type='text', name='umb2', style="display: none;", value="x")
+          input#umb3.form-control(type='text', name='umb3', style="display: none;", value="x")
+          input#circle.form-control(type='text', name='circle', style="display: none;", value="1")
+          input#books.form-control(type='text', name='books', style="display: none;", value="1")
+          input#flag1.form-control(type='text', name='flag1', style="display: none;", value="x")
+          input#flag2.form-control(type='text', name='flag2', style="display: none;", value="x")
+          input#flag3.form-control(type='text', name='flag3', style="display: none;", value="x")
+          button#submit.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px; margin-left: 80%; margin-bottom: 10vh;", onclick="showDiv()") Start The Game!   
+
 
     script(src='libs/coffee/assets/jquery.js')
     script.
-      $('button.registerButton').click( function() {
-      $('form.registerForm').submit();
-      });
       $('button.loginButton').click( function() {
-      $('form.loginForm').submit();
-      }); 
-    script.
-      function showDiv() { 
-          window.location.href = '/missions';
-      }
+      $('form.5missions').submit();
+      });
 
     // wow script
     script(src='libs/coffee/assets/wow/wow.min.js')

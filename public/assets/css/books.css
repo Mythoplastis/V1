@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+/*body{
+  font-size: 20px;
+  font-weight: bold;
+}*/
 .scene {
   position: relative;
   height: 100%;
@@ -12,6 +16,17 @@
   text-align: center;
 }
 
+.help {
+    height: 15vh;
+    width: 20%;
+    position: absolute;
+    margin-left: 0%;
+    margin-right: 0;
+    margin-top: 5vh;
+    background-image: url(../../assets/img/help2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 .submit {
   height: 35px; 
   display: none;   
@@ -24,6 +39,17 @@
   display: none;
 }
 
+.help2 {
+    height: 15vh;
+    width: 20%;
+    position: absolute;
+    margin-left: 80%;
+    margin-right: 0;
+    margin-top: 5vh;
+    background-image: url(../../assets/img/help.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 .magic {
   z-index: 5;
@@ -35,4 +61,14 @@
   background: url("../../assets/img/photo.jpg") 50% 50% no-repeat fixed;
   background-size: cover;
   border-radius: 50%;
+}
+
+.bounceInLeft {
+    -webkit-animation-delay: 15s; /* Chrome, Safari, Opera */
+    animation-delay: 15s;
+}
+
+.bounceInRight {
+    -webkit-animation-delay: 20s; /* Chrome, Safari, Opera */
+    animation-delay: 20s;
 }

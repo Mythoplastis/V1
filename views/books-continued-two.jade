@@ -58,17 +58,43 @@ html
                 li
                   a(href='#partners') Partners
                 |                  
-      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") Memories Covered in Plants!
-      h4#2.text-center.wowload.fadeInUp(style="margin-top:10%; margin-bottom: 0%;") Police found few things in John's suitcase. 
-      h4#3.text-center.wowload.fadeInUp(style="margin-top:0%; margin-bottom: 0%;") Look through his stuff and see whether you can find anything useful or not!
-      button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Click To Start!
-      .contain
-        .scene#4(style="display: none;")
-          .magic#5(style="display:none;")
-          button#submit.btn.btn-default.submit(type='submit', onclick="showDiv2()") I GOT IT! GET ME OUT OF HERE!
 
+      h1#5.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") Great Job!
+      h4#7.text-center.wowload.fadeInUp(style="margin-top:4%; margin-bottom: 0.5%;") How Should We Describe This Building to John!?
+      form.loginForm(method='POST', action='/Booksub')
+        .form-group(style="margin-left: 31%; margin-top: 4%; font-size: 20px; font-weight:bold;")
+            label.col-md-12.control-label(for='Beyer') Beyer Building is:
+              |   
+              .col-md-12(style="margin-left:5%; margin-top: 4vh;")
+                .radio
+                  label(for='Beyer-0')
+                    input#Beyer-0(type='radio', name='Beyer', value='bad', checked='checked')
+                    |       A very overrated Building
+                |   
+                .radio
+                  label(for='Beyer-1')
+                    input#Beyer-1(type='radio', name='Beyer', value='good')
+                    |       A hidden gem in University of Manchester
+                |   
+                .radio
+                  label(for='Beyer-2')
+                    input#Beyer-2(type='radio', name='Beyer', value='indifferent')
+                    |       I havent seen it and I am not bothered to go and see it anyway
+                |   
+                .radio
+                  label(for='Beyer-3')
+                    input#Beyer-3(type='radio', name='Beyer', value='nothing')
+                    |       I dont know even what is in there!
+        input#final(name='final', type='text', value='final', style="display:none;")       
+        button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Send it to John!
 
   script(src='libs/flat/js/jquery.js')
+  script.
+      $('button.loginButton').click( function() {
+      var x = $( "input:radio[name=Beyer]:checked" ).val();
+      document.getElementById("final").value = x;
+      $('form.loginForm').submit();
+      });
   script(src='libs/coffee/assets/wow/wow.min.js')
     // boostrap
   script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
@@ -80,26 +106,3 @@ html
   script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
     // custom script
   script(src='libs/coffee/assets/script.js')
-  script.
-      function showDiv() { 
-          document.getElementById('1').style.display='none';
-          document.getElementById('2').style.display='none';
-          document.getElementById('3').style.display='none';
-          document.getElementById('show').style.display='none';
-          document.getElementById('4').style.display='block';
-          document.getElementById('5').style.display='block';
-          document.getElementById('submit').style.display='block';
-        }
-
-  script.
-    $(document).ready(function() {
-      var $magic = $(".magic"),
-          magicWHalf = $magic.width() / 2;
-      $(document).on("mousemove", function(e) {
-        $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
-      });
-    });
-  script.
-      $('button.submit').click(function() {
-      window.location.href = '/books-continued';
-      });
