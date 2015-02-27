@@ -15,8 +15,8 @@ body {
     margin-left: 20%;
     margin-top: 5vh;
     position: absolute;
-    width: 60%;
-    height: 50vh;
+/*    width: 60%;
+    height: 50vh;*/
 }
 #background {
     display: none;

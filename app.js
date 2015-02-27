@@ -583,9 +583,7 @@ app.post("/flagsub", function(req, res) {
     var condition = mongoose.model('missions').findOne({
             author: req.session.user.username
         }, function(err, doc) {
-            doc.flag1 = req.body.flag1;
-            doc.flag2 = req.body.flag2;
-            doc.flag3 = req.body.flag3;
+            doc.flag1 = req.body.final;
             doc.save(function(err) {
                 if (err) return res.json("error");
                 res.redirect('5points');
@@ -594,36 +592,7 @@ app.post("/flagsub", function(req, res) {
         }
     );
 });
-/*
-app.get('/ViewMode', function (req, res) {
 
-    if (req.session.user) {
-        res.render('ViewMode');
-    } else {
-        res.redirect('/');
-    }
-});
-
-var getlat = require ("./public/assets/js/data.js");
-app.get('/test', function(req, res){
-
-  getlat(function(err, latlng, id, text, date, category, feeling, hashtag, author){
-    if(err){
-      return res.send(500);
-    } 
-    console.log("loading points");
-    res.render('viewMode', {
-        latlng: latlng,
-        id: id,
-        category: category,
-        feeling: feeling,
-        hashtag: hashtag,
-        author: author,
-        text: text,
-    });
-   });
-});
-*/
 var getlat = require ("./public/assets/js/data.js");
 app.get('/here', function(req, res){
 

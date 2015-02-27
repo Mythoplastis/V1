@@ -66,7 +66,7 @@ html
           button.stories(class= 'mission', style="background-image: url(../../../libs/flat/images/slider/button2.jpg); background-size: 100% 100%; margin-top:2%;")
         br
         .col-md-12
-          button.stories(class= 'mission', style="background-image: url(../../../libs/flat/images/slider/button3.jpg); background-size: 100% 100%; margin-top:2%;")
+          button.logo(class= 'mission', style="background-image: url(../../../libs/flat/images/slider/button3.jpg); background-size: 100% 100%; margin-top:2%;")
         br
       //- #contain
       //-   #container-john
@@ -98,15 +98,14 @@ html
     // custom script
   script(src='libs/coffee/assets/script.js')
   script.
-      $('button.submitcomment').click( function() {
-      $('form.subcomment').submit();
-      $('#mymodal').modal('hide');
-      });
-    script.
       $('button.longmission').click(function() {
       window.location.href = '/locations';
       });
-    script.
+  script.
       $('button.stories').click(function() {
-      window.location.href = '/new';
+      window.location.href = '/portfolio';
       });
+  script.
+      $('button.logo').click(function() {
+        alert('Under Construction!');
+        });
