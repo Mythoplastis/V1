@@ -1,0 +1,221 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/style4.css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+    script.
+      function check() {
+        var umbrella = !{JSON.stringify(umbrella)};
+          if (umbrella == 'true' || umbrella == true ) {
+              document.getElementById('umbmis').style.backgroundImage= "none";
+              document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('info').style.display= "block";
+              document.getElementById('umb').style.display= "none";
+              document.getElementById('umb1').style.display= "none";
+              document.getElementById('umb2').style.display= "none";            
+            }; 
+          };
+
+    script.     
+      function check2() {
+        var circle = !{JSON.stringify(circle)};
+          if (circle == 'true' || circle == true) {
+              document.getElementById('circle1').style.backgroundImage= "none";
+              document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('circle3').style.display= "none";
+              document.getElementById('circle4').style.display= "none";
+              document.getElementById('circle6').style.display= "none";
+              document.getElementById('circle5').style.display= "block";
+          };
+        };
+
+    script.
+      function check3() {
+        var Books = !{JSON.stringify(Books)};
+          if (Books == 'true' || Books == true) {
+              document.getElementById('books1').style.backgroundImage= "none";
+              document.getElementById('books2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('books3').style.display= "none";
+              document.getElementById('books4').style.display= "none";
+              document.getElementById('books6').style.display= "none";
+              document.getElementById('books5').style.display= "block";
+          };
+        };
+
+    script.
+      function check4() {
+        var flag = !{JSON.stringify(flag)};
+          if (flag == 'true' || flag == true) {
+              document.getElementById('flag1').style.backgroundImage= "none";
+              document.getElementById('flag2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('flag3').style.display= "none";
+              document.getElementById('flag4').style.display= "none";
+              document.getElementById('flag6').style.display= "none";
+              document.getElementById('flag5').style.display= "block";
+          };
+      };
+
+    script.
+      function check5() {
+        var flag = !{JSON.stringify(flag)};
+        var books = !{JSON.stringify(books)};
+        var circle = !{JSON.stringify(circle)};
+        var umbrella = !{JSON.stringify(umbrella)};               
+          if (flag == 'true' || flag == true && books == 'true' || books == true && circle == 'true' || circle == true && umbrella == 'true' || umbrella == true) {
+              document.getElementById('5').style.opacity= "1";
+              $('.ch-img-5').css("background-image", "url('libs/circle/images/unlocked.jpg');")              
+          };
+      };
+  body(onload= "check4(); check(); check2(); check3(); check5()")
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+      h1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") START WITH ANY OF THE POINTS BELOW!
+      h4.text-center.wowload.fadeInUp(style="margin-top: 0%; margin-bottom: 0%;") The main thing in this zone is to find out the identity of the person John used to meet quite often in Manchester 
+
+    .container
+      section.main
+        ul.ch-grid
+          li
+            .ch-item.ch-img-1#circle1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-1#circle2
+                  .ch-info-back
+                    img#circle5(src="libs/Circle/images/circle-logo.png" style="margin-left: 10%; margin-top: 5vh; display:none; opacity: 0.7;")
+                    h3#circle3(style="margin-bottom: 2vh;") Tins' Stories
+                    p#circle4
+                      a#circle6(href='Uni') Start Here!
+
+          li
+            .ch-item.ch-img-2#books1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-2#books2
+                  .ch-info-back
+                    img#books5(src="libs/Circle/images/bookslogo.png" style="margin-left: 10%; margin-top: 5vh; display:none; opacity: 0.7;")
+                    h3#books3(style="margin-bottom: 2vh;") All The Plants
+                    p#books4
+                      a#books6(href='books') Start Here!
+          li
+            .ch-item.ch-img-3#umbmis
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-3#umbmis2
+                  .ch-info-back
+                    img#info(src="libs/Circle/images/logo-umbrella.png" style="margin-left: 10%; margin-top: 5vh; display:none; opacity: 0.7;")
+                    h3#umb(style="margin-bottom: 2vh;") Puddles point
+                    p#umb1
+                      a#umb2(href='umbrella') Start Here! 
+          li
+            .ch-item.ch-img-4#flag1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-4#flag2
+                  .ch-info-back
+                    img#flag5(src="libs/Circle/images/logo-flag.png" style="margin-left: 10%; margin-top: 5vh; display:none; opacity: 0.7;")
+                    h3#flag3 United!
+                    p#flag4
+                      a#flag6(href='flag') Start Here!
+          br
+          li
+            .ch-item.ch-img-5#5
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-5
+                  .ch-info-back
+                    h3(style="margin-top: 5vh;") Locked!
+          li
+            .ch-item.ch-img-6#6
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-6
+                  .ch-info-back
+                    h3(style="margin-top: 5vh;") Locked!
+
+      h1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 28px;") Is there any other point that John needs to know about? Anywhere that he might have any memory with?
+      h1.text-center.wowload.fadeInUp(style="margin-top: 2%; font-weight: bold; font-size: 28px;") If so, let us know by 
+        a(href='portfolio') clicking here
+
+
+
+
+
+
+  script(src='libs/flat/js/jquery.js')
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')
+  script.
+      $('button.submitcomment').click( function() {
+      $('form.subcomment').submit();
+      $('#mymodal').modal('hide');
+      });
+    script.
+      $('button.longmission').click(function() {
+      window.location.href = '/locations';
+      });
+    script.
+      $('button.stories').click(function() {
+      window.location.href = '/new';
+      });

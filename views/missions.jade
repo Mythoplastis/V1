@@ -1,0 +1,111 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    link(href='assets/css/missions.css', rel='stylesheet')
+
+  body
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+    .container(style="margin-top: 9%;")
+        .col-md-12
+          button.longmission(class= 'mission')
+        br
+        br
+        .col-md-12
+          button.stories(class= 'mission', style="background-image: url(../../../libs/flat/images/slider/button2.jpg); background-size: 100% 100%; margin-top:2%;")
+        br
+        .col-md-12
+          button.logo(class= 'mission', style="background-image: url(../../../libs/flat/images/slider/button3.jpg); background-size: 100% 100%; margin-top:2%;")
+        br
+      //- #contain
+      //-   #container-john
+      //-     #square.magictime.puffIn
+      //- .row
+      //-   .col-sm-6.wowload.fadeInLeft
+      //-     h4
+      //-       i.fa.fa-pencil-square-o
+      //-       |  Register
+
+      //-   .col-sm-6.wowload.fadeInRight
+      //-     h4
+      //-       i.fa.fa-sign-in
+      //-       |  Log in!   
+      //-     p
+      //-       | By registering you are accepting the terms and condition. Please read them before joining. Our terms and conditions are not very long. it won't take you much time.
+  
+
+  script(src='libs/flat/js/jquery.js')
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')
+  script.
+      $('button.longmission').click(function() {
+      window.location.href = '/locations';
+      });
+  script.
+      $('button.stories').click(function() {
+      window.location.href = '/portfolio';
+      });
+  script.
+      $('button.logo').click(function() {
+        alert('Under Construction!');
+        });

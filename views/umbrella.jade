@@ -1,0 +1,164 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/style6.css')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+
+  body
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") PUDDLES IN THE RAIN!
+      h4#2.text-center.wowload.fadeInUp(style="margin-top: 0%; margin-bottom: 0%;") We found these in John's house. Check them out to find out more. 
+      h4#3.text-center.wowload.fadeInUp(style="margin-top: 0%; margin-bottom: 0%;") We think with these we can find out more about who he kept meeting back in Manchester 
+
+      section.main
+        ul#clues.ch-grid.wowload.fadeInRight(style="margin-top: -1%;")
+          li 
+            .ch-item.ch-img-2(style="margin-top: 4vh; margin-left: -60%;")
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-2
+                  .ch-info-back
+                    h3 COMMUNISM
+                    p
+                      | Who could believe that Aberdeen House was the place that great man lived!
+          li
+            .ch-item.ch-img-3(style="margin-top: 25vh; margin-left: -10%;")
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-3
+                  .ch-info-back
+                    h3 BIG PUB
+                    p
+                      | I never figured out what is the use of that garden on the top floor of this pub! 
+          li
+            .ch-item.ch-img-4(style="margin-top: 4vh; margin-left: -25%;")
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-4
+                  .ch-info-back
+                    h3 ART GALLERY
+                    p
+                      | That beautiful art gallery and this university hall! absolutely zero resemblance!
+          li
+            .ch-item.ch-img-1(style="margin-top: 7vh; margin-left: 25%;")
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-1
+                  .ch-info-back
+                    h3 LEMN SISSAY
+                    p
+                      | We put the umbrella under the rain on the wall! it was a great meal!
+      #help.help.animated.bounceInLeft
+
+      .col-sm-6.wowload.fadeInRight(style="margin-top: 20vh; margin-left: 55%;")
+            .col-md-7
+                input#takeway.form-control.input-md(type='text', name='text', placeholder='Which takeaway is John talking about?!', data-trigger='change', required='')
+            .form-group(style="margin-left: 16%;")
+                label.col-md-6.control-label(for='test')
+                  |   
+                  .col-md-6
+                    button#submit.btn.btn-success(type='submit', style="height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your answer!
+
+      h1#4.text-center.wowload.fadeInUp(style="display: none; margin-top: 8%; font-weight: bold; font-size: 38px;") WOW! GREAT JOB!
+      h4#5.text-center.wowload.fadeInUp(style="display: none; margin-top: 0%; margin-bottom: 0%;") Give Us Three Words That If We Tell John He Will Remember This Place! 
+
+      form.umbrella(method='POST', action='/Submitted')
+        fieldset(style="border:none; margin-top: 5%;")
+          input#umb1.form-control.wowload.fadeInUp(type='text', name='umb1', placeholder="Word #1")
+          br
+          input#umb2.form-control.wowload.fadeInUp(type='text', name='umb2', placeholder="Word #2")
+          br
+          input#umb3.form-control.wowload.fadeInUp(type='text', name='umb3', placeholder="Word #3")
+          button#show.btn.btn-success.umbrel.wowload.fadeInUp(type='submit', style="margin-left: 41%; display: none; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;") Check Your Answer!
+
+
+  script.
+      function showDiv() { 
+       if ($('#takeway').val() == 'Gemini' || $('#takeway').val() == 'gemini' || $('#takeway').val() == 'Gemini Take away' ) {
+          document.getElementById('clues').style.display='none';
+          document.getElementById('1').style.display='none';
+          document.getElementById('2').style.display='none';
+          document.getElementById('3').style.display='none';
+          document.getElementById('submit').style.display='none';
+          document.getElementById('takeway').style.display='none';
+          document.getElementById('4').style.display='block';
+          document.getElementById('5').style.display='block';
+          document.getElementById('umb1').style.display='block';
+          document.getElementById('umb2').style.display='block';
+          document.getElementById('umb3').style.display='block';
+          document.getElementById('show').style.display='block';
+          document.getElementById('help').style.display='none';
+
+        } else {
+          alert('wrong');
+        }       
+      }
+
+  script.
+      $('button.umbrel').click( function() {
+      $('form.umbrella').submit();
+      });
+  script(src='libs/flat/js/jquery.js')
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')

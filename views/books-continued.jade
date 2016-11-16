@@ -1,0 +1,156 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    link(rel='stylesheet', href='assets/css/books.css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+
+  body
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+
+      h1#1.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") So Tell Us Where This Place Is!
+      button#back.btn.btn-success.back.wowload.fadeInUp(type='submit', style="margin-left: 42%; background-color:  #5b5a58; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="back()") See The Luggage Again!
+
+      h4#2.text-center.wowload.fadeInUp(style="margin-top:4%; margin-bottom: 0.5%;") Knowing where this place is, would be a great help for us. 
+      h4#3.text-center.wowload.fadeInUp(style="margin-top:0%; margin-bottom: 0%;") We think that John's friend who he has met several times in Manchester was either studying or working in this building.
+      p#guess(style="margin-left: 40%; margin-top: 4%; font-size: 20px; font-weight: bold; margin-bottom:0; display: none;")
+        | Here Are Our Guesses:          
+      .form-group#javab(style="margin-left: 30%; display:none;")
+            .col-md-6
+              .checkbox
+                label(for='javab')
+                  input(type='checkbox', name='javab', id='javab-0', value='1')
+                  |       Cafe Muse
+              |   
+              .checkbox
+                label(for='javab-1')
+                  input(type='checkbox', name='javab', id='javab-1', value='2')
+                  |         Kilburn Building 
+              |   
+              .checkbox
+                label(for='javab-2')
+                  input(type='checkbox', name='javab', id='javab-2', value='3')
+                  |       Zochonis Building
+              |   
+              .checkbox
+                label(for='javab-3')
+                  input(type='checkbox', name='javab', id='javab-3', value='4')
+                  |       Manchester Museum
+              |   
+              .checkbox
+                 label(for='javab-4')
+                  input(type='checkbox', name='javab', id='javab-4', value='')
+                  |     Beyer Building
+              .col-md-6
+                button.test.btn.btn-success.loginButton(type='submit', style="height: 35px; padding: 10px 20px 10px 20px; margin-left: 58%;") Check Your answer!
+
+
+      .col-md-4(style="margin-left: 33%; margin-top: 3%;")
+          input#answer.form-control.input-md.wowload.fadeInUp(type='text', name='text', placeholder='Type the name of the building!', data-trigger='change', required='')
+      button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Check Your Answer!
+      #help1.help.animated.bounceInLeft
+      #help2.help2.animated.bounceInRight
+      h1#5.text-center.wowload.fadeInUp(style="display: none; margin-top: 8%; font-weight: bold; font-size: 38px;") Great Job!
+      h4#7.text-center.wowload.fadeInUp(style="display: none; margin-top:8%; margin-bottom: 0.5%;") Now we have to know what people think about this place to send it to John 
+      h4#8.text-center.wowload.fadeInUp(style="display: none; margin-top:0%; margin-bottom: 0%;") This gonna be very important for us!
+
+
+  script(src='libs/flat/js/jquery.js')
+  script.
+    $('.test').click( function() {
+      if ($('#javab-4').is(":checked")) {
+          window.location.href = '/books-continued-two';
+      } else {
+      alert('Cmooon you can do much better than this!')
+      }
+      });
+  script.
+      function showDiv() { 
+       if ($('#answer').val() == 'Beyer Building' || $('#answer').val() == 'beyer building' || $('#answer').val() == 'Beyer'  || $('#answer').val() == 'beyer'  ) {
+        window.location.href = '/books-continued-two';
+
+         } else {
+          alert('wrong');
+        }       
+      }
+  script.
+      $('.help2').click( function() {
+          document.getElementById('answer').style.display='none';
+          document.getElementById('show').style.display='none';
+          document.getElementById('back').style.display='none';
+          document.getElementById('javab').style.display='block';
+          document.getElementById('guess').style.display='block';
+          document.getElementById('help1').style.display='none';
+          document.getElementById('help2').style.display='none';
+
+      });
+  script.
+    $('button.book').click( function() {
+        window.location.href = '/books-continued-two';
+    });
+  script.
+    $('button.back').click( function() {
+        window.location.href = '/books';
+    });
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')

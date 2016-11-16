@@ -1,0 +1,109 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Books Point
+    meta(name='description', content='Clues to find books point')
+    meta(name='keywords', content='circle, border-radius, hover, css3, transition, image, thumbnail, effect, 3d')
+    meta(name='author', content='Codrops')
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/books.css')
+    script(type='text/javascript', src='libs/jquery-2.1.1/jquery-2.1.1.min.js')
+    link(href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+    script(type='text/javascript', src='assets/js/books.js')
+  body
+      h1#title(style="position: absolute; color: #575656; font-size: 7px; font-weight: bold;") 
+        span Try Different Combination Of Switches To See All The Clues!
+      .container#box
+        .toggle
+          input#M(type='checkbox')
+          span.button
+          span.label M
+        .toggle
+          input#C(type='checkbox')
+          span.button
+          span.label C
+        .toggle
+          input#R(type='checkbox')
+          span.button
+          span.label R
+      
+      img#aks.animated.fadeInUp(src='../../libs/Circle/images/balloons.png', style="margin-top:7%; margin-left: 10%; position: absolute; display: none;")
+      img#plane.animated.fadeInLeft(src='../../libs/Circle/images/plane.png', style="margin-top:37%; margin-left: 30%; position: absolute; display: none;")
+      img#air.animated.fadeInUp(src='../../libs/Circle/images/airballoon.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
+      img#fire.animated.fadeInUp(src='../../libs/Circle/images/fire.png', style="margin-top:7%; margin-left: 70%; position: absolute; display: none;")
+      input#Beyer.form-control(type='text', name='beyer', placeholder="Name the Place")
+      h2#titleone
+        span#title(style="font-size: 24px; color: #535353; margin-top: 20%; margin-left: -20%; position:absolute;") Name this one and only vegetated building in the campus!
+      input#check.check(type="button", value="Check your answer!", onclick="showDiv()")
+      h1#2
+        span#3(style="display:none; margin-left:-25%; color: #535353;") WELL DONE! YOU FOUND THE LOGO AND THE PIECE OF PUZZLE!
+      img#circle(src="libs/Circle/images/bookslogo.png" style="display:none; margin-left: 42%;")
+      //- img#puzzle(src="libs/Circle/images/bookslogo.png" style="display:none; margin-left: 42%;") --- this would be the image of the puzzle piece for this one!
+      form#form.books(method='POST', action='/Booksub', style="display:none; margin-left:30%; margin-top: 10vh;")
+          fieldset
+              .form-group
+                input#radios-0(type='radio', name='radios', value='happy', checked='checked')
+                |      Seeing an old friend!
+                br
+                input#radios-1(type='radio', name='radios', value='indifference')
+                |      Hearing your facourite song!
+                br
+                input#radios-2(type='radio', name='radios', value='sad')
+                |      The line for the ride I am waiting for isn't too long but it's still long enough to have to wait a little bit!
+                br
+                input#radios-3(type='radio', name='radios', value='awful')
+                |      I asked for a tattoo of a "skull and crossbones" and instead got a tattoo of a "seagull and cellphones"!
+                br
+          input#submit.book(type='submit', class="button", value="GET THE LOGO")
+    script.
+      $('#M').change(function(){
+            if(this.checked) {
+              document.getElementById('aks').style.display='block';
+            } else {
+              document.getElementById('aks').style.display='none';
+            }
+        });
+      $('#C').change(function(){
+            if(this.checked) {
+              document.getElementById('plane').style.display='block';
+            } else {
+              document.getElementById('plane').style.display='none';
+            }
+        });
+      $('#R').change(function(){
+            if(this.checked) {
+              document.getElementById('air').style.display='block';
+            } else {
+              document.getElementById('air').style.display='none';
+            }
+        });
+
+    script.
+      function showDiv() { 
+       if ($('#Beyer').val() == 'Beyer Building' || $('#Beyer').val() == 'beyer building' || $('#Beyer').val() == 'beyer' ) {
+          document.getElementById('box').style.display='none';
+          document.getElementById('aks').style.display='none';
+          document.getElementById('Beyer').style.display='none';
+          document.getElementById('plane').style.display='none';
+          document.getElementById('air').style.display='none';
+          document.getElementById('fire').style.display='none';
+          document.getElementById('title').style.display='none';
+          document.getElementById('check').style.display='none';
+          document.getElementById('titleone').style.display='none';
+          document.getElementById('2').style.display='block';
+          document.getElementById('3').style.display='block';
+          document.getElementById('form').style.display='block';
+          document.getElementById('submit').style.display='block';
+          document.getElementById('circle').style.display='block';
+
+        } else {
+          alert('wrong');
+        }       
+      }
+    script.
+      $('button.book').click( function() {
+      $('form.books').submit();
+      });

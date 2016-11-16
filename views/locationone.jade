@@ -1,0 +1,333 @@
+html(lang="en")
+  head
+    title Home | Flat Theme
+    link(href="libs/Honey/css/bootstrap.min.css", rel="stylesheet")
+    link(href="libs/Honey/css/font-awesome.min.css", rel="stylesheet")
+    link(href="libs/Honey/css/prettyPhoto.css", rel="stylesheet")
+    link(href="libs/Honey/css/animate.css", rel="stylesheet")
+    link(href="libs/Honey/css/main.css", rel="stylesheet")
+    link(href="libs/Honey/css/mission.css", rel="stylesheet")
+    //if lt IE 9
+      script(src="libs/Honey/js/html5shiv.js")
+      script(src="libs/Honey/js/respond.min.js")
+    link(rel="shortcut icon", href="libs/Honey/images/ico/favicon.ico")
+    link(rel="apple-touch-icon-precomposed", sizes="144x144", href="images/ico/apple-touch-icon-144-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", sizes="114x114", href="images/ico/apple-touch-icon-114-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", sizes="72x72", href="images/ico/apple-touch-icon-72-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", href="images/ico/apple-touch-icon-57-precomposed.png")
+    script(type="text/javascript", src="http://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyBeYO4WXTpTzPR615h9n6L8Ear4dkNd80Y&sensor=false")
+          
+    script.
+      // This example creates an interactive map which constructs a
+      // polyline based on user clicks. Note that the polyline only appears
+      // once its path property contains two LatLng coordinates.
+      var poly;https://github.com/vidalab/meteor-html2jade
+      var map;
+      function initialize() {
+      var mapOptions = {
+      center: new google.maps.LatLng(53.467216, -2.233701),
+      disableDoubleClickZoom: true,
+      zoom: 15,
+      styles: [{"stylers":[{"saturation":-100},{"gamma":0.8},{"lightness":4},{"visibility":"on"}]},{"featureType":"landscape.natural","stylers":[{"visibility":"on"},{"gamma":0.8},{"lightness":4},{"saturation":-100}]},{"featureType":"poi.park","stylers":[{"visibility":"on"},{"color":"#5dff00"},{"gamma":4.97},{"lightness":-5},{"saturation":100}]}]
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var polyOptions = {
+      strokeColor: '#000000',
+      strokeOpacity: 1.0,
+      strokeWeight: 3,
+      };
+      poly = new google.maps.Polyline(polyOptions);
+      poly.setMap(map);
+      // Add a listener for the click event
+      google.maps.event.addListener(map, 'click', addLatLng);
+      }
+      /**
+      * Handles click events on a map, and adds a new point to the Polyline.
+      * @param {google.maps.MouseEvent} event
+      */
+      function addLatLng(event) {
+      var path = poly.getPath();
+      // Because path is an MVCArray, we can simply append a new coordinate
+      // and it will automatically appear.
+      path.push(event.latLng);
+      var image = 'images/slider/man.png';
+      // Add a new marker at the new plotted point on the polyline.
+      var marker = new google.maps.Marker({
+      position: event.latLng,
+      title: '#' + path.getLength(),
+      map: map,
+      icon: image
+      });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  // /head
+  body
+    // modal for introduction bees
+    #bee1.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 28px; font-color: white") WHY BEES!?
+          .modal-body
+            p(style="font-weight: bold; font-size: 28px; color: #A6D1D9;") Here there will be the explanation of how bees have become symbol of Manchester
+          .modal-footer
+            button.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modal for introduction bees
+    #bee2.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 28px; font-color: white") TERMS AND CONDITIONS
+          .modal-body
+            h3(style="font-weight: bold; font-size: 28px; color: #A6D1D9;") Here it will be list of terms and conditions 
+          .modal-footer
+            button.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modal for introduction bees
+    #bee3.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 28px; font-color: white") HOW TO PLAY THE GAME!
+          .modal-body
+            h3(style="font-weight: bold; font-size: 28px; color: #A6D1D9;")
+              | Here it will be explanation of what is the game; How you can gain points and ...
+          .modal-footer
+            button.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modal for introduction bees
+    #bee4.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 28px; font-color: white") OWNERSHIP
+          .modal-body
+            h3(style="font-weight: bold; font-size: 28px; color: #A6D1D9;") Here it will be explanation of how they can make changes to their properties. 
+          .modal-footer
+            button.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modoal puzzle 1
+    #Puzz1.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h3.modal-title(style="font-weight: bold; font-size: 26px; text-align: center; color: #131D43; font-family: Impact, Charcoal, sans-serif;") "WHEN THE RAIN FALLS, THEY TALK OF MANCHESTER"
+          .modal-body
+            img(style="margin-left:10%; width: 80%; height: 40%;", src="libs/Honey/images/location1/rainfall.jpg")
+            h3(style="font-weight: bold; font-size: 20px; color: #A6D1D9; text-align: justify;")
+              | If you find this poem by Lemm Sissay on the wall, you are very close to the location one. Don"t forget to take a picture and tweet it with #Mythoplastis. You can see it also in Google street view!
+          .modal-footer(style="margin-top: -2%;")
+            button#one.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+        // /.modal-content
+      // /.modal-dialog
+    // /.modal
+    // modoal puzzle 2
+    #Puzz2.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 26px; text-align: center; color: white;") 2003 TRAGEDY
+          .modal-body
+            h3(style="font-weight: bold; font-size: 20px; color: #A6D1D9; text-align: justify;")
+              | On Saturday 26 April 2003, three valuable assets of this location were stolen. They were later found rolled up in a nearby public toilet and were returned!
+          .modal-footer
+            button#two.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+        // /.modal-content
+      // /.modal-dialog
+    // /.modal
+    // modoal puzzle 3
+    #Puzz3.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="font-weight: bold; font-size: 26px; text-align: center; color: white;")  1960s:BOOM!
+          .modal-body
+            img(style="margin-left:10%; width: 80%; height: 70%;", src="libs/Honey/images/location1/1960.png")
+            h3(style="font-weight: bold; font-size: 20px; color: #A6D1D9; text-align: justify;")  1960s will be back here! This image explains it all!
+          .modal-footer
+            button#three.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modoal puzzle 4
+    #Puzz4.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="color: #2E2E2E; font-family: Impact, Charcoal, sans-serif; font-size: 24px; font-weight: bold;") IT STILL LOOKS THE SAME!
+          .modal-body
+            img(style="margin-left:10%; width: 90%; height: 60%;", src="libs/Honey/images/location1/old.png")
+          .modal-footer
+            button#four.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modoal puzzle 5
+    #Puzz5.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="color: white; font-size: 24px; font-weight: bold;") NOT TOO CLOSE, NOT TOO FAR
+          .modal-body
+            h3(style="font-weight: bold; font-size: 20px; color: #A6D1D9; text-align: justify;")  This place is located somewhere between Denmark and Oxford and Manchester!!
+          .modal-footer
+            button#five.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modoal puzzle 6
+    #Puzz6.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="color: white; font-size: 24px; font-weight: bold;") DO YOU REMEMBER THIS?
+          .modal-body
+            img(style="margin-left:20%; width: 60%; height: 90%;", src="libs/Honey/images/location1/umbrella.jpg")
+          .modal-footer
+            button#six.btn.btn-success(type="button", data-dismiss="modal") I GOT IT!
+    // modoal Ownership location one
+    #ownership.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") &#215;
+              span.sr-only Close
+            h4.modal-title(style="color: white; font-size: 28px; font-weight: bold;") Do you want to own this location?!
+          .modal-body
+            .col-md-8
+              label.checkbox-inline(for="own", style="color: white; font-size: 18px; font-weight: bold;")
+                input#own(type="checkbox", name="checkboxes", value="Yes")
+                | Yes
+              label.checkbox-inline(for="nown", style="color: white; font-size: 18px; font-weight: bold;")
+                input#nown(type="checkbox", name="checkboxes", value="No")
+                | No
+            br
+            h3#ownconf(style="color: white; font-size: 18px; font-weight: bold; display: none;")
+              | Great! You have now xxxxx honey and one property. Check updates on your property from the website
+            h3#noconf(style="color: white; font-size: 18px; font-weight: bold; display:none;")  No Worries! You still have xxxx honey. Move on to the next location.
+          .modal-footer
+            button#nine.btn.btn-success(type="button", data-dismiss="modal", href="/missions") Go To The Next Location
+    // Main Slides
+    section#main-slider.no-margin
+      #myCarousel.carousel.slide.wet-asphalt(data-interval="false")
+        .carousel-inner
+          .item.active(style="background-image: url(libs/Honey/images/slider/bg2d.jpg)")
+            .container
+              .row
+                .col-sm-12
+                  .carousel-content
+                    br
+                    .row
+                      .col-md-12(style="margin-left: 10%; margin-top: 3%;")
+                        h2.boxed.animation.animated-item-1(style="margin-bottom: 40%; font-size: 28px;") CLICK ON THE BEES AND THEY WILL EXPLAIN HOW THINGS WORK
+                      .col-md-4(style="margin-top: -20%; margin-left: 15%;")
+                        input#saveForm.button.pulse(type="image", src="libs/Honey/images/slider/letter.png", name="saveForm", data-toggle="modal", data-target="#bee1")
+                      .col-md-4(style="margin-top: -10%; margin-left: 80%;")
+                        input#saveForm.button.pulse(type="image", src="libs/Honey/images/slider/letter.png", name="saveForm", data-toggle="modal", data-target="#bee2")
+                      .col-md-3(style="margin-top: -35%; margin-left: 29%;")
+                        input#saveForm.button.pulse(type="image", src="libs/Honey/images/slider/bee.png", name="saveForm", data-toggle="modal", data-target="#bee3")
+                      .col-md-3(style="margin-top: -18%; margin-left: 50%;")
+                        input#saveForm.button.pulse(type="image", src="libs/Honey/images/slider/bee.png", name="saveForm", data-toggle="modal", data-target="#bee4")
+          // /.item
+          .item(style="background-image: url(libs/Honey/images/slider/bgtest.jpg)")
+            .container
+              .row
+                .col-sm-12
+                  .carousel-content
+                    h2(style="color: white; font-family: Georgia, serif; font-size: 28px; font-weight: bold; margin-top: 7%; margin-left: 5%;") HERE ARE ALL THE CLUES YOU HAVE TO FIND THE FIRST LOCATION!
+                    .col-md-6(style="margin-top:5%; margin-left:30%;")
+                      #puzzle
+                        button#1(data-toggle="modal", data-target="#Puzz1", style="background-image: url(libs/Honey/images/puzzle/10.jpg);")
+                          | 1
+                        button#2(data-toggle="modal", data-target="#Puzz2", style="background-image: url(libs/Honey/images/puzzle/10.jpg);")
+                          | 2
+                        button#3(data-toggle="modal", data-target="#Puzz3", style="background-image: url(libs/Honey/images/puzzle/10.jpg); box-shadow: 8px 0px 5px #888888;")
+                          | 3
+                        button#4(data-toggle="modal", data-target="#Puzz4", style="background-image: url(libs/Honey/images/puzzle/10.jpg); box-shadow: 0px 8px 5px #888888;")
+                          | 4
+                        button#5(data-toggle="modal", data-target="#Puzz5", style="background-image: url(libs/Honey/images/puzzle/10.jpg); box-shadow: 0px 8px 5px #888888;")
+                          | 5
+                        button#6(data-toggle="modal", data-target="#Puzz6", style="background-image: url(libs/Honey/images/puzzle/10.jpg); box-shadow: 8px 8px 5px #888888;")
+                          | 6
+                    br
+                    .col-lg-8.middle(style="margin-left: 30%;")
+                      form
+                        input#ireland(type="text", value="53.460483", style="visibility: hidden;")
+                        input#ireland(type="text", value="-2.229485", style="visibility: hidden;")
+                        label.col-md-8.control-label(for="location1", style="color: white; font-family: Georgia, serif; font-size: 20px; ") Know Where this is?! Type It Here
+                        .col-md-6
+                          input#location.form-control(type="text", placeholder="Name of the location")
+                        label#wrong.col-md-8.control-label(for="location1", style="visibility: hidden") Wrong Guess! :/
+                        .col-lg-6(style="margin-top:3%; margin-left: 13%;")
+                          input#submit.btn.btn-success(type="submit", value="YAY! You got it right!", disabled="disabled", data-toggle="modal", data-target="#ownership")
+      a.prev.hidden-xs(data-slide="prev", href="#myCarousel") &#8249;
+      a.next.hidden-xs(data-slide="next", href="#myCarousel") &#8250;
+  script(src="libs/Honey/js/jquery.js")
+  script.
+    $('.carousel').carousel()
+  script(src="libs/Honey/js/bootstrap.min.js")
+  script(src="libs/Honey/js/main.js")
+  script.
+    (function() {
+    $('#location').keyup(function() {
+    var empty = false;
+    $('#location').each(function() {
+    if ($(this).val() == '') {
+    empty = true;
+    }
+    });
+    if (empty) {
+    $('#submit').attr('disabled', 'disabled');
+    } else {
+    if($(this).val() =='Whitworth art gallery') {
+    $('#submit').removeAttr('disabled');
+    $('#wrong').attr('style','visibility: hidden;');
+    }
+    else {
+    $('#wrong').removeAttr('style');
+    };
+    }
+    });
+    })();
+  script(type="text/javascript").
+    $("#own").change(function() {
+    var inputs = $("[id^=nown]:checkbox").not(this);
+    this.checked ? inputs.prop({disabled: true, checked: false}) : inputs.prop("disabled", false);
+    }).change();
+  script(type="text/javascript").
+    $('#own').click(function(){
+    if ($("#own").is(':checked')) {
+    $("#ownconf").show();
+    } else {
+    $("#ownconf").hide();
+    $("#noconf").hide();
+    }
+    });
+    $('#nown').click(function(){
+    if ($("#nown").is(':checked')) {
+    $("#noconf").show();
+    } else {
+    $("#noconf").hide();
+    $("#ownconf").hide();
+    }
+    });
+  script(src="libs/Honey/js/picchange.js")

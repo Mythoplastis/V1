@@ -1,0 +1,444 @@
+html
+  head(lang='en')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title Mythoplastis
+    meta(name='description', content='CUPS - Mythoplastis - A Planning Phd on puplic participation')
+    meta(name='keywords', content='cups, uom, university of manchester, planning, gaming, public participation')
+    meta(property='og:title', content='')
+    link(rel='stylesheet', type='text/css', href='libs/munter/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='libs/bootstrap-modal-master/css/bootstrap-modal-bs3patch.css')
+    link(rel='stylesheet', type='text/css', href='libs/bootstrap-modal-master/css/bootstrap-modal.css')
+    link(rel='stylesheet', href='libs/fancybox/jquery.fancybox-v=2.1.5.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='libs/munter/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='libs/munter/css/style.css')
+    link(rel='stylesheet', href='libs/munter/css/parsley.css')
+    link(rel='stylesheet', href='assets/css/munter-modified.css')
+    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    link(rel='prefetch', href='libs/munter/images/zoom.png')
+  body
+    .navbar.navbar-fixed-top(data-activeslide='1')
+      .container
+        //
+           .navbar-toggle is used as the toggle for collapsed navbar content 
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .nav-collapse.collapse.navbar-responsive-collapse
+          ul.nav.row
+            li.col-12.col-sm-2(data-slide='1')
+              a#menu-link-1(href='#slide-1', title='Next Section')
+                span.icon.icon-home
+                span.text HOME
+            li.col-12.col-sm-2(data-slide='2')
+              a#menu-link-2(href='#slide-2', title='Next Section')
+                span.icon.icon-user
+                span.text JOIN US
+            li.col-12.col-sm-2(data-slide='3')
+              a#menu-link-3(href='#slide-3', title='Next Section')
+                span.icon.icon-briefcase
+                span.text OVERVIEW
+            li.col-12.col-sm-2(data-slide='4')
+              a#menu-link-4(href='#slide-4', title='Next Section')
+                span.icon.icon-gears
+                span.text ABOUT US
+            li.col-12.col-sm-2(data-slide='5')
+              a#menu-link-5(href='#slide-5', title='Next Section')
+                span.icon.icon-envelope
+                span.text CONTACT
+          .row
+            .col-sm-2.active-menu
+        //
+           /.nav-collapse 
+      //
+         /.container 
+    //
+       /.navbar 
+    //
+       === Arrows === 
+    #arrows
+      #arrow-up.disabled
+      #arrow-down
+      #arrow-left.disabled.visible-lg
+      #arrow-right.disabled.visible-lg
+    br
+    br
+    //
+       === MAIN Background === 
+    #slide-1.slide.story(data-slide='1')
+      .container
+        #home-row-1.row.clearfix
+          .col-12
+            h1.font-semibold
+            h4.font-thin
+              span.font-semibold
+            br
+            br
+        #home-row-2.row.clearfix
+          br
+          br
+          br
+          br
+    //
+       === Slide 1 ===
+    div
+    //
+       === Slide 2 ===
+    #slide-2.slide.story(data-slide='2')
+      //
+        name="slide2" > 
+      .container
+        .row.title-row
+          .col-12.font-title
+            | “Carefully told and carefully heard,stories do have the potential to act as a bridge between engrained habits and new futures.”
+        .row.line-row
+          .hr  
+        br
+        br
+        .row
+          .col-lg-12
+              .col-xs-5.col-sm-5.col-md-5
+                .container
+                  .row
+                    .col-md-5
+                      .panel.panel-default
+                        .panel-body
+                          form.loginForm(method='POST', action='/missions')
+                            fieldset
+                              h2 Start Exploring Here! 
+                              hr.colorgraph
+                              .form-group
+                                input#email.form-control.input-lg(type='email', name='emaillog', placeholder='Email Address', data-trigger='change', data-required='true')
+                              .form-group
+                                input#password.form-control.input-lg(type='password', name='passwordlog', placeholder='Password')
+                              a.btn.btn-link.pull-right(href='') Forgot Password?
+                              hr.colorgraph
+                              .form-group.last
+                                .col-sm-offset-1.col-sm-9
+                                  button.loginButton.btn.btn-primary(type='submit') Sign in
+                                  button.btn.btn-default(type='Register', href='#Register', data-toggle='modal')  Register
+              .col-xs-6.col-sm-6.col-md-6
+                  #home-row-2.row.clearfix
+                      .col-10.col-sm-3
+                        .home-hover1.navigation-slide(href='#terms', data-toggle='modal')
+                          img(src='assets/img/button.jpg')
+                      .col-10.col-sm-3
+                        .home-hover.navigation-slide(data-slide='3')
+                          img(src='assets/img/button2.jpg')
+                  //
+                    == Terms and Condition Modal==
+                  #terms.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+                    .modal-
+                      .modal-content
+                        .modal-header
+                          h2 Terms and Conditions
+                        .modal-body
+                          p
+                            | You can submit your material in any format you want; being photo, video, text and sound.
+                          p
+                            | You have the option to allow others to download your submitted material, modify it and create a new material. In creating your input also you can ask others for visual helps and collaborate with them in creating the material.
+                          p
+                            | The materials you submit will be visible to public as long as the website is running. You can delete your entries at any time but if you have allowed others to download your material and modify it, their entry will not be affected by you deleting your entry.
+                          p
+                            | All the submitted materials will be reviewed by website administrators and admins have all the right to remove any material which they find offensive in any terms or inappropriate.
+                          p  You can also report any abuse of your submitted material. 
+            #Register.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+                .modal-
+                    .modal-content
+                      .modal-header
+                        h2
+                          | Become a Member!
+                          small Fill the Form
+                      .modal-body
+                        form.registerForm(method='POST', action='/samples')
+
+                          .form-group
+                              label.col-md-4.control-label(for='fullName') Full Name
+                                .col-md-6
+                                  input#email.form-control.input-md(name='fullName', type='text', placeholder='*Please enter a valid email address', required='')
+                                  span.help-block No one will see your full name during the game. 
+
+                          .form-group
+                              label.col-md-4.control-label(for='age') Age
+                                .col-md-6
+                                  input#email.form-control.input-md(name='age', type='text', placeholder='*How old are you?', required='')
+                                  span.help-block There is no age limit for this website 
+
+
+                          .form-group
+                              label.col-md-4.control-label(for='city') Postcode
+                                .col-md-6
+                                  input#email.form-control.input-md(name='city', type='text', placeholder='*Please enter the valid postcode', required='')
+                                  span.help-block If you don't live in Manchester please enter your postcode in any city you are currently living. 
+
+                          .form-group
+                              label.col-md-4.control-label(for='job') Job
+                                .col-md-6
+                                  input#email.form-control.input-md(name='job', type='text', placeholder='*What you do for living?', required='')
+
+                          .form-group
+                              label.col-md-4.control-label(for='username') Your preffered username
+                                .col-md-6
+                                  input#email.form-control.input-md(name='username', type='text', placeholder='*what do you want to be called here?', required='')
+
+                          .form-group
+                              label.col-md-4.control-label(for='password') password
+                                .col-md-6
+                                  input#email.form-control.input-md(name='password', type='text', placeholder='*choose a password', required='')
+                          .form-group
+                              label.col-md-4.control-label(for='email') Email
+                                .col-md-6
+                                  input#email.form-control.input-md(name='email', type='email', placeholder='*PLease enter the valid email address?', required='')
+
+                            button.registerButton.btn.btn-primary(type='submit') Register 
+
+      //
+        == Terms and Condition Modal==
+      #terms.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+        .modal-
+          .modal-content
+            .modal-header
+              h2 Terms and Conditions
+            .modal-body
+              p
+                | You can submit your material in any format you want; being photo, video, text and sound.
+              p
+                | You have the option to allow others to download your submitted material, modify it and create a new material. In creating your input also you can ask others for visual helps and collaborate with them in creating the material.
+              p
+                | The materials you submit will be visible to public as long as the website is running. You can delete your entries at any time but if you have allowed others to download your material and modify it, their entry will not be affected by you deleting your entry.
+              p
+                | All the submitted materials will be reviewed by website administrators and admins have all the right to remove any material which they find offensive in any terms or inappropriate.
+              p  You can also report any abuse of your submitted material. 
+    //
+       /slide2 
+    //
+       === Slide 3 - Portfolio 
+    #slide-3.slide.story(data-slide='3')
+      .row
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p01-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p01-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p02-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p02-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p09-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p09-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p010-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p10-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p05-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p05-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p06-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p06-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p07-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p07-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p08-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p08-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p03-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p03-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p04-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p04-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p11-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p11-small.jpg', alt='')
+        .col-12.col-sm-6.col-lg-2
+          a.fancybox(data-fancybox-group='portfolio', href='libs/munter/images/portfolio/p12-large.jpg')
+            img.thumb(src='libs/munter/images/portfolio/p12-small.jpg', alt='')
+      //
+         /row 
+    //
+       /slide3 
+    //
+       === Slide 4 - Process === 
+    #slide-4.slide.story(data-slide='4')
+      .container
+        .row.title-row
+          .col-12.font-semibold Who We Are and What We Do
+        //
+           /row 
+        .row.line-row
+          .hr  
+        //
+           /row 
+        .row.subtitle-row
+          .col-sm-1.hidden-sm  
+          .col-12.col-sm-10.font-light
+            | Mythoplastis is a tool developed as part of a PhD project in the Planning Department of University of Manchester.Our aims are:
+          .col-sm-1.hidden-sm  
+        //
+           /row 
+        .row.content-row
+          .col-sm-1.hidden-sm  
+          .col-12.col-sm-2
+            p
+              i.icon.icon-user
+            h2.font-thin
+              | Listening to
+              br
+              span.font-semibold Your Stories
+          //
+             /col12 
+          .col-12.col-sm-2
+            p
+              i.icon.icon-list-alt
+            h2.font-thin
+              | Sharing
+              br
+              span.font-semibold Your Stories
+          //
+             /col12 
+          .col-12.col-sm-2
+            p
+              i.icon.icon-cloud
+            h2.font-thin
+              | Storming
+              br
+              span.font-semibold our brains
+          //
+             /col12 
+          .col-12.col-sm-2
+            p
+              i.icon.icon-map-marker
+            h2.font-thin
+              | Locating
+              br
+              span.font-semibold Your Favourite Places
+          //
+             /col12 
+          .col-12.col-sm-2
+            p
+              i.icon.icon-gift
+            h2.font-thin
+              | Sharing
+              br
+              span.font-semibold ideas
+          //
+             /col12 
+          .col-sm-1.hidden-sm  
+        //
+           /row 
+        .row.subtitle-row
+          .col-sm-1.hidden-sm  
+          .col-12.col-sm-10.font-light Here is our team:
+          .col-sm-1.hidden-sm  
+        //
+           /row 
+        .row.content-row
+          .col-4.col-sm-4
+            p
+              img(src='assets/img/richard.jpg')
+            h2.font-thin Richard Kingston
+          //
+             /col12 
+          .col-4.col-sm-4
+            p
+              img(src='assets/img/moozhan.jpg')
+            h2.font-thin Moozhan Shakeri
+          //
+             /col12 
+          .col-4.col-sm-4
+            p
+              img(src='assets/img/nuno.jpg')
+            h2.font-thin Nuno Pinto
+          //
+             /col12 
+        //
+           /row 
+      //
+         /container 
+    //
+       /slide4 
+    //
+       === Slide 6 / Contact === 
+    #slide-6.slide.story(data-slide='6')
+      .container
+        .row.title-row
+          .col-12.font-light Leave us a message
+        //
+           /row 
+        .row.line-row
+        //
+           /row 
+        .row.subtitle-row
+          .col-12.col-sm-12.font-light You can find us literally anywhere, just push a button and we’re there
+        //
+           /row 
+        #contact-row-4.row
+          .col-sm-1.hidden-sm  
+          .col-12.col-sm-2.with-hover-text
+            p
+              a(target='_blank', href='#')
+                i.icon.icon-phone
+            span.hover-text.font-light xxxxxxxxxxxx
+          //
+             /col12 
+          .col-12.col-sm-2.with-hover-text
+            p
+              a(target='_blank', href='#')
+                i.icon.icon-envelope
+            span.hover-text.font-light Moozhan.Shakeri@manchester.ac.uk
+          //
+             /col12 
+          .col-12.col-sm-2.with-hover-text
+            p
+              a(target='_blank', href='#')
+                i.icon.icon-home
+            span.hover-text.font-light
+              | Manchester, England
+              br
+              | xxxxxxxx
+          //
+             /col12 
+          .col-12.col-sm-2.with-hover-text
+            p
+              a(target='_blank', href='#')
+                i.icon.icon-facebook
+            span.hover-text.font-light facebook/Mythoplastis
+          //
+             /col12 
+          .col-12.col-sm-2.with-hover-text
+            p
+              a(target='_blank', href='#')
+                i.icon.icon-twitter
+            span.hover-text.font-light @Mythoplastis
+          //
+             /col12 
+        //
+           /row 
+      //
+         /container 
+    //
+       /Slide 6 
+    //
+       SCRIPTS 
+    script(src='libs/munter/js/html5shiv.js')
+    script(src='libs/munter/js/jquery-1.10.2.min.js')
+    script(src='libs/munter/js/jquery-migrate-1.2.1.min.js')
+    script(src='libs/munter/js/bootstrap.min.js')
+    script(src='libs/bootstrap-modal-master/js/bootstrap-modalmanager.js')
+    script(src='libs/bootstrap-modal-master/js/bootstrap-modal.js')
+    script(src='libs/munter/js/jquery.easing.1.3.js')
+    script(type='text/javascript', src='libs/fancybox/jquery.fancybox.pack-v=2.1.5.js')
+    script(src='libs/munter/js/script.js')
+    script(src='assets/js/jquery-1.7.1.min.js')
+    script(src='assets/js/jquery.validate.min.js')
+    script(src='assets/js/jquery.parsley.js')
+    script(src='assets/js/jquery.parsley.extend.min.js')
+    script(src='assets/js/jquery.parsley-standalone.min.js')
+    //
+       fancybox init 
+    script.
+      $('button.registerButton').click( function() {
+      $('form.registerForm').submit();
+      });
+      $('button.loginButton').click( function() {
+      $('form.loginForm').submit();
+      });

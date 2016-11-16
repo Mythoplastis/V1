@@ -1,0 +1,108 @@
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    title MYTHOPLASTIS
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lobster', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:600', rel='stylesheet', type='text/css')
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='libs/coffee/assets/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/animate.css')
+    link(rel='stylesheet', href='libs/coffee/assets/animate/set.css')
+    link(rel='stylesheet', href='assets/css/magic.min.css')
+    link(rel='stylesheet', href='assets/css/magic.css')
+    link(rel='stylesheet', href='libs/coffee/assets/gallery/blueimp-gallery.min.css')
+    link(rel='shortcut icon', href='images/favicons.ico', type='image/x-icon')
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    link(rel='stylesheet', href='libs/coffee/assets/style2.css')
+    //- script(src='libs/flat/js/jquery-1.9.1.min.js')
+    script(src='libs/flat/js/modernizr.js')
+    link(rel='stylesheet', href='libs/coffee/assets/style.css')
+    link(rel='stylesheet', href='assets/css/books.css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+
+  body
+    .topbar.animated.fadeInLeftBig
+    // Header Starts
+    .navbar-wrapper
+      .container
+        #top-nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+          .container
+            .navbar-header
+              // Logo Starts
+              a.navbar-brand(href='#home')
+                img(src='assets/img/letter2.png', alt='logo', style="margin-top: -5%;")
+              // #Logo Ends
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+                |                 
+                span.icon-bar
+            // Nav Starts
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav.navbar-right.scroll
+                li.active
+                  a(href='#home') Home
+                |                  
+                li
+                  a(href='#menuw', style="color: #ccb117;") Join Us/Login
+                |                  
+                li
+                  a(href='#foods') Overview
+                |                  
+                li
+                  a(href='#partners') Partners
+                |                  
+
+      h1#5.text-center.wowload.fadeInUp(style="margin-top: 8%; font-weight: bold; font-size: 38px;") Great Job!
+      h4#7.text-center.wowload.fadeInUp(style="margin-top:4%; margin-bottom: 0.5%;") How Should We Describe This Building to John!?
+      form.loginForm(method='POST', action='/Booksub')
+        .form-group(style="margin-left: 31%; margin-top: 4%; font-size: 20px; font-weight:bold;")
+            label.col-md-12.control-label(for='Beyer') Beyer Building is:
+              |   
+              .col-md-12(style="margin-left:5%; margin-top: 4vh;")
+                .radio
+                  label(for='Beyer-0')
+                    input#Beyer-0(type='radio', name='Beyer', value='bad', checked='checked')
+                    |       A very overrated Building
+                |   
+                .radio
+                  label(for='Beyer-1')
+                    input#Beyer-1(type='radio', name='Beyer', value='good')
+                    |       A hidden gem in University of Manchester
+                |   
+                .radio
+                  label(for='Beyer-2')
+                    input#Beyer-2(type='radio', name='Beyer', value='indifferent')
+                    |       I havent seen it and I am not bothered to go and see it anyway
+                |   
+                .radio
+                  label(for='Beyer-3')
+                    input#Beyer-3(type='radio', name='Beyer', value='nothing')
+                    |       I dont know even what is in there!
+        input#final(name='final', type='text', value='final', style="display:none;")       
+        button#show.btn.btn-success.loginButton.wowload.fadeInUp(type='submit', style="margin-left: 43%; margin-top: 3%; height: 35px; padding: 10px 20px 10px 20px;", onclick="showDiv()") Send it to John!
+
+  script(src='libs/flat/js/jquery.js')
+  script.
+      $('button.loginButton').click( function() {
+      var x = $( "input:radio[name=Beyer]:checked" ).val();
+      document.getElementById("final").value = x;
+      $('form.loginForm').submit();
+      });
+  script(src='libs/coffee/assets/wow/wow.min.js')
+    // boostrap
+  script(src='libs/coffee/assets/bootstrap/js/bootstrap.js', type='text/javascript')
+    // jquery mobile
+  script(src='libs/coffee/assets/mobile/touchSwipe.min.js')
+  script(src='libs/coffee/assets/respond/respond.js')
+    // gallery
+  script(src='libs/coffee/assets/gallery/jquery.blueimp-gallery.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js')
+    // custom script
+  script(src='libs/coffee/assets/script.js')

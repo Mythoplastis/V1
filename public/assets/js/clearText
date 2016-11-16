@@ -1,0 +1,5 @@
+function clearTexts() {
+      	if (1>0) {
+      		  document.getElementById("Text").style.display='none'
+		}
+}

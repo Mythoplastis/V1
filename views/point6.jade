@@ -1,0 +1,28 @@
+html(lang='en')
+  head
+    title Mythoplastis-Flag Point
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/6.css') 
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.js') 
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.css') 
+
+
+
+  body#body
+    #container
+      img#ballon(src="libs/Circle/images/puzzle1.png")
+      img#ballon1(src="libs/Circle/images/puzzle2.png")
+      img#ballon2(src="libs/Circle/images/puzzle3.png")
+      img#ballon3(src="libs/Circle/images/puzzle4.png")
+      input#answer.form-control(type='text', placeholder="What Bank Was this place?")
+      h2#h1 NAME THE PLACE!
+
+    script.
+      
+      $('#ballon').draggable();
+      $('#ballon1').draggable();
+      $('#ballon2').draggable();
+      $('#ballon3').draggable();

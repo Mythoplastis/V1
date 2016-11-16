@@ -1,0 +1,164 @@
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Mythoplastis - points
+    meta(name='description', content='points to choose')
+    meta(name='keywords', content='mythoplastis')
+    meta(name='author', content='Codrops')
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/demo.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/common.css')
+    link(rel='stylesheet', type='text/css', href='libs/circle/css/style4.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,700', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='libs/circle/js/modernizr.custom.79639.js')
+    script.
+      function check() {
+        var umbrella = !{JSON.stringify(umbrella)};
+          if (umbrella == 'true' || umbrella == true ) {
+              document.getElementById('umbmis').style.backgroundImage= "none";
+              document.getElementById('umbmis2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('info').style.display= "block";
+              document.getElementById('umb').style.display= "none";
+              document.getElementById('umb1').style.display= "none";
+              document.getElementById('umb2').style.display= "none";            
+            }; 
+          }
+
+    script.     
+      function check2() {
+        var circle = !{JSON.stringify(circle)};
+          if (circle == 'true' || circle == true) {
+              document.getElementById('circle1').style.backgroundImage= "none";
+              document.getElementById('circle2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('circle3').style.display= "none";
+              document.getElementById('circle4').style.display= "none";
+              document.getElementById('circle6').style.display= "none";
+              document.getElementById('circle5').style.display= "block";
+          };
+        };
+
+    script.
+      function check3() {
+        var books = !{JSON.stringify(books)};
+          if (books == 'true' || books == true) {
+              document.getElementById('books1').style.backgroundImage= "none";
+              document.getElementById('books2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('books3').style.display= "none";
+              document.getElementById('books4').style.display= "none";
+              document.getElementById('books6').style.display= "none";
+              document.getElementById('books5').style.display= "block";
+          };
+        };
+
+    script.
+      function check4() {
+        var flag = !{JSON.stringify(flag)};
+          if (flag == 'true' || flag == true) {
+              document.getElementById('flag1').style.backgroundImage= "none";
+              document.getElementById('flag2').style.backgroundImage= "url('libs/circle/images/right.jpg')";
+              document.getElementById('flag3').style.display= "none";
+              document.getElementById('flag4').style.display= "none";
+              document.getElementById('flag6').style.display= "none";
+              document.getElementById('flag5').style.display= "block";
+          };
+      };
+
+    script.
+      function check5() {
+        var flag = !{JSON.stringify(flag)};
+        var books = !{JSON.stringify(books)};
+        var circle = !{JSON.stringify(circle)};
+        var umbrella = !{JSON.stringify(umbrella)};               
+          if (flag == 'true' || flag == true && books == 'true' || books == true && circle == 'true' || circle == true && umbrella == 'true' || umbrella == true) {
+              document.getElementById('5').style.opacity= "1";
+              $('.ch-img-5').css("background-image", "url('libs/circle/images/unlocked.jpg');")              
+          };
+      };
+  body(onload= "check4(); check(); check2(); check3(); check5()")
+    .break
+    .leftbar
+    .container
+      section.main
+        ul.ch-grid
+          li
+            .ch-item.ch-img-1#circle1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-1#circle2
+                  .ch-info-back
+                    img#circle5(src="libs/Circle/images/circle-logo.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#circle3 It's All Circles!
+                    p#circle4
+                      a#circle6(href='Uni') Start Here!
+
+          li
+            .ch-item.ch-img-2#books1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-2#books2
+                  .ch-info-back
+                    img#books5(src="libs/Circle/images/bookslogo.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#books3 You Need Books!
+                    p#books4
+                      a#books6(href='books') Start Finding books!
+          li
+            .ch-item.ch-img-3#umbmis
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-3#umbmis2
+                  .ch-info-back
+                    img#info(src="libs/Circle/images/logo-umbrella.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#umb Find the Umbrella!
+                    p#umb1
+                      a#umb2(href='umbrella') Start Here! 
+          li
+            .ch-item.ch-img-4#flag1
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-4#flag2
+                  .ch-info-back
+                    img#flag5(src="libs/Circle/images/logo-flag.png" style="margin-left: 7%; margin-top: 10%; display:none; opacity: 0.7;")
+                    h3#flag3 It's all Flags
+                    p#flag4
+                      a#flag6(href='flag') Find the Flag Logo!
+          br
+          li
+            .ch-item.ch-img-5#5
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-5
+                  .ch-info-back
+                    h3 Unlock this point!
+                    p
+                      a(href='circles') Find all the other points
+          li
+            .ch-item.ch-img-6#6
+              .ch-info-wrap
+                .ch-info
+                  .ch-info-front.ch-img-6
+                  .ch-info-back
+                    h3 Unlock this point!
+                    p
+                      a(href='point7') Find all the other points
+      a(href="/logout") GET THE LOGO
+      form.5missions(method='POST', action='/misst')
+        fieldset(style="border:none;")
+          input#umb1.form-control(type='text', name='umb1', placeholder="Word #1", style="display: none;", value="x")
+          input#umb2.form-control(type='text', name='umb2', placeholder="Word #2", style="display: none;", value="x")
+          input#umb3.form-control(type='text', name='umb3', placeholder="Word #3", style="display: none;", value="x")
+          input#circle.form-control(type='text', name='circle', placeholder="Word #3", style="display: none;", value="1")
+          input#books.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="1")
+          input#flag1.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
+          input#flag2.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
+          input#flag3.form-control(type='text', name='books', placeholder="Word #3", style="display: none;", value="x")
+
+          input#submit.umbrel(type='submit', class="button", value="GET THE LOGO",  disabled="disabled")
+
+    //- script.
+    //-   function check() {
+    //-     var umbrella = !{JSON.stringify(umbrella)};
+    //-     if (umbrella="true") {
+    //-       alert('umbrella');
+    //-   }.style.display= "none";

@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+  font-family: 'Lobster', cursive;
+  overflow: hidden;
+}
+
+h1 {
+  margin-left: 5%; 
+  margin-top:5%;
+  color: white ;
+  text-align: center;
+  line-height: 20px;
+  -moz-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-webkit-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-o-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+-ms-transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+transform: scale(1) rotate(-1deg) translateX(0px) translateY(0px) skewX(1deg) skewY(1deg);
+  /*-----------------------*/
+  text-shadow: 1px 1px #737070, 2px 2px #737070, 3px 3px #737070, 4px 4px #737070, 5px 5px #737070, 6px 6px #737070, 7px 7px #737070, 8px 8px #737070, 9px 9px #737070, 10px 10px #737070, 11px 11px #737070;
+  
+}
+
+span:nth-child(3), span:nth-child(7) { 
+font-size: 45px;
+}
+
+span:nth-child(1), span:nth-child(9), span:nth-child(5)  {
+  font-family: Lobster;
+  font-size: 50px;
+}
+

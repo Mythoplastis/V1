@@ -1,0 +1,117 @@
+html(lang='en')
+  head
+    title Mythoplastis-Flag Point
+    link(rel='shortcut icon', href='../favicon.ico')
+    link(rel='stylesheet', type='text/css', href='assets/css/circle2.css') 
+    link(rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.js') 
+    script(type='text/javascript', src='libs/jquery-ui-1.11.2/jquery-ui.min.css') 
+
+
+
+  body#body
+    #container
+      img#piece(src="libs/Circle/images/1.png")
+      img#piece1(src="libs/Circle/images/4.png")
+      img#piece2(src="libs/Circle/images/20.png")
+      img#piece3(src="libs/Circle/images/piece4.png")
+      img#piece4(src="libs/Circle/images/2.png")
+      img#piece5(src="libs/Circle/images/piece4.png")
+      img#piece6(src="libs/Circle/images/14.png")
+      img#piece7(src="libs/Circle/images/piece2.png")
+      img#piece8(src="libs/Circle/images/3.png")
+      img#piece9(src="libs/Circle/images/15.png")
+      img#piece10(src="libs/Circle/images/piece5.png")
+      img#piece11(src="libs/Circle/images/13.png")
+      img#piece12(src="libs/Circle/images/piece3.png")
+      img#piece13(src="libs/Circle/images/5.png")
+      img#piece14(src="libs/Circle/images/piece2.png")
+      img#piece15(src="libs/Circle/images/12.png")
+      img#piece16(src="libs/Circle/images/19-1.png")
+      img#piece17(src="libs/Circle/images/piece5.png")
+      img#piece18(src="libs/Circle/images/6.png")
+      img#piece19(src="libs/Circle/images/piece3.png")
+      img#piece20(src="libs/Circle/images/11.png")
+      img#piece21(src="libs/Circle/images/18.png")
+      img#piece22(src="libs/Circle/images/piece1.png")
+      img#piece23(src="libs/Circle/images/7.png")
+      img#piece24(src="libs/Circle/images/piece4.png")
+      img#piece25(src="libs/Circle/images/10.png")
+      img#piece26(src="libs/Circle/images/piece2.png")
+      img#piece27(src="libs/Circle/images/17.png")
+      img#piece28(src="libs/Circle/images/8.png")
+      img#piece29(src="libs/Circle/images/piece5.png")
+      img#piece30(src="libs/Circle/images/9.png")
+      img#piece31(src="libs/Circle/images/piece4.png")
+      img#piece32(src="libs/Circle/images/16.png")
+      img#piece33(src="libs/Circle/images/piece4.png")
+      img#piece34(src="libs/Circle/images/piece2.png")
+      img#piece35(src="libs/Circle/images/piece3.png")
+      img#piece36(src="libs/Circle/images/piece4.png")
+      img#piece37(src="libs/Circle/images/piece1.png")
+      img#piece38(src="libs/Circle/images/piece2.png")
+
+      input#subans.check(type="button", value="Check!", onclick="showDiv()")
+
+      input#answer.form-control(type='text', placeholder="The Owner")
+      h2#h1 WHO IS THE OWNER OF THIS PLACE NOW?!
+
+    script.
+      
+      $('#piece').draggable();
+      $('#piece1').draggable();
+      $('#piece2').draggable();
+      $('#piece3').draggable();
+      $('#piece4').draggable();
+      $('#piece5').draggable();
+      $('#piece6').draggable();
+      $('#piece7').draggable();
+      $('#piece8').draggable();
+      $('#piece9').draggable();
+      $('#piece10').draggable();
+      $('#piece11').draggable();
+      $('#piece12').draggable();
+      $('#piece13').draggable(); 
+      $('#piece14').draggable();
+      $('#piece15').draggable();
+      $('#piece16').draggable();
+      $('#piece17').draggable();
+      $('#piece18').draggable();
+      $('#piece19').draggable();
+      $('#piece20').draggable();    
+      $('#piece21').draggable();    
+      $('#piece22').draggable();    
+      $('#piece23').draggable();        
+      $('#piece24').draggable();        
+      $('#piece25').draggable();        
+      $('#piece26').draggable();        
+      $('#piece27').draggable();        
+      $('#piece28').draggable();        
+      $('#piece29').draggable();        
+      $('#piece30').draggable();      
+      $('#piece31').draggable();        
+      $('#piece32').draggable();          
+      $('#piece33').draggable();    
+      $('#piece34').draggable();    
+      $('#piece35').draggable();        
+      $('#piece36').draggable();        
+      $('#piece37').draggable();        
+      $('#piece38').draggable();        
+      $('#piece39').draggable();        
+      $('#piece40').draggable();        
+      $('#piece41').draggable();        
+      $('#piece42').draggable();      
+      $('#piece43').draggable();        
+      $('#piece44').draggable();        
+
+    script.
+      function showDiv() { 
+       if ($('#answer').val() == 'RBS' || $('#answer').val() == 'rbs' || $('#answer').val() == 'rbs bank' || $('#answer').val() == 'RBS bank' ) {
+          document.getElementById('container').style.display='none';
+ 
+          } else {
+          alert('wrong');
+        }       
+      }
